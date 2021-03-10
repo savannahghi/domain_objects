@@ -7,7 +7,7 @@ part 'supplier_profile.g.dart';
 
 @freezed
 class SupplierProfile with _$SupplierProfile {
-  const factory SupplierProfile({
+  factory SupplierProfile({
     required bool active,
     required SupplierAccountType accountType,
     required bool underOrganization,
@@ -16,9 +16,6 @@ class SupplierProfile with _$SupplierProfile {
     required bool kycSubmitted,
     bool? location,
   }) = _SupplierProfile;
-
-  const factory SupplierProfile.error({required String message}) =
-      SupplierProfileError;
 
   factory SupplierProfile.fromJson(Map<String, dynamic> json) =>
       _$SupplierProfileFromJson(json);

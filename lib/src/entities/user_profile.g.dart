@@ -46,14 +46,3 @@ Map<String, dynamic> _$_$_UserProfileToJson(_$_UserProfile instance) =>
       'canExperiment': instance.canExperiment,
       'supplierProfile': instance.supplierProfile?.toJson(),
     };
-
-_$UserProfileError _$_$UserProfileErrorFromJson(Map<String, dynamic> json) {
-  return _$UserProfileError(
-    message: json['message'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$UserProfileErrorToJson(_$UserProfileError instance) =>
-    <String, dynamic>{
-      'message': instance.message,
-    };

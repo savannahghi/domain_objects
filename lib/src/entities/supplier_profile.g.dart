@@ -61,16 +61,3 @@ const _$SupplierAccountTypeEnumMap = {
   SupplierAccountType.ORGANISATION: 'ORGANISATION',
   SupplierAccountType.UNSPECIFIED: 'UNSPECIFIED',
 };
-
-_$SupplierProfileError _$_$SupplierProfileErrorFromJson(
-    Map<String, dynamic> json) {
-  return _$SupplierProfileError(
-    message: json['message'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$SupplierProfileErrorToJson(
-        _$SupplierProfileError instance) =>
-    <String, dynamic>{
-      'message': instance.message,
-    };

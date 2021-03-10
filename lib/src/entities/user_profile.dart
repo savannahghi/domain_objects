@@ -8,7 +8,7 @@ part 'user_profile.g.dart';
 
 @freezed
 class UserProfile with _$UserProfile {
-  const factory UserProfile({
+  factory UserProfile({
     required String id,
     required Name username,
     required PhoneNumber primaryPhoneNumber,
@@ -21,8 +21,6 @@ class UserProfile with _$UserProfile {
     bool? canExperiment,
     SupplierProfile? supplierProfile,
   }) = _UserProfile;
-
-  const factory UserProfile.error({required String message}) = UserProfileError;
 
   factory UserProfile.fromJson(Map<String, dynamic> json) =>
       _$UserProfileFromJson(json);
