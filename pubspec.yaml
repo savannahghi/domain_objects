@@ -1,0 +1,32 @@
+name: sil_core_domain_objects
+description: Home for all shared domain objects that are common for both consumer and professional app
+version: 0.0.1
+author: dmwangi@savannahinformatics.com
+homepage: https://gitlab.slade360emr.com/optimalhealth/dart_utils/sil_core_domain_objects
+
+
+environment:
+  # sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: ">=2.0.1"
+  
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dartz: ^0.10.0-nullsafety.1 
+  freezed: ^0.14.0+1  
+  freezed_annotation: ^0.14.0  
+  json_serializable: ^4.0.2
+  json_annotation: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.8.0
+  test: 
+
+
+flutter:
+
+  
