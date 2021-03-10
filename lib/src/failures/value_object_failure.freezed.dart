@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'value_failure.dart';
+part of 'value_object_failure.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$ValueFailureTearOff {
-  const _$ValueFailureTearOff();
+class _$ValueObjectFailureTearOff {
+  const _$ValueObjectFailureTearOff();
 
   InvalidEmailAddress<T> invalidEmailAddress<T>({required T failedValue}) {
     return InvalidEmailAddress<T>(
@@ -37,10 +37,10 @@ class _$ValueFailureTearOff {
 }
 
 /// @nodoc
-const $ValueFailure = _$ValueFailureTearOff();
+const $ValueObjectFailure = _$ValueObjectFailureTearOff();
 
 /// @nodoc
-mixin _$ValueFailure<T> {
+mixin _$ValueObjectFailure<T> {
   T get failedValue => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
@@ -77,26 +77,26 @@ mixin _$ValueFailure<T> {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith =>
+  $ValueObjectFailureCopyWith<T, ValueObjectFailure<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ValueFailureCopyWith<T, $Res> {
-  factory $ValueFailureCopyWith(
-          ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
-      _$ValueFailureCopyWithImpl<T, $Res>;
+abstract class $ValueObjectFailureCopyWith<T, $Res> {
+  factory $ValueObjectFailureCopyWith(ValueObjectFailure<T> value,
+          $Res Function(ValueObjectFailure<T>) then) =
+      _$ValueObjectFailureCopyWithImpl<T, $Res>;
   $Res call({T failedValue});
 }
 
 /// @nodoc
-class _$ValueFailureCopyWithImpl<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
-  _$ValueFailureCopyWithImpl(this._value, this._then);
+class _$ValueObjectFailureCopyWithImpl<T, $Res>
+    implements $ValueObjectFailureCopyWith<T, $Res> {
+  _$ValueObjectFailureCopyWithImpl(this._value, this._then);
 
-  final ValueFailure<T> _value;
+  final ValueObjectFailure<T> _value;
   // ignore: unused_field
-  final $Res Function(ValueFailure<T>) _then;
+  final $Res Function(ValueObjectFailure<T>) _then;
 
   @override
   $Res call({
@@ -113,7 +113,7 @@ class _$ValueFailureCopyWithImpl<T, $Res>
 
 /// @nodoc
 abstract class $InvalidEmailAddressCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+    implements $ValueObjectFailureCopyWith<T, $Res> {
   factory $InvalidEmailAddressCopyWith(InvalidEmailAddress<T> value,
           $Res Function(InvalidEmailAddress<T>) then) =
       _$InvalidEmailAddressCopyWithImpl<T, $Res>;
@@ -123,7 +123,7 @@ abstract class $InvalidEmailAddressCopyWith<T, $Res>
 
 /// @nodoc
 class _$InvalidEmailAddressCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
+    extends _$ValueObjectFailureCopyWithImpl<T, $Res>
     implements $InvalidEmailAddressCopyWith<T, $Res> {
   _$InvalidEmailAddressCopyWithImpl(InvalidEmailAddress<T> _value,
       $Res Function(InvalidEmailAddress<T>) _then)
@@ -154,7 +154,7 @@ class _$InvalidEmailAddress<T> implements InvalidEmailAddress<T> {
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.invalidEmailAddress(failedValue: $failedValue)';
+    return 'ValueObjectFailure<$T>.invalidEmailAddress(failedValue: $failedValue)';
   }
 
   @override
@@ -227,7 +227,7 @@ class _$InvalidEmailAddress<T> implements InvalidEmailAddress<T> {
   }
 }
 
-abstract class InvalidEmailAddress<T> implements ValueFailure<T> {
+abstract class InvalidEmailAddress<T> implements ValueObjectFailure<T> {
   const factory InvalidEmailAddress({required T failedValue}) =
       _$InvalidEmailAddress<T>;
 
@@ -241,7 +241,7 @@ abstract class InvalidEmailAddress<T> implements ValueFailure<T> {
 
 /// @nodoc
 abstract class $InvalidPhoneNumberCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+    implements $ValueObjectFailureCopyWith<T, $Res> {
   factory $InvalidPhoneNumberCopyWith(InvalidPhoneNumber<T> value,
           $Res Function(InvalidPhoneNumber<T>) then) =
       _$InvalidPhoneNumberCopyWithImpl<T, $Res>;
@@ -251,7 +251,7 @@ abstract class $InvalidPhoneNumberCopyWith<T, $Res>
 
 /// @nodoc
 class _$InvalidPhoneNumberCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
+    extends _$ValueObjectFailureCopyWithImpl<T, $Res>
     implements $InvalidPhoneNumberCopyWith<T, $Res> {
   _$InvalidPhoneNumberCopyWithImpl(
       InvalidPhoneNumber<T> _value, $Res Function(InvalidPhoneNumber<T>) _then)
@@ -282,7 +282,7 @@ class _$InvalidPhoneNumber<T> implements InvalidPhoneNumber<T> {
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.invalidPhoneNumber(failedValue: $failedValue)';
+    return 'ValueObjectFailure<$T>.invalidPhoneNumber(failedValue: $failedValue)';
   }
 
   @override
@@ -355,7 +355,7 @@ class _$InvalidPhoneNumber<T> implements InvalidPhoneNumber<T> {
   }
 }
 
-abstract class InvalidPhoneNumber<T> implements ValueFailure<T> {
+abstract class InvalidPhoneNumber<T> implements ValueObjectFailure<T> {
   const factory InvalidPhoneNumber({required T failedValue}) =
       _$InvalidPhoneNumber<T>;
 
@@ -369,7 +369,7 @@ abstract class InvalidPhoneNumber<T> implements ValueFailure<T> {
 
 /// @nodoc
 abstract class $EmailAddressMustNotBeNullCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+    implements $ValueObjectFailureCopyWith<T, $Res> {
   factory $EmailAddressMustNotBeNullCopyWith(EmailAddressMustNotBeNull<T> value,
           $Res Function(EmailAddressMustNotBeNull<T>) then) =
       _$EmailAddressMustNotBeNullCopyWithImpl<T, $Res>;
@@ -379,7 +379,7 @@ abstract class $EmailAddressMustNotBeNullCopyWith<T, $Res>
 
 /// @nodoc
 class _$EmailAddressMustNotBeNullCopyWithImpl<T, $Res>
-    extends _$ValueFailureCopyWithImpl<T, $Res>
+    extends _$ValueObjectFailureCopyWithImpl<T, $Res>
     implements $EmailAddressMustNotBeNullCopyWith<T, $Res> {
   _$EmailAddressMustNotBeNullCopyWithImpl(EmailAddressMustNotBeNull<T> _value,
       $Res Function(EmailAddressMustNotBeNull<T>) _then)
@@ -411,7 +411,7 @@ class _$EmailAddressMustNotBeNull<T> implements EmailAddressMustNotBeNull<T> {
 
   @override
   String toString() {
-    return 'ValueFailure<$T>.emailAddressMustNotBeNull(failedValue: $failedValue)';
+    return 'ValueObjectFailure<$T>.emailAddressMustNotBeNull(failedValue: $failedValue)';
   }
 
   @override
@@ -484,7 +484,7 @@ class _$EmailAddressMustNotBeNull<T> implements EmailAddressMustNotBeNull<T> {
   }
 }
 
-abstract class EmailAddressMustNotBeNull<T> implements ValueFailure<T> {
+abstract class EmailAddressMustNotBeNull<T> implements ValueObjectFailure<T> {
   const factory EmailAddressMustNotBeNull({required T failedValue}) =
       _$EmailAddressMustNotBeNull<T>;
 

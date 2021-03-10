@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
-import 'package:sil_core_domain_objects/src/failures/value_failure.dart';
+import 'package:sil_core_domain_objects/failures.dart';
 
 @immutable
 abstract class ValueObject<T> {
   const ValueObject();
-  Either<ValueFailure<T>, T> get value;
+  Either<ValueObjectFailure<T>, T> get value;
 
   @override
   bool operator ==(Object o) {
