@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:intl/intl.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:sil_core_domain_objects/failures.dart';
 
@@ -18,13 +19,7 @@ class Name extends ValueObject<String> {
   /// since [JsonSerialzable] demands for it. Always use [Name.withValue(value)] constructor
   const Name(this.value);
 
-  @override
-  final Either<ValueObjectFailure<String>, String> value;
-
-  /// [Name] constuctor is used in instance when the name must be provided. Example usecas;
-  factory Name.withValue(String value) {
-    return Name._(right(value));
-  }
+  const Name._(this.value);
 
   /// [Name.maybe] is used when the name is optional. Example usecase;
   /// middlename
@@ -35,9 +30,26 @@ class Name extends ValueObject<String> {
     return Name._(right(input));
   }
 
-  const Name._(this.value);
+  /// [Name.titleCased] is used when the name to returned has to be titleCased
+  factory Name.titleCased({required String input}) {
+    final String titleCased = input
+        .toLowerCase()
+        .split(' ')
+        .map((String e) => e.trim())
+        .map((String word) => toBeginningOfSentenceCase(word))
+        .join(' ');
+    return Name._(right(titleCased));
+  }
+
+  /// [Name] constuctor is used in instance when the name must be provided. Example usecas;
+  factory Name.withValue(String value) {
+    return Name._(right(value));
+  }
 
   factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
+
+  @override
+  final Either<ValueObjectFailure<String>, String> value;
 
   Map<String, dynamic> toJson() => _$NameToJson(this);
 }
@@ -57,5 +69,6 @@ class _NameConverter
 
   @override
   String toJson(Either<ValueObjectFailure<String>, String> object) =>
-      object.fold((left) => UNKNOWN, (right) => right);
+      object.fold((ValueObjectFailure<String> left) => UNKNOWN,
+          (String right) => right);
 }

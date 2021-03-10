@@ -15,8 +15,7 @@ class PhoneNumber extends ValueObject<String> {
   /// which will internally check for the validitiy of the provided input
   const PhoneNumber(this.value);
 
-  @override
-  final Either<ValueObjectFailure<String>, String> value;
+  const PhoneNumber._(this.value);
 
   /// [PhoneNumber.withValue] the constructor that should be used in all usecases.
   factory PhoneNumber.withValue(String value) {
@@ -25,21 +24,22 @@ class PhoneNumber extends ValueObject<String> {
     );
   }
 
-  const PhoneNumber._(this.value);
-
   factory PhoneNumber.fromJson(Map<String, dynamic> json) =>
       _$PhoneNumberFromJson(json);
+
+  @override
+  final Either<ValueObjectFailure<String>, String> value;
 
   Map<String, dynamic> toJson() => _$PhoneNumberToJson(this);
 }
 
 Either<ValueObjectFailure<String>, String> validatePhoneNumber(String input) {
   // a valid Kenyan phone number regex
-  RegExp kenyanPhoneRegExp = RegExp(
+  final RegExp kenyanPhoneRegExp = RegExp(
       r'''^(?:254|\+254|0)?((7|1)(?:(?:[129][0-9])|(?:0[0-8])|(4[0-1]))[0-9]{6})$''');
 
 // a valid US phone number regex
-  RegExp americanPhoneRegExp =
+  final RegExp americanPhoneRegExp =
       RegExp(r'''^(\+)(\d{1,})([(]{1}\d{1,3}[)]){0,}\d{2}\d{3}\d{5}$''');
 
   if (kenyanPhoneRegExp.hasMatch(input) ||
@@ -62,13 +62,14 @@ class _PhoneNumberConverter
   @override
   Either<ValueObjectFailure<String>, String> fromJson(String? value) {
     if (value == null) {
-      return left(
-          ValueObjectFailure<String>.invalidPhoneNumber(failedValue: UNKNOWN));
+      return left(const ValueObjectFailure<String>.invalidPhoneNumber(
+          failedValue: UNKNOWN));
     }
     return right(value);
   }
 
   @override
   String toJson(Either<ValueObjectFailure<String>, String> object) =>
-      object.fold((left) => UNKNOWN, (right) => right);
+      object.fold((ValueObjectFailure<String> left) => UNKNOWN,
+          (String right) => right);
 }

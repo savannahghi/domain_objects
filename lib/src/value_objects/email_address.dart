@@ -17,8 +17,7 @@ class EmailAddress extends ValueObject<String> {
   /// which will internally check for the validitiy of the provided input
   const EmailAddress(this.value);
 
-  @override
-  final Either<ValueObjectFailure<String>, String> value;
+  const EmailAddress._(this.value);
 
   /// [EmailAddress.withValue] the constructor that should be used in all usecases.
   factory EmailAddress.withValue(String value) {
@@ -27,17 +26,18 @@ class EmailAddress extends ValueObject<String> {
     );
   }
 
-  const EmailAddress._(this.value);
-
   factory EmailAddress.fromJson(Map<String, dynamic> json) =>
       _$EmailAddressFromJson(json);
+
+  @override
+  final Either<ValueObjectFailure<String>, String> value;
 
   Map<String, dynamic> toJson() => _$EmailAddressToJson(this);
 }
 
 /// [validateEmailAddress] checks for the validity of the provided input
 Either<ValueObjectFailure<String>, String> validateEmailAddress(String input) {
-  RegExp emailRegex = RegExp(
+  final RegExp emailRegex = RegExp(
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""");
 
   if (emailRegex.hasMatch(input)) {
@@ -59,13 +59,14 @@ class _EmailAddressConverter
   @override
   Either<ValueObjectFailure<String>, String> fromJson(String? value) {
     if (value == null) {
-      return left(
-          ValueObjectFailure<String>.invalidEmailAddress(failedValue: UNKNOWN));
+      return left(const ValueObjectFailure<String>.invalidEmailAddress(
+          failedValue: UNKNOWN));
     }
     return right(value);
   }
 
   @override
   String toJson(Either<ValueObjectFailure<String>, String> object) =>
-      object.fold((left) => UNKNOWN, (right) => right);
+      object.fold((ValueObjectFailure<String> left) => UNKNOWN,
+          (String right) => right);
 }
