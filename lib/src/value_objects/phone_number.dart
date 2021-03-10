@@ -1,18 +1,27 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
-import 'package:sil_core_domain_objects/src/failures/value_failure.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
 import 'package:sil_core_domain_objects/src/value_objects/value_object.dart';
+import 'package:sil_core_domain_objects/value_objects.dart';
 
 part 'phone_number.g.dart';
 
-@immutable
+@JsonSerializable()
+@_PhoneNumberConverter()
 class PhoneNumber extends ValueObject<String> {
-  @override
-  final Either<ValueFailure<String>, String> value;
+  /// [PhoneNumber] is the default constructor of this class. It should `NOT` be used to
+  /// create a new instance of [PhoneNumber]. It's here solely for the purpose to satify the compiler
+  /// since [JsonSerialzable] demands for it. Always use [PhoneNumber.withValue(value)] constructor
+  /// which will internally check for the validitiy of the provided input
+  const PhoneNumber(this.value);
 
-  factory PhoneNumber(String input) {
+  @override
+  final Either<ValueObjectFailure<String>, String> value;
+
+  /// [PhoneNumber.withValue] the constructor that should be used in all usecases.
+  factory PhoneNumber.withValue(String value) {
     return PhoneNumber._(
-      validatePhoneNumber(input),
+      validatePhoneNumber(value),
     );
   }
 
@@ -24,7 +33,7 @@ class PhoneNumber extends ValueObject<String> {
   Map<String, dynamic> toJson() => _$PhoneNumberToJson(this);
 }
 
-Either<ValueFailure<String>, String> validatePhoneNumber(String input) {
+Either<ValueObjectFailure<String>, String> validatePhoneNumber(String input) {
   // a valid Kenyan phone number regex
   RegExp kenyanPhoneRegExp = RegExp(
       r'''^(?:254|\+254|0)?((7|1)(?:(?:[129][0-9])|(?:0[0-8])|(4[0-1]))[0-9]{6})$''');
@@ -37,6 +46,29 @@ Either<ValueFailure<String>, String> validatePhoneNumber(String input) {
       (americanPhoneRegExp.hasMatch(input))) {
     return right(input);
   } else {
-    return left(ValueFailure<String>.invalidPhoneNumber(failedValue: input));
+    return left(
+        ValueObjectFailure<String>.invalidPhoneNumber(failedValue: input));
   }
+}
+
+/// [_PhoneNumberConverter] is a custom serialization class for [PhoneNumber]
+/// A custom converter is needed because [JsonSerializer] has no way of properly
+/// serializing type [Either]
+class _PhoneNumberConverter
+    implements
+        JsonConverter<Either<ValueObjectFailure<String>, String>, String> {
+  const _PhoneNumberConverter();
+
+  @override
+  Either<ValueObjectFailure<String>, String> fromJson(String? value) {
+    if (value == null) {
+      return left(
+          ValueObjectFailure<String>.invalidPhoneNumber(failedValue: UNKNOWN));
+    }
+    return right(value);
+  }
+
+  @override
+  String toJson(Either<ValueObjectFailure<String>, String> object) =>
+      object.fold((left) => UNKNOWN, (right) => right);
 }

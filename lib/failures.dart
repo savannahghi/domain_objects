@@ -1,1 +1,1 @@
-export 'src/failures/value_failure.dart';
+export 'src/failures/value_object_failure.dart';

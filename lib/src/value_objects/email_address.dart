@@ -1,26 +1,31 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:sil_core_domain_objects/failures.dart';
 
-import 'package:sil_core_domain_objects/src/failures/value_failure.dart';
 import 'package:sil_core_domain_objects/src/value_objects/value_object.dart';
 import 'package:sil_core_domain_objects/value_objects.dart';
 
 part 'email_address.g.dart';
 
 /// [EmailAddress] value object holds information about the user's email address.
-@immutable
 @JsonSerializable()
 @_EmailAddressConverter()
 class EmailAddress extends ValueObject<String> {
+  /// [EmailAddress] is the default constructor of this class. It should `NOT` be used to
+  /// create a new instance of [EmailAddress]. It's here solely for the purpose to satify the compiler
+  /// since [JsonSerialzable] demands for it. Always use [EmailAddress.withValue(value)] constructor
+  /// which will internally check for the validitiy of the provided input
+  const EmailAddress(this.value);
+
+  @override
+  final Either<ValueObjectFailure<String>, String> value;
+
+  /// [EmailAddress.withValue] the constructor that should be used in all usecases.
   factory EmailAddress.withValue(String value) {
     return EmailAddress._(
       validateEmailAddress(value),
     );
   }
-
-  @override
-  final Either<ValueFailure<String>, String> value;
 
   const EmailAddress._(this.value);
 
@@ -30,31 +35,37 @@ class EmailAddress extends ValueObject<String> {
   Map<String, dynamic> toJson() => _$EmailAddressToJson(this);
 }
 
-Either<ValueFailure<String>, String> validateEmailAddress(String input) {
+/// [validateEmailAddress] checks for the validity of the provided input
+Either<ValueObjectFailure<String>, String> validateEmailAddress(String input) {
   RegExp emailRegex = RegExp(
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""");
 
   if (emailRegex.hasMatch(input)) {
     return right(input);
   } else {
-    return left(ValueFailure<String>.invalidEmailAddress(failedValue: input));
+    return left(
+        ValueObjectFailure<String>.invalidEmailAddress(failedValue: input));
   }
 }
 
+/// [_EmailAddressConverter] is a custom serialization class for [EmailAddress]
+/// A custom converter is needed because [JsonSerializer] has no way of properly
+/// serializing type [Either]
 class _EmailAddressConverter
-    implements JsonConverter<Either<ValueFailure<String>, String>, String> {
+    implements
+        JsonConverter<Either<ValueObjectFailure<String>, String>, String> {
   const _EmailAddressConverter();
 
   @override
-  Either<ValueFailure<String>, String> fromJson(String? value) {
+  Either<ValueObjectFailure<String>, String> fromJson(String? value) {
     if (value == null) {
       return left(
-          ValueFailure<String>.invalidEmailAddress(failedValue: UNKNOWN));
+          ValueObjectFailure<String>.invalidEmailAddress(failedValue: UNKNOWN));
     }
     return right(value);
   }
 
   @override
-  String toJson(Either<ValueFailure<String>, String> object) =>
+  String toJson(Either<ValueObjectFailure<String>, String> object) =>
       object.fold((left) => UNKNOWN, (right) => right);
 }
