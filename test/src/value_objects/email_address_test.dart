@@ -1,10 +1,11 @@
+import 'package:flutter_test/flutter_test.dart';
 import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
-import 'package:test/test.dart';
+import 'package:sil_core_domain_objects/src/value_objects/email_address.dart';
 
 void main() {
   group('Email Address', () {
     const String validEmail = 'author@example.com';
+    const String inValidEmail = 'author.co';
 
     test('expects valid email to be returned', () {
       final EmailAddress email = EmailAddress.withValue(validEmail);
@@ -16,10 +17,13 @@ void main() {
     });
 
     test('expects invalid email error to be returned', () {
-      final EmailAddress email = EmailAddress.withValue(validEmail);
+      final EmailAddress email = EmailAddress.withValue(inValidEmail);
 
       email.value.fold(
-        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (ValueObjectFailure<String> left) => expect(
+            left,
+            const ValueObjectFailure<String>.invalidEmailAddress(
+                failedValue: inValidEmail)),
         (String right) => expect(right, validEmail),
       );
     });
@@ -38,29 +42,6 @@ void main() {
       final Map<String, dynamic> email =
           EmailAddress.withValue(validEmail).toJson();
       expect(email['value'], validEmail);
-    });
-  });
-
-  group('Phonenumber', () {
-    const String validKenyanPhone = '+254712345678';
-    const String validUSAPhone = '+12025550163';
-
-    test('expects valid kenyan phone number to be returned', () {
-      final PhoneNumber phone = PhoneNumber.withValue(validKenyanPhone);
-
-      phone.value.fold(
-        (ValueObjectFailure<String> left) => expect(left, null),
-        (String right) => expect(right, validKenyanPhone),
-      );
-    });
-
-    test('expects valid usa phone number to be returned', () {
-      final PhoneNumber phone = PhoneNumber.withValue(validUSAPhone);
-
-      phone.value.fold(
-        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
-        (String right) => expect(right, validUSAPhone),
-      );
     });
   });
 }
