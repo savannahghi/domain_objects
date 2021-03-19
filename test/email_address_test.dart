@@ -29,8 +29,7 @@ void main() {
     });
 
     test('expects valid email from json to be returned', () {
-      const Map<String, dynamic> json = <String, dynamic>{'value': validEmail};
-      final EmailAddress email = EmailAddress.fromJson(json);
+      final EmailAddress email = EmailAddress.fromJson(validEmail);
 
       email.value.fold(
         (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),

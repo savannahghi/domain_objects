@@ -21,17 +21,32 @@ class _$UserProfileTearOff {
   const _$UserProfileTearOff();
 
   _UserProfile call(
-      {required String id,
-      required Name username,
-      required PhoneNumber primaryPhoneNumber,
-      required String? primaryEmailAddress,
-      List<String?>? secondaryPhoneNumbers,
-      List<String?>? secondaryEmailAddresses,
-      String? photoURL,
-      List<String?>? permissions,
-      bool? isAdmin,
-      bool? canExperiment,
-      SupplierProfile? supplierProfile}) {
+      {@JsonKey(name: 'id')
+          required String id,
+      @JsonKey(name: 'userName')
+          required Name username,
+      @JsonKey(name: 'primaryPhone')
+          required PhoneNumber primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress')
+          required EmailAddress? primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers')
+          List<PhoneNumber?>? secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses')
+          List<String?>? secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted')
+          bool? termsAccepted,
+      @JsonKey(name: 'suspended')
+          bool? suspended,
+      @JsonKey(name: 'photoUploadID')
+          String? photoUploadID,
+      @JsonKey(name: 'covers')
+          List<Cover?>? covers,
+      @JsonKey(name: 'userBioData')
+          BioData? userBioData,
+      @JsonKey(name: 'homeAddress')
+          Address? homeAddress,
+      @JsonKey(name: 'workAddress')
+          Address? workAddress}) {
     return _UserProfile(
       id: id,
       username: username,
@@ -39,11 +54,13 @@ class _$UserProfileTearOff {
       primaryEmailAddress: primaryEmailAddress,
       secondaryPhoneNumbers: secondaryPhoneNumbers,
       secondaryEmailAddresses: secondaryEmailAddresses,
-      photoURL: photoURL,
-      permissions: permissions,
-      isAdmin: isAdmin,
-      canExperiment: canExperiment,
-      supplierProfile: supplierProfile,
+      termsAccepted: termsAccepted,
+      suspended: suspended,
+      photoUploadID: photoUploadID,
+      covers: covers,
+      userBioData: userBioData,
+      homeAddress: homeAddress,
+      workAddress: workAddress,
     );
   }
 
@@ -57,19 +74,34 @@ const $UserProfile = _$UserProfileTearOff();
 
 /// @nodoc
 mixin _$UserProfile {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'userName')
   Name get username => throw _privateConstructorUsedError;
+  @JsonKey(name: 'primaryPhone')
   PhoneNumber get primaryPhoneNumber => throw _privateConstructorUsedError;
-  String? get primaryEmailAddress => throw _privateConstructorUsedError;
-  List<String?>? get secondaryPhoneNumbers =>
+  @JsonKey(name: 'primaryEmailAddress')
+  EmailAddress? get primaryEmailAddress => throw _privateConstructorUsedError;
+  @JsonKey(name: 'secondaryPhoneNumbers')
+  List<PhoneNumber?>? get secondaryPhoneNumbers =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'secondaryEmailAddresses')
   List<String?>? get secondaryEmailAddresses =>
       throw _privateConstructorUsedError;
-  String? get photoURL => throw _privateConstructorUsedError;
-  List<String?>? get permissions => throw _privateConstructorUsedError;
-  bool? get isAdmin => throw _privateConstructorUsedError;
-  bool? get canExperiment => throw _privateConstructorUsedError;
-  SupplierProfile? get supplierProfile => throw _privateConstructorUsedError;
+  @JsonKey(name: 'terms_accepted')
+  bool? get termsAccepted => throw _privateConstructorUsedError;
+  @JsonKey(name: 'suspended')
+  bool? get suspended => throw _privateConstructorUsedError;
+  @JsonKey(name: 'photoUploadID')
+  String? get photoUploadID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'covers')
+  List<Cover?>? get covers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'userBioData')
+  BioData? get userBioData => throw _privateConstructorUsedError;
+  @JsonKey(name: 'homeAddress')
+  Address? get homeAddress => throw _privateConstructorUsedError;
+  @JsonKey(name: 'workAddress')
+  Address? get workAddress => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -83,19 +115,36 @@ abstract class $UserProfileCopyWith<$Res> {
           UserProfile value, $Res Function(UserProfile) then) =
       _$UserProfileCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      Name username,
-      PhoneNumber primaryPhoneNumber,
-      String? primaryEmailAddress,
-      List<String?>? secondaryPhoneNumbers,
-      List<String?>? secondaryEmailAddresses,
-      String? photoURL,
-      List<String?>? permissions,
-      bool? isAdmin,
-      bool? canExperiment,
-      SupplierProfile? supplierProfile});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'userName')
+          Name username,
+      @JsonKey(name: 'primaryPhone')
+          PhoneNumber primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress')
+          EmailAddress? primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers')
+          List<PhoneNumber?>? secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses')
+          List<String?>? secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted')
+          bool? termsAccepted,
+      @JsonKey(name: 'suspended')
+          bool? suspended,
+      @JsonKey(name: 'photoUploadID')
+          String? photoUploadID,
+      @JsonKey(name: 'covers')
+          List<Cover?>? covers,
+      @JsonKey(name: 'userBioData')
+          BioData? userBioData,
+      @JsonKey(name: 'homeAddress')
+          Address? homeAddress,
+      @JsonKey(name: 'workAddress')
+          Address? workAddress});
 
-  $SupplierProfileCopyWith<$Res>? get supplierProfile;
+  $BioDataCopyWith<$Res>? get userBioData;
+  $AddressCopyWith<$Res>? get homeAddress;
+  $AddressCopyWith<$Res>? get workAddress;
 }
 
 /// @nodoc
@@ -114,11 +163,13 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
     Object? primaryEmailAddress = freezed,
     Object? secondaryPhoneNumbers = freezed,
     Object? secondaryEmailAddresses = freezed,
-    Object? photoURL = freezed,
-    Object? permissions = freezed,
-    Object? isAdmin = freezed,
-    Object? canExperiment = freezed,
-    Object? supplierProfile = freezed,
+    Object? termsAccepted = freezed,
+    Object? suspended = freezed,
+    Object? photoUploadID = freezed,
+    Object? covers = freezed,
+    Object? userBioData = freezed,
+    Object? homeAddress = freezed,
+    Object? workAddress = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -136,46 +187,76 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
       primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as EmailAddress?,
       secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
           ? _value.secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
+              as List<PhoneNumber?>?,
       secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      photoURL: photoURL == freezed
-          ? _value.photoURL
-          : photoURL // ignore: cast_nullable_to_non_nullable
+      termsAccepted: termsAccepted == freezed
+          ? _value.termsAccepted
+          : termsAccepted // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      suspended: suspended == freezed
+          ? _value.suspended
+          : suspended // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      photoUploadID: photoUploadID == freezed
+          ? _value.photoUploadID
+          : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      permissions: permissions == freezed
-          ? _value.permissions
-          : permissions // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
-      isAdmin: isAdmin == freezed
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canExperiment: canExperiment == freezed
-          ? _value.canExperiment
-          : canExperiment // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      supplierProfile: supplierProfile == freezed
-          ? _value.supplierProfile
-          : supplierProfile // ignore: cast_nullable_to_non_nullable
-              as SupplierProfile?,
+      covers: covers == freezed
+          ? _value.covers
+          : covers // ignore: cast_nullable_to_non_nullable
+              as List<Cover?>?,
+      userBioData: userBioData == freezed
+          ? _value.userBioData
+          : userBioData // ignore: cast_nullable_to_non_nullable
+              as BioData?,
+      homeAddress: homeAddress == freezed
+          ? _value.homeAddress
+          : homeAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      workAddress: workAddress == freezed
+          ? _value.workAddress
+          : workAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
     ));
   }
 
   @override
-  $SupplierProfileCopyWith<$Res>? get supplierProfile {
-    if (_value.supplierProfile == null) {
+  $BioDataCopyWith<$Res>? get userBioData {
+    if (_value.userBioData == null) {
       return null;
     }
 
-    return $SupplierProfileCopyWith<$Res>(_value.supplierProfile!, (value) {
-      return _then(_value.copyWith(supplierProfile: value));
+    return $BioDataCopyWith<$Res>(_value.userBioData!, (value) {
+      return _then(_value.copyWith(userBioData: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res>? get homeAddress {
+    if (_value.homeAddress == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.homeAddress!, (value) {
+      return _then(_value.copyWith(homeAddress: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res>? get workAddress {
+    if (_value.workAddress == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.workAddress!, (value) {
+      return _then(_value.copyWith(workAddress: value));
     });
   }
 }
@@ -188,20 +269,39 @@ abstract class _$UserProfileCopyWith<$Res>
       __$UserProfileCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      Name username,
-      PhoneNumber primaryPhoneNumber,
-      String? primaryEmailAddress,
-      List<String?>? secondaryPhoneNumbers,
-      List<String?>? secondaryEmailAddresses,
-      String? photoURL,
-      List<String?>? permissions,
-      bool? isAdmin,
-      bool? canExperiment,
-      SupplierProfile? supplierProfile});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'userName')
+          Name username,
+      @JsonKey(name: 'primaryPhone')
+          PhoneNumber primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress')
+          EmailAddress? primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers')
+          List<PhoneNumber?>? secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses')
+          List<String?>? secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted')
+          bool? termsAccepted,
+      @JsonKey(name: 'suspended')
+          bool? suspended,
+      @JsonKey(name: 'photoUploadID')
+          String? photoUploadID,
+      @JsonKey(name: 'covers')
+          List<Cover?>? covers,
+      @JsonKey(name: 'userBioData')
+          BioData? userBioData,
+      @JsonKey(name: 'homeAddress')
+          Address? homeAddress,
+      @JsonKey(name: 'workAddress')
+          Address? workAddress});
 
   @override
-  $SupplierProfileCopyWith<$Res>? get supplierProfile;
+  $BioDataCopyWith<$Res>? get userBioData;
+  @override
+  $AddressCopyWith<$Res>? get homeAddress;
+  @override
+  $AddressCopyWith<$Res>? get workAddress;
 }
 
 /// @nodoc
@@ -222,11 +322,13 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
     Object? primaryEmailAddress = freezed,
     Object? secondaryPhoneNumbers = freezed,
     Object? secondaryEmailAddresses = freezed,
-    Object? photoURL = freezed,
-    Object? permissions = freezed,
-    Object? isAdmin = freezed,
-    Object? canExperiment = freezed,
-    Object? supplierProfile = freezed,
+    Object? termsAccepted = freezed,
+    Object? suspended = freezed,
+    Object? photoUploadID = freezed,
+    Object? covers = freezed,
+    Object? userBioData = freezed,
+    Object? homeAddress = freezed,
+    Object? workAddress = freezed,
   }) {
     return _then(_UserProfile(
       id: id == freezed
@@ -244,35 +346,43 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
       primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as EmailAddress?,
       secondaryPhoneNumbers: secondaryPhoneNumbers == freezed
           ? _value.secondaryPhoneNumbers
           : secondaryPhoneNumbers // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
+              as List<PhoneNumber?>?,
       secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
               as List<String?>?,
-      photoURL: photoURL == freezed
-          ? _value.photoURL
-          : photoURL // ignore: cast_nullable_to_non_nullable
+      termsAccepted: termsAccepted == freezed
+          ? _value.termsAccepted
+          : termsAccepted // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      suspended: suspended == freezed
+          ? _value.suspended
+          : suspended // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      photoUploadID: photoUploadID == freezed
+          ? _value.photoUploadID
+          : photoUploadID // ignore: cast_nullable_to_non_nullable
               as String?,
-      permissions: permissions == freezed
-          ? _value.permissions
-          : permissions // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
-      isAdmin: isAdmin == freezed
-          ? _value.isAdmin
-          : isAdmin // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      canExperiment: canExperiment == freezed
-          ? _value.canExperiment
-          : canExperiment // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      supplierProfile: supplierProfile == freezed
-          ? _value.supplierProfile
-          : supplierProfile // ignore: cast_nullable_to_non_nullable
-              as SupplierProfile?,
+      covers: covers == freezed
+          ? _value.covers
+          : covers // ignore: cast_nullable_to_non_nullable
+              as List<Cover?>?,
+      userBioData: userBioData == freezed
+          ? _value.userBioData
+          : userBioData // ignore: cast_nullable_to_non_nullable
+              as BioData?,
+      homeAddress: homeAddress == freezed
+          ? _value.homeAddress
+          : homeAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      workAddress: workAddress == freezed
+          ? _value.workAddress
+          : workAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
     ));
   }
 }
@@ -282,47 +392,66 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserProfile implements _UserProfile {
   _$_UserProfile(
-      {required this.id,
-      required this.username,
-      required this.primaryPhoneNumber,
-      required this.primaryEmailAddress,
-      this.secondaryPhoneNumbers,
-      this.secondaryEmailAddresses,
-      this.photoURL,
-      this.permissions,
-      this.isAdmin,
-      this.canExperiment,
-      this.supplierProfile});
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'userName') required this.username,
+      @JsonKey(name: 'primaryPhone') required this.primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress') required this.primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers') this.secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses') this.secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted') this.termsAccepted,
+      @JsonKey(name: 'suspended') this.suspended,
+      @JsonKey(name: 'photoUploadID') this.photoUploadID,
+      @JsonKey(name: 'covers') this.covers,
+      @JsonKey(name: 'userBioData') this.userBioData,
+      @JsonKey(name: 'homeAddress') this.homeAddress,
+      @JsonKey(name: 'workAddress') this.workAddress});
 
   factory _$_UserProfile.fromJson(Map<String, dynamic> json) =>
       _$_$_UserProfileFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   @override
+  @JsonKey(name: 'userName')
   final Name username;
   @override
+  @JsonKey(name: 'primaryPhone')
   final PhoneNumber primaryPhoneNumber;
   @override
-  final String? primaryEmailAddress;
+  @JsonKey(name: 'primaryEmailAddress')
+  final EmailAddress? primaryEmailAddress;
   @override
-  final List<String?>? secondaryPhoneNumbers;
+  @JsonKey(name: 'secondaryPhoneNumbers')
+  final List<PhoneNumber?>? secondaryPhoneNumbers;
   @override
+  @JsonKey(name: 'secondaryEmailAddresses')
   final List<String?>? secondaryEmailAddresses;
   @override
-  final String? photoURL;
+  @JsonKey(name: 'terms_accepted')
+  final bool? termsAccepted;
   @override
-  final List<String?>? permissions;
+  @JsonKey(name: 'suspended')
+  final bool? suspended;
   @override
-  final bool? isAdmin;
+  @JsonKey(name: 'photoUploadID')
+  final String? photoUploadID;
   @override
-  final bool? canExperiment;
+  @JsonKey(name: 'covers')
+  final List<Cover?>? covers;
   @override
-  final SupplierProfile? supplierProfile;
+  @JsonKey(name: 'userBioData')
+  final BioData? userBioData;
+  @override
+  @JsonKey(name: 'homeAddress')
+  final Address? homeAddress;
+  @override
+  @JsonKey(name: 'workAddress')
+  final Address? workAddress;
 
   @override
   String toString() {
-    return 'UserProfile(id: $id, username: $username, primaryPhoneNumber: $primaryPhoneNumber, primaryEmailAddress: $primaryEmailAddress, secondaryPhoneNumbers: $secondaryPhoneNumbers, secondaryEmailAddresses: $secondaryEmailAddresses, photoURL: $photoURL, permissions: $permissions, isAdmin: $isAdmin, canExperiment: $canExperiment, supplierProfile: $supplierProfile)';
+    return 'UserProfile(id: $id, username: $username, primaryPhoneNumber: $primaryPhoneNumber, primaryEmailAddress: $primaryEmailAddress, secondaryPhoneNumbers: $secondaryPhoneNumbers, secondaryEmailAddresses: $secondaryEmailAddresses, termsAccepted: $termsAccepted, suspended: $suspended, photoUploadID: $photoUploadID, covers: $covers, userBioData: $userBioData, homeAddress: $homeAddress, workAddress: $workAddress)';
   }
 
   @override
@@ -347,21 +476,26 @@ class _$_UserProfile implements _UserProfile {
                     other.secondaryEmailAddresses, secondaryEmailAddresses) ||
                 const DeepCollectionEquality().equals(
                     other.secondaryEmailAddresses, secondaryEmailAddresses)) &&
-            (identical(other.photoURL, photoURL) ||
+            (identical(other.termsAccepted, termsAccepted) ||
                 const DeepCollectionEquality()
-                    .equals(other.photoURL, photoURL)) &&
-            (identical(other.permissions, permissions) ||
+                    .equals(other.termsAccepted, termsAccepted)) &&
+            (identical(other.suspended, suspended) ||
                 const DeepCollectionEquality()
-                    .equals(other.permissions, permissions)) &&
-            (identical(other.isAdmin, isAdmin) ||
+                    .equals(other.suspended, suspended)) &&
+            (identical(other.photoUploadID, photoUploadID) ||
                 const DeepCollectionEquality()
-                    .equals(other.isAdmin, isAdmin)) &&
-            (identical(other.canExperiment, canExperiment) ||
+                    .equals(other.photoUploadID, photoUploadID)) &&
+            (identical(other.covers, covers) ||
+                const DeepCollectionEquality().equals(other.covers, covers)) &&
+            (identical(other.userBioData, userBioData) ||
                 const DeepCollectionEquality()
-                    .equals(other.canExperiment, canExperiment)) &&
-            (identical(other.supplierProfile, supplierProfile) ||
+                    .equals(other.userBioData, userBioData)) &&
+            (identical(other.homeAddress, homeAddress) ||
                 const DeepCollectionEquality()
-                    .equals(other.supplierProfile, supplierProfile)));
+                    .equals(other.homeAddress, homeAddress)) &&
+            (identical(other.workAddress, workAddress) ||
+                const DeepCollectionEquality()
+                    .equals(other.workAddress, workAddress)));
   }
 
   @override
@@ -373,11 +507,13 @@ class _$_UserProfile implements _UserProfile {
       const DeepCollectionEquality().hash(primaryEmailAddress) ^
       const DeepCollectionEquality().hash(secondaryPhoneNumbers) ^
       const DeepCollectionEquality().hash(secondaryEmailAddresses) ^
-      const DeepCollectionEquality().hash(photoURL) ^
-      const DeepCollectionEquality().hash(permissions) ^
-      const DeepCollectionEquality().hash(isAdmin) ^
-      const DeepCollectionEquality().hash(canExperiment) ^
-      const DeepCollectionEquality().hash(supplierProfile);
+      const DeepCollectionEquality().hash(termsAccepted) ^
+      const DeepCollectionEquality().hash(suspended) ^
+      const DeepCollectionEquality().hash(photoUploadID) ^
+      const DeepCollectionEquality().hash(covers) ^
+      const DeepCollectionEquality().hash(userBioData) ^
+      const DeepCollectionEquality().hash(homeAddress) ^
+      const DeepCollectionEquality().hash(workAddress);
 
   @JsonKey(ignore: true)
   @override
@@ -392,45 +528,77 @@ class _$_UserProfile implements _UserProfile {
 
 abstract class _UserProfile implements UserProfile {
   factory _UserProfile(
-      {required String id,
-      required Name username,
-      required PhoneNumber primaryPhoneNumber,
-      required String? primaryEmailAddress,
-      List<String?>? secondaryPhoneNumbers,
-      List<String?>? secondaryEmailAddresses,
-      String? photoURL,
-      List<String?>? permissions,
-      bool? isAdmin,
-      bool? canExperiment,
-      SupplierProfile? supplierProfile}) = _$_UserProfile;
+      {@JsonKey(name: 'id')
+          required String id,
+      @JsonKey(name: 'userName')
+          required Name username,
+      @JsonKey(name: 'primaryPhone')
+          required PhoneNumber primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress')
+          required EmailAddress? primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers')
+          List<PhoneNumber?>? secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses')
+          List<String?>? secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted')
+          bool? termsAccepted,
+      @JsonKey(name: 'suspended')
+          bool? suspended,
+      @JsonKey(name: 'photoUploadID')
+          String? photoUploadID,
+      @JsonKey(name: 'covers')
+          List<Cover?>? covers,
+      @JsonKey(name: 'userBioData')
+          BioData? userBioData,
+      @JsonKey(name: 'homeAddress')
+          Address? homeAddress,
+      @JsonKey(name: 'workAddress')
+          Address? workAddress}) = _$_UserProfile;
 
   factory _UserProfile.fromJson(Map<String, dynamic> json) =
       _$_UserProfile.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'userName')
   Name get username => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'primaryPhone')
   PhoneNumber get primaryPhoneNumber => throw _privateConstructorUsedError;
   @override
-  String? get primaryEmailAddress => throw _privateConstructorUsedError;
+  @JsonKey(name: 'primaryEmailAddress')
+  EmailAddress? get primaryEmailAddress => throw _privateConstructorUsedError;
   @override
-  List<String?>? get secondaryPhoneNumbers =>
+  @JsonKey(name: 'secondaryPhoneNumbers')
+  List<PhoneNumber?>? get secondaryPhoneNumbers =>
       throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'secondaryEmailAddresses')
   List<String?>? get secondaryEmailAddresses =>
       throw _privateConstructorUsedError;
   @override
-  String? get photoURL => throw _privateConstructorUsedError;
+  @JsonKey(name: 'terms_accepted')
+  bool? get termsAccepted => throw _privateConstructorUsedError;
   @override
-  List<String?>? get permissions => throw _privateConstructorUsedError;
+  @JsonKey(name: 'suspended')
+  bool? get suspended => throw _privateConstructorUsedError;
   @override
-  bool? get isAdmin => throw _privateConstructorUsedError;
+  @JsonKey(name: 'photoUploadID')
+  String? get photoUploadID => throw _privateConstructorUsedError;
   @override
-  bool? get canExperiment => throw _privateConstructorUsedError;
+  @JsonKey(name: 'covers')
+  List<Cover?>? get covers => throw _privateConstructorUsedError;
   @override
-  SupplierProfile? get supplierProfile => throw _privateConstructorUsedError;
+  @JsonKey(name: 'userBioData')
+  BioData? get userBioData => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'homeAddress')
+  Address? get homeAddress => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'workAddress')
+  Address? get workAddress => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserProfileCopyWith<_UserProfile> get copyWith =>

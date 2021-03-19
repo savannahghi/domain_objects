@@ -6,20 +6,28 @@ import 'package:sil_core_domain_objects/value_objects.dart';
 part 'user_profile.freezed.dart';
 part 'user_profile.g.dart';
 
+/// [UserProfile] represents a valid user as mapped out from the backend
+/// In the event the backend mapping changes, this model should also chage as well
+
 @freezed
 class UserProfile with _$UserProfile {
   factory UserProfile({
-    required String id,
-    required Name username,
-    required PhoneNumber primaryPhoneNumber,
-    required String? primaryEmailAddress,
-    List<String?>? secondaryPhoneNumbers,
-    List<String?>? secondaryEmailAddresses,
-    String? photoURL,
-    List<String?>? permissions,
-    bool? isAdmin,
-    bool? canExperiment,
-    SupplierProfile? supplierProfile,
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'userName') required Name username,
+    @JsonKey(name: 'primaryPhone') required PhoneNumber primaryPhoneNumber,
+    @JsonKey(name: 'primaryEmailAddress')
+        required EmailAddress? primaryEmailAddress,
+    @JsonKey(name: 'secondaryPhoneNumbers')
+        List<PhoneNumber?>? secondaryPhoneNumbers,
+    @JsonKey(name: 'secondaryEmailAddresses')
+        List<String?>? secondaryEmailAddresses,
+    @JsonKey(name: 'terms_accepted') bool? termsAccepted,
+    @JsonKey(name: 'suspended') bool? suspended,
+    @JsonKey(name: 'photoUploadID') String? photoUploadID,
+    @JsonKey(name: 'covers') List<Cover?>? covers,
+    @JsonKey(name: 'userBioData') BioData? userBioData,
+    @JsonKey(name: 'homeAddress') Address? homeAddress,
+    @JsonKey(name: 'workAddress') Address? workAddress,
   }) = _UserProfile;
 
   factory UserProfile.fromJson(Map<String, dynamic> json) =>

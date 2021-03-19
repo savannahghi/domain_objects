@@ -21,21 +21,58 @@ class _$SupplierProfileTearOff {
   const _$SupplierProfileTearOff();
 
   _SupplierProfile call(
-      {required bool active,
-      required SupplierAccountType accountType,
-      required bool underOrganization,
-      required String partnerType,
-      required String partnerSetupComplete,
-      required bool kycSubmitted,
-      bool? location}) {
+      {@JsonKey(name: 'supplierID')
+          required String? supplierID,
+      @JsonKey(name: 'profileID')
+          required String? profileID,
+      @JsonKey(name: 'erpSupplierID')
+          required String? erpSupplierID,
+      @JsonKey(name: 'payables_account')
+          required PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC')
+          required Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active')
+          required bool? active,
+      @JsonKey(name: 'accountType')
+          required SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization')
+          required bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified')
+          required bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode')
+          required String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID')
+          required String? parentOrganizationID,
+      @JsonKey(name: 'organizationName')
+          required String? organizationName,
+      @JsonKey(name: 'hasBranches')
+          required bool? hasBranches,
+      @JsonKey(name: 'location')
+          required Location? location,
+      @JsonKey(name: 'partnerType')
+          required SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete')
+          required bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted')
+          required bool? kycSubmitted}) {
     return _SupplierProfile(
+      supplierID: supplierID,
+      profileID: profileID,
+      erpSupplierID: erpSupplierID,
+      payablesAccount: payablesAccount,
+      supplierKYC: supplierKYC,
       active: active,
       accountType: accountType,
       underOrganization: underOrganization,
+      isOrganizationVerified: isOrganizationVerified,
+      sladeCode: sladeCode,
+      parentOrganizationID: parentOrganizationID,
+      organizationName: organizationName,
+      hasBranches: hasBranches,
+      location: location,
       partnerType: partnerType,
       partnerSetupComplete: partnerSetupComplete,
       kycSubmitted: kycSubmitted,
-      location: location,
     );
   }
 
@@ -49,13 +86,40 @@ const $SupplierProfile = _$SupplierProfileTearOff();
 
 /// @nodoc
 mixin _$SupplierProfile {
-  bool get active => throw _privateConstructorUsedError;
-  SupplierAccountType get accountType => throw _privateConstructorUsedError;
-  bool get underOrganization => throw _privateConstructorUsedError;
-  String get partnerType => throw _privateConstructorUsedError;
-  String get partnerSetupComplete => throw _privateConstructorUsedError;
-  bool get kycSubmitted => throw _privateConstructorUsedError;
-  bool? get location => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supplierID')
+  String? get supplierID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'profileID')
+  String? get profileID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'erpSupplierID')
+  String? get erpSupplierID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'payables_account')
+  PayablesAccount? get payablesAccount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supplierKYC')
+  Map<String, dynamic>? get supplierKYC => throw _privateConstructorUsedError;
+  @JsonKey(name: 'active')
+  bool? get active => throw _privateConstructorUsedError;
+  @JsonKey(name: 'accountType')
+  SupplierAccountType? get accountType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'underOrganization')
+  bool? get underOrganization => throw _privateConstructorUsedError;
+  @JsonKey(name: 'isOrganizationVerified')
+  bool? get isOrganizationVerified => throw _privateConstructorUsedError;
+  @JsonKey(name: 'sladeCode')
+  String? get sladeCode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'parentOrganizationID')
+  String? get parentOrganizationID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'organizationName')
+  String? get organizationName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hasBranches')
+  bool? get hasBranches => throw _privateConstructorUsedError;
+  @JsonKey(name: 'location')
+  Location? get location => throw _privateConstructorUsedError;
+  @JsonKey(name: 'partnerType')
+  SupplierPartnerType? get partnerType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'partnerSetupComplete')
+  bool? get partnerSetupComplete => throw _privateConstructorUsedError;
+  @JsonKey(name: 'kycSubmitted')
+  bool? get kycSubmitted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,13 +133,26 @@ abstract class $SupplierProfileCopyWith<$Res> {
           SupplierProfile value, $Res Function(SupplierProfile) then) =
       _$SupplierProfileCopyWithImpl<$Res>;
   $Res call(
-      {bool active,
-      SupplierAccountType accountType,
-      bool underOrganization,
-      String partnerType,
-      String partnerSetupComplete,
-      bool kycSubmitted,
-      bool? location});
+      {@JsonKey(name: 'supplierID') String? supplierID,
+      @JsonKey(name: 'profileID') String? profileID,
+      @JsonKey(name: 'erpSupplierID') String? erpSupplierID,
+      @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active') bool? active,
+      @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization') bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode') String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID') String? parentOrganizationID,
+      @JsonKey(name: 'organizationName') String? organizationName,
+      @JsonKey(name: 'hasBranches') bool? hasBranches,
+      @JsonKey(name: 'location') Location? location,
+      @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted') bool? kycSubmitted});
+
+  $PayablesAccountCopyWith<$Res>? get payablesAccount;
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -89,44 +166,116 @@ class _$SupplierProfileCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? supplierID = freezed,
+    Object? profileID = freezed,
+    Object? erpSupplierID = freezed,
+    Object? payablesAccount = freezed,
+    Object? supplierKYC = freezed,
     Object? active = freezed,
     Object? accountType = freezed,
     Object? underOrganization = freezed,
+    Object? isOrganizationVerified = freezed,
+    Object? sladeCode = freezed,
+    Object? parentOrganizationID = freezed,
+    Object? organizationName = freezed,
+    Object? hasBranches = freezed,
+    Object? location = freezed,
     Object? partnerType = freezed,
     Object? partnerSetupComplete = freezed,
     Object? kycSubmitted = freezed,
-    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
+      supplierID: supplierID == freezed
+          ? _value.supplierID
+          : supplierID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      profileID: profileID == freezed
+          ? _value.profileID
+          : profileID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      erpSupplierID: erpSupplierID == freezed
+          ? _value.erpSupplierID
+          : erpSupplierID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payablesAccount: payablesAccount == freezed
+          ? _value.payablesAccount
+          : payablesAccount // ignore: cast_nullable_to_non_nullable
+              as PayablesAccount?,
+      supplierKYC: supplierKYC == freezed
+          ? _value.supplierKYC
+          : supplierKYC // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       active: active == freezed
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       accountType: accountType == freezed
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
-              as SupplierAccountType,
+              as SupplierAccountType?,
       underOrganization: underOrganization == freezed
           ? _value.underOrganization
           : underOrganization // ignore: cast_nullable_to_non_nullable
-              as bool,
-      partnerType: partnerType == freezed
-          ? _value.partnerType
-          : partnerType // ignore: cast_nullable_to_non_nullable
-              as String,
-      partnerSetupComplete: partnerSetupComplete == freezed
-          ? _value.partnerSetupComplete
-          : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
-              as String,
-      kycSubmitted: kycSubmitted == freezed
-          ? _value.kycSubmitted
-          : kycSubmitted // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      isOrganizationVerified: isOrganizationVerified == freezed
+          ? _value.isOrganizationVerified
+          : isOrganizationVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sladeCode: sladeCode == freezed
+          ? _value.sladeCode
+          : sladeCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentOrganizationID: parentOrganizationID == freezed
+          ? _value.parentOrganizationID
+          : parentOrganizationID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      organizationName: organizationName == freezed
+          ? _value.organizationName
+          : organizationName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hasBranches: hasBranches == freezed
+          ? _value.hasBranches
+          : hasBranches // ignore: cast_nullable_to_non_nullable
+              as bool?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
+              as Location?,
+      partnerType: partnerType == freezed
+          ? _value.partnerType
+          : partnerType // ignore: cast_nullable_to_non_nullable
+              as SupplierPartnerType?,
+      partnerSetupComplete: partnerSetupComplete == freezed
+          ? _value.partnerSetupComplete
+          : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      kycSubmitted: kycSubmitted == freezed
+          ? _value.kycSubmitted
+          : kycSubmitted // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
+  }
+
+  @override
+  $PayablesAccountCopyWith<$Res>? get payablesAccount {
+    if (_value.payablesAccount == null) {
+      return null;
+    }
+
+    return $PayablesAccountCopyWith<$Res>(_value.payablesAccount!, (value) {
+      return _then(_value.copyWith(payablesAccount: value));
+    });
+  }
+
+  @override
+  $LocationCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $LocationCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
+    });
   }
 }
 
@@ -138,13 +287,28 @@ abstract class _$SupplierProfileCopyWith<$Res>
       __$SupplierProfileCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool active,
-      SupplierAccountType accountType,
-      bool underOrganization,
-      String partnerType,
-      String partnerSetupComplete,
-      bool kycSubmitted,
-      bool? location});
+      {@JsonKey(name: 'supplierID') String? supplierID,
+      @JsonKey(name: 'profileID') String? profileID,
+      @JsonKey(name: 'erpSupplierID') String? erpSupplierID,
+      @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active') bool? active,
+      @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization') bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode') String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID') String? parentOrganizationID,
+      @JsonKey(name: 'organizationName') String? organizationName,
+      @JsonKey(name: 'hasBranches') bool? hasBranches,
+      @JsonKey(name: 'location') Location? location,
+      @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted') bool? kycSubmitted});
+
+  @override
+  $PayablesAccountCopyWith<$Res>? get payablesAccount;
+  @override
+  $LocationCopyWith<$Res>? get location;
 }
 
 /// @nodoc
@@ -160,42 +324,92 @@ class __$SupplierProfileCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? supplierID = freezed,
+    Object? profileID = freezed,
+    Object? erpSupplierID = freezed,
+    Object? payablesAccount = freezed,
+    Object? supplierKYC = freezed,
     Object? active = freezed,
     Object? accountType = freezed,
     Object? underOrganization = freezed,
+    Object? isOrganizationVerified = freezed,
+    Object? sladeCode = freezed,
+    Object? parentOrganizationID = freezed,
+    Object? organizationName = freezed,
+    Object? hasBranches = freezed,
+    Object? location = freezed,
     Object? partnerType = freezed,
     Object? partnerSetupComplete = freezed,
     Object? kycSubmitted = freezed,
-    Object? location = freezed,
   }) {
     return _then(_SupplierProfile(
+      supplierID: supplierID == freezed
+          ? _value.supplierID
+          : supplierID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      profileID: profileID == freezed
+          ? _value.profileID
+          : profileID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      erpSupplierID: erpSupplierID == freezed
+          ? _value.erpSupplierID
+          : erpSupplierID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payablesAccount: payablesAccount == freezed
+          ? _value.payablesAccount
+          : payablesAccount // ignore: cast_nullable_to_non_nullable
+              as PayablesAccount?,
+      supplierKYC: supplierKYC == freezed
+          ? _value.supplierKYC
+          : supplierKYC // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>?,
       active: active == freezed
           ? _value.active
           : active // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       accountType: accountType == freezed
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
-              as SupplierAccountType,
+              as SupplierAccountType?,
       underOrganization: underOrganization == freezed
           ? _value.underOrganization
           : underOrganization // ignore: cast_nullable_to_non_nullable
-              as bool,
-      partnerType: partnerType == freezed
-          ? _value.partnerType
-          : partnerType // ignore: cast_nullable_to_non_nullable
-              as String,
-      partnerSetupComplete: partnerSetupComplete == freezed
-          ? _value.partnerSetupComplete
-          : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
-              as String,
-      kycSubmitted: kycSubmitted == freezed
-          ? _value.kycSubmitted
-          : kycSubmitted // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      isOrganizationVerified: isOrganizationVerified == freezed
+          ? _value.isOrganizationVerified
+          : isOrganizationVerified // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      sladeCode: sladeCode == freezed
+          ? _value.sladeCode
+          : sladeCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentOrganizationID: parentOrganizationID == freezed
+          ? _value.parentOrganizationID
+          : parentOrganizationID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      organizationName: organizationName == freezed
+          ? _value.organizationName
+          : organizationName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hasBranches: hasBranches == freezed
+          ? _value.hasBranches
+          : hasBranches // ignore: cast_nullable_to_non_nullable
+              as bool?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
+              as Location?,
+      partnerType: partnerType == freezed
+          ? _value.partnerType
+          : partnerType // ignore: cast_nullable_to_non_nullable
+              as SupplierPartnerType?,
+      partnerSetupComplete: partnerSetupComplete == freezed
+          ? _value.partnerSetupComplete
+          : partnerSetupComplete // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      kycSubmitted: kycSubmitted == freezed
+          ? _value.kycSubmitted
+          : kycSubmitted // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
   }
@@ -206,41 +420,120 @@ class __$SupplierProfileCopyWithImpl<$Res>
 /// @nodoc
 class _$_SupplierProfile implements _SupplierProfile {
   _$_SupplierProfile(
-      {required this.active,
-      required this.accountType,
-      required this.underOrganization,
-      required this.partnerType,
-      required this.partnerSetupComplete,
-      required this.kycSubmitted,
-      this.location});
+      {@JsonKey(name: 'supplierID')
+          required this.supplierID,
+      @JsonKey(name: 'profileID')
+          required this.profileID,
+      @JsonKey(name: 'erpSupplierID')
+          required this.erpSupplierID,
+      @JsonKey(name: 'payables_account')
+          required this.payablesAccount,
+      @JsonKey(name: 'supplierKYC')
+          required this.supplierKYC,
+      @JsonKey(name: 'active')
+          required this.active,
+      @JsonKey(name: 'accountType')
+          required this.accountType,
+      @JsonKey(name: 'underOrganization')
+          required this.underOrganization,
+      @JsonKey(name: 'isOrganizationVerified')
+          required this.isOrganizationVerified,
+      @JsonKey(name: 'sladeCode')
+          required this.sladeCode,
+      @JsonKey(name: 'parentOrganizationID')
+          required this.parentOrganizationID,
+      @JsonKey(name: 'organizationName')
+          required this.organizationName,
+      @JsonKey(name: 'hasBranches')
+          required this.hasBranches,
+      @JsonKey(name: 'location')
+          required this.location,
+      @JsonKey(name: 'partnerType')
+          required this.partnerType,
+      @JsonKey(name: 'partnerSetupComplete')
+          required this.partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted')
+          required this.kycSubmitted});
 
   factory _$_SupplierProfile.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplierProfileFromJson(json);
 
   @override
-  final bool active;
+  @JsonKey(name: 'supplierID')
+  final String? supplierID;
   @override
-  final SupplierAccountType accountType;
+  @JsonKey(name: 'profileID')
+  final String? profileID;
   @override
-  final bool underOrganization;
+  @JsonKey(name: 'erpSupplierID')
+  final String? erpSupplierID;
   @override
-  final String partnerType;
+  @JsonKey(name: 'payables_account')
+  final PayablesAccount? payablesAccount;
   @override
-  final String partnerSetupComplete;
+  @JsonKey(name: 'supplierKYC')
+  final Map<String, dynamic>? supplierKYC;
   @override
-  final bool kycSubmitted;
+  @JsonKey(name: 'active')
+  final bool? active;
   @override
-  final bool? location;
+  @JsonKey(name: 'accountType')
+  final SupplierAccountType? accountType;
+  @override
+  @JsonKey(name: 'underOrganization')
+  final bool? underOrganization;
+  @override
+  @JsonKey(name: 'isOrganizationVerified')
+  final bool? isOrganizationVerified;
+  @override
+  @JsonKey(name: 'sladeCode')
+  final String? sladeCode;
+  @override
+  @JsonKey(name: 'parentOrganizationID')
+  final String? parentOrganizationID;
+  @override
+  @JsonKey(name: 'organizationName')
+  final String? organizationName;
+  @override
+  @JsonKey(name: 'hasBranches')
+  final bool? hasBranches;
+  @override
+  @JsonKey(name: 'location')
+  final Location? location;
+  @override
+  @JsonKey(name: 'partnerType')
+  final SupplierPartnerType? partnerType;
+  @override
+  @JsonKey(name: 'partnerSetupComplete')
+  final bool? partnerSetupComplete;
+  @override
+  @JsonKey(name: 'kycSubmitted')
+  final bool? kycSubmitted;
 
   @override
   String toString() {
-    return 'SupplierProfile(active: $active, accountType: $accountType, underOrganization: $underOrganization, partnerType: $partnerType, partnerSetupComplete: $partnerSetupComplete, kycSubmitted: $kycSubmitted, location: $location)';
+    return 'SupplierProfile(supplierID: $supplierID, profileID: $profileID, erpSupplierID: $erpSupplierID, payablesAccount: $payablesAccount, supplierKYC: $supplierKYC, active: $active, accountType: $accountType, underOrganization: $underOrganization, isOrganizationVerified: $isOrganizationVerified, sladeCode: $sladeCode, parentOrganizationID: $parentOrganizationID, organizationName: $organizationName, hasBranches: $hasBranches, location: $location, partnerType: $partnerType, partnerSetupComplete: $partnerSetupComplete, kycSubmitted: $kycSubmitted)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SupplierProfile &&
+            (identical(other.supplierID, supplierID) ||
+                const DeepCollectionEquality()
+                    .equals(other.supplierID, supplierID)) &&
+            (identical(other.profileID, profileID) ||
+                const DeepCollectionEquality()
+                    .equals(other.profileID, profileID)) &&
+            (identical(other.erpSupplierID, erpSupplierID) ||
+                const DeepCollectionEquality()
+                    .equals(other.erpSupplierID, erpSupplierID)) &&
+            (identical(other.payablesAccount, payablesAccount) ||
+                const DeepCollectionEquality()
+                    .equals(other.payablesAccount, payablesAccount)) &&
+            (identical(other.supplierKYC, supplierKYC) ||
+                const DeepCollectionEquality()
+                    .equals(other.supplierKYC, supplierKYC)) &&
             (identical(other.active, active) ||
                 const DeepCollectionEquality().equals(other.active, active)) &&
             (identical(other.accountType, accountType) ||
@@ -249,6 +542,24 @@ class _$_SupplierProfile implements _SupplierProfile {
             (identical(other.underOrganization, underOrganization) ||
                 const DeepCollectionEquality()
                     .equals(other.underOrganization, underOrganization)) &&
+            (identical(other.isOrganizationVerified, isOrganizationVerified) ||
+                const DeepCollectionEquality().equals(
+                    other.isOrganizationVerified, isOrganizationVerified)) &&
+            (identical(other.sladeCode, sladeCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.sladeCode, sladeCode)) &&
+            (identical(other.parentOrganizationID, parentOrganizationID) ||
+                const DeepCollectionEquality().equals(
+                    other.parentOrganizationID, parentOrganizationID)) &&
+            (identical(other.organizationName, organizationName) ||
+                const DeepCollectionEquality()
+                    .equals(other.organizationName, organizationName)) &&
+            (identical(other.hasBranches, hasBranches) ||
+                const DeepCollectionEquality()
+                    .equals(other.hasBranches, hasBranches)) &&
+            (identical(other.location, location) ||
+                const DeepCollectionEquality()
+                    .equals(other.location, location)) &&
             (identical(other.partnerType, partnerType) ||
                 const DeepCollectionEquality()
                     .equals(other.partnerType, partnerType)) &&
@@ -257,22 +568,29 @@ class _$_SupplierProfile implements _SupplierProfile {
                     other.partnerSetupComplete, partnerSetupComplete)) &&
             (identical(other.kycSubmitted, kycSubmitted) ||
                 const DeepCollectionEquality()
-                    .equals(other.kycSubmitted, kycSubmitted)) &&
-            (identical(other.location, location) ||
-                const DeepCollectionEquality()
-                    .equals(other.location, location)));
+                    .equals(other.kycSubmitted, kycSubmitted)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(supplierID) ^
+      const DeepCollectionEquality().hash(profileID) ^
+      const DeepCollectionEquality().hash(erpSupplierID) ^
+      const DeepCollectionEquality().hash(payablesAccount) ^
+      const DeepCollectionEquality().hash(supplierKYC) ^
       const DeepCollectionEquality().hash(active) ^
       const DeepCollectionEquality().hash(accountType) ^
       const DeepCollectionEquality().hash(underOrganization) ^
+      const DeepCollectionEquality().hash(isOrganizationVerified) ^
+      const DeepCollectionEquality().hash(sladeCode) ^
+      const DeepCollectionEquality().hash(parentOrganizationID) ^
+      const DeepCollectionEquality().hash(organizationName) ^
+      const DeepCollectionEquality().hash(hasBranches) ^
+      const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(partnerType) ^
       const DeepCollectionEquality().hash(partnerSetupComplete) ^
-      const DeepCollectionEquality().hash(kycSubmitted) ^
-      const DeepCollectionEquality().hash(location);
+      const DeepCollectionEquality().hash(kycSubmitted);
 
   @JsonKey(ignore: true)
   @override
@@ -287,31 +605,95 @@ class _$_SupplierProfile implements _SupplierProfile {
 
 abstract class _SupplierProfile implements SupplierProfile {
   factory _SupplierProfile(
-      {required bool active,
-      required SupplierAccountType accountType,
-      required bool underOrganization,
-      required String partnerType,
-      required String partnerSetupComplete,
-      required bool kycSubmitted,
-      bool? location}) = _$_SupplierProfile;
+      {@JsonKey(name: 'supplierID')
+          required String? supplierID,
+      @JsonKey(name: 'profileID')
+          required String? profileID,
+      @JsonKey(name: 'erpSupplierID')
+          required String? erpSupplierID,
+      @JsonKey(name: 'payables_account')
+          required PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC')
+          required Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active')
+          required bool? active,
+      @JsonKey(name: 'accountType')
+          required SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization')
+          required bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified')
+          required bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode')
+          required String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID')
+          required String? parentOrganizationID,
+      @JsonKey(name: 'organizationName')
+          required String? organizationName,
+      @JsonKey(name: 'hasBranches')
+          required bool? hasBranches,
+      @JsonKey(name: 'location')
+          required Location? location,
+      @JsonKey(name: 'partnerType')
+          required SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete')
+          required bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted')
+          required bool? kycSubmitted}) = _$_SupplierProfile;
 
   factory _SupplierProfile.fromJson(Map<String, dynamic> json) =
       _$_SupplierProfile.fromJson;
 
   @override
-  bool get active => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supplierID')
+  String? get supplierID => throw _privateConstructorUsedError;
   @override
-  SupplierAccountType get accountType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'profileID')
+  String? get profileID => throw _privateConstructorUsedError;
   @override
-  bool get underOrganization => throw _privateConstructorUsedError;
+  @JsonKey(name: 'erpSupplierID')
+  String? get erpSupplierID => throw _privateConstructorUsedError;
   @override
-  String get partnerType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'payables_account')
+  PayablesAccount? get payablesAccount => throw _privateConstructorUsedError;
   @override
-  String get partnerSetupComplete => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supplierKYC')
+  Map<String, dynamic>? get supplierKYC => throw _privateConstructorUsedError;
   @override
-  bool get kycSubmitted => throw _privateConstructorUsedError;
+  @JsonKey(name: 'active')
+  bool? get active => throw _privateConstructorUsedError;
   @override
-  bool? get location => throw _privateConstructorUsedError;
+  @JsonKey(name: 'accountType')
+  SupplierAccountType? get accountType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'underOrganization')
+  bool? get underOrganization => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'isOrganizationVerified')
+  bool? get isOrganizationVerified => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'sladeCode')
+  String? get sladeCode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'parentOrganizationID')
+  String? get parentOrganizationID => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'organizationName')
+  String? get organizationName => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'hasBranches')
+  bool? get hasBranches => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'location')
+  Location? get location => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'partnerType')
+  SupplierPartnerType? get partnerType => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'partnerSetupComplete')
+  bool? get partnerSetupComplete => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'kycSubmitted')
+  bool? get kycSubmitted => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SupplierProfileCopyWith<_SupplierProfile> get copyWith =>

@@ -51,10 +51,7 @@ void main() {
     });
 
     test('expects valid number from json to be returned', () {
-      const Map<String, dynamic> json = <String, dynamic>{
-        'value': validKenyanPhone
-      };
-      final PhoneNumber phoneNumber = PhoneNumber.fromJson(json);
+      final PhoneNumber phoneNumber = PhoneNumber.fromJson(validKenyanPhone);
 
       phoneNumber.value.fold(
         (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),

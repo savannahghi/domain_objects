@@ -26,8 +26,8 @@ class EmailAddress extends ValueObject<String> {
     );
   }
 
-  factory EmailAddress.fromJson(Map<String, dynamic> json) =>
-      _$EmailAddressFromJson(json);
+  factory EmailAddress.fromJson(String value) =>
+      _$EmailAddressFromJson(<String, dynamic>{'value': value});
 
   @override
   final Either<ValueObjectFailure<String>, String> value;

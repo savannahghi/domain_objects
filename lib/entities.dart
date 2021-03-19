@@ -1,2 +1,13 @@
+export 'src/entities/address.dart';
+export 'src/entities/auth_credential_response.dart';
+export 'src/entities/bio_data.dart';
+export 'src/entities/communication_settings.dart';
+export 'src/entities/cover.dart';
+export 'src/entities/customer.dart';
+export 'src/entities/location.dart';
+export 'src/entities/otp_response.dart';
+export 'src/entities/payables_account.dart';
+export 'src/entities/receivables_account.dart';
 export 'src/entities/supplier_profile.dart';
 export 'src/entities/user_profile.dart';
+export 'src/entities/user_response.dart';

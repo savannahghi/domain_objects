@@ -46,7 +46,8 @@ class Name extends ValueObject<String> {
     return Name._(right(value));
   }
 
-  factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
+  factory Name.fromJson(String value) =>
+      _$NameFromJson(<String, dynamic>{'value': value});
 
   @override
   final Either<ValueObjectFailure<String>, String> value;

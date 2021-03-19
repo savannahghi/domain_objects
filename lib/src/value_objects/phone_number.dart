@@ -24,8 +24,8 @@ class PhoneNumber extends ValueObject<String> {
     );
   }
 
-  factory PhoneNumber.fromJson(Map<String, dynamic> json) =>
-      _$PhoneNumberFromJson(json);
+  factory PhoneNumber.fromJson(String value) =>
+      _$PhoneNumberFromJson(<String, dynamic>{'value': value});
 
   @override
   final Either<ValueObjectFailure<String>, String> value;
