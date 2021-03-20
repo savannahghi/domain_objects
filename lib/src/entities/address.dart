@@ -11,7 +11,7 @@ class Address with _$Address {
     @JsonKey(name: 'locality') String? locality,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'placeID') String? placeID,
-    @JsonKey(name: 'formattedAddress') required String? formattedAddress,
+    @JsonKey(name: 'formattedAddress') String? formattedAddress,
   }) = _Address;
 
   factory Address.fromJson(Map<String, dynamic> json) =>

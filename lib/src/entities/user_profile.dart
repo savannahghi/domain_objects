@@ -12,11 +12,10 @@ part 'user_profile.g.dart';
 @freezed
 class UserProfile with _$UserProfile {
   factory UserProfile({
-    @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'userName') required Name username,
-    @JsonKey(name: 'primaryPhone') required PhoneNumber primaryPhoneNumber,
-    @JsonKey(name: 'primaryEmailAddress')
-        required EmailAddress? primaryEmailAddress,
+    @JsonKey(name: 'id') String? id,
+    @JsonKey(name: 'userName') Name? username,
+    @JsonKey(name: 'primaryPhone') PhoneNumber? primaryPhoneNumber,
+    @JsonKey(name: 'primaryEmailAddress') EmailAddress? primaryEmailAddress,
     @JsonKey(name: 'secondaryPhoneNumbers')
         List<PhoneNumber?>? secondaryPhoneNumbers,
     @JsonKey(name: 'secondaryEmailAddresses')

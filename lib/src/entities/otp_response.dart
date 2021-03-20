@@ -6,7 +6,7 @@ part 'otp_response.g.dart';
 @freezed
 class OtpResponse with _$OtpResponse {
   factory OtpResponse({
-    @JsonKey(name: 'otp') required String? otp,
+    @JsonKey(name: 'otp') String? otp,
   }) = _OtpResponse;
 
   factory OtpResponse.fromJson(Map<String, dynamic> json) =>

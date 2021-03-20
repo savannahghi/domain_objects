@@ -7,12 +7,12 @@ part 'customer.g.dart';
 @freezed
 class Customer with _$Customer {
   factory Customer({
-    @JsonKey(name: 'customerID') required String? id,
-    @JsonKey(name: 'profileID') required String? profileID,
-    @JsonKey(name: 'id') required String? customerID,
+    @JsonKey(name: 'customerID') String? id,
+    @JsonKey(name: 'profileID') String? profileID,
+    @JsonKey(name: 'id') String? customerID,
     @JsonKey(name: 'receivables_account')
-        required ReceivablesAccount? receivablesAccount,
-    @JsonKey(name: 'active ') required bool? active,
+        ReceivablesAccount? receivablesAccount,
+    @JsonKey(name: 'active ') bool? active,
   }) = _Customer;
 
   factory Customer.fromJson(Map<String, dynamic> json) =>

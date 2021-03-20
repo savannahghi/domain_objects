@@ -20,7 +20,7 @@ OtpResponse _$OtpResponseFromJson(Map<String, dynamic> json) {
 class _$OtpResponseTearOff {
   const _$OtpResponseTearOff();
 
-  _OtpResponse call({@JsonKey(name: 'otp') required String? otp}) {
+  _OtpResponse call({@JsonKey(name: 'otp') String? otp}) {
     return _OtpResponse(
       otp: otp,
     );
@@ -111,7 +111,7 @@ class __$OtpResponseCopyWithImpl<$Res> extends _$OtpResponseCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_OtpResponse implements _OtpResponse {
-  _$_OtpResponse({@JsonKey(name: 'otp') required this.otp});
+  _$_OtpResponse({@JsonKey(name: 'otp') this.otp});
 
   factory _$_OtpResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_OtpResponseFromJson(json);
@@ -149,8 +149,7 @@ class _$_OtpResponse implements _OtpResponse {
 }
 
 abstract class _OtpResponse implements OtpResponse {
-  factory _OtpResponse({@JsonKey(name: 'otp') required String? otp}) =
-      _$_OtpResponse;
+  factory _OtpResponse({@JsonKey(name: 'otp') String? otp}) = _$_OtpResponse;
 
   factory _OtpResponse.fromJson(Map<String, dynamic> json) =
       _$_OtpResponse.fromJson;

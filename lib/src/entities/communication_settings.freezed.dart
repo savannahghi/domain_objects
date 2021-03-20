@@ -22,11 +22,11 @@ class _$CommunicationSettingsTearOff {
   const _$CommunicationSettingsTearOff();
 
   _CommunicationSettings call(
-      {@JsonKey(name: 'profileID') required String? profileID,
-      @JsonKey(name: 'allowWhatsApp') required bool? allowWhatsApp,
-      @JsonKey(name: 'allowTextSMS') required bool? allowText,
-      @JsonKey(name: 'allowPush') required bool? allowPush,
-      @JsonKey(name: 'allowEmail') required bool? allowEmail}) {
+      {@JsonKey(name: 'profileID') String? profileID,
+      @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
+      @JsonKey(name: 'allowTextSMS') bool? allowText,
+      @JsonKey(name: 'allowPush') bool? allowPush,
+      @JsonKey(name: 'allowEmail') bool? allowEmail}) {
     return _CommunicationSettings(
       profileID: profileID,
       allowWhatsApp: allowWhatsApp,
@@ -182,11 +182,11 @@ class __$CommunicationSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunicationSettings implements _CommunicationSettings {
   _$_CommunicationSettings(
-      {@JsonKey(name: 'profileID') required this.profileID,
-      @JsonKey(name: 'allowWhatsApp') required this.allowWhatsApp,
-      @JsonKey(name: 'allowTextSMS') required this.allowText,
-      @JsonKey(name: 'allowPush') required this.allowPush,
-      @JsonKey(name: 'allowEmail') required this.allowEmail});
+      {@JsonKey(name: 'profileID') this.profileID,
+      @JsonKey(name: 'allowWhatsApp') this.allowWhatsApp,
+      @JsonKey(name: 'allowTextSMS') this.allowText,
+      @JsonKey(name: 'allowPush') this.allowPush,
+      @JsonKey(name: 'allowEmail') this.allowEmail});
 
   factory _$_CommunicationSettings.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationSettingsFromJson(json);
@@ -256,11 +256,11 @@ class _$_CommunicationSettings implements _CommunicationSettings {
 
 abstract class _CommunicationSettings implements CommunicationSettings {
   factory _CommunicationSettings(
-          {@JsonKey(name: 'profileID') required String? profileID,
-          @JsonKey(name: 'allowWhatsApp') required bool? allowWhatsApp,
-          @JsonKey(name: 'allowTextSMS') required bool? allowText,
-          @JsonKey(name: 'allowPush') required bool? allowPush,
-          @JsonKey(name: 'allowEmail') required bool? allowEmail}) =
+          {@JsonKey(name: 'profileID') String? profileID,
+          @JsonKey(name: 'allowWhatsApp') bool? allowWhatsApp,
+          @JsonKey(name: 'allowTextSMS') bool? allowText,
+          @JsonKey(name: 'allowPush') bool? allowPush,
+          @JsonKey(name: 'allowEmail') bool? allowEmail}) =
       _$_CommunicationSettings;
 
   factory _CommunicationSettings.fromJson(Map<String, dynamic> json) =

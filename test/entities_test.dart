@@ -12,18 +12,18 @@ void main() {
         id: 'id',
         username: Name.withValue('username'),
         primaryPhoneNumber: PhoneNumber.withValue(validPhone),
-        primaryEmailAddress: null,
       );
 
       expect(profile, isA<UserProfile>());
 
       expect(profile.id, 'id');
       expect(
-          profile.username.value.fold((ValueObjectFailure<String> left) => null,
+          profile.username!.value.fold(
+              (ValueObjectFailure<String> left) => null,
               (String right) => right),
           'username');
       expect(
-          profile.primaryPhoneNumber.value.fold(
+          profile.primaryPhoneNumber!.value.fold(
               (ValueObjectFailure<String> left) => null,
               (String right) => right),
           validPhone);
@@ -34,17 +34,17 @@ void main() {
         id: 'id',
         username: Name.withValue('username'),
         primaryPhoneNumber: PhoneNumber.withValue(validPhone),
-        primaryEmailAddress: null,
       );
 
       expect(profile, isA<UserProfile>());
       expect(profile.id, 'id');
       expect(
-          profile.username.value.fold((ValueObjectFailure<String> left) => null,
+          profile.username!.value.fold(
+              (ValueObjectFailure<String> left) => null,
               (String right) => right),
           'username');
       expect(
-          profile.primaryPhoneNumber.value.fold(
+          profile.primaryPhoneNumber!.value.fold(
               (ValueObjectFailure<String> left) => null,
               (String right) => right),
           validPhone);
@@ -89,7 +89,7 @@ void main() {
       expect(profile, isNotNull);
       expect(profile.primaryPhoneNumber, isNotNull);
 
-      profile.primaryPhoneNumber.value.fold(
+      profile.primaryPhoneNumber!.value.fold(
         (ValueObjectFailure<String> left) => expect(left, isNull),
         (String right) => expect(right, '+254718376163'),
       );

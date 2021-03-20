@@ -7,12 +7,12 @@ part 'user_response.g.dart';
 @freezed
 class UserResponse with _$UserResponse {
   factory UserResponse({
-    @JsonKey(name: 'profile') required UserProfile? profile,
-    @JsonKey(name: 'supplierProfile') required SupplierProfile? supplierProfile,
-    @JsonKey(name: 'customerProfile') required Customer? customerProfile,
+    @JsonKey(name: 'profile') UserProfile? profile,
+    @JsonKey(name: 'supplierProfile') SupplierProfile? supplierProfile,
+    @JsonKey(name: 'customerProfile') Customer? customerProfile,
     @JsonKey(name: 'communicationSettings')
-        required CommunicationSettings? communicationSettings,
-    @JsonKey(name: 'auth') required AuthCredentialResponse? auth,
+        CommunicationSettings? communicationSettings,
+    @JsonKey(name: 'auth') AuthCredentialResponse? auth,
   }) = _UserResponse;
 
   factory UserResponse.fromJson(Map<String, dynamic> json) =>

@@ -22,13 +22,13 @@ class _$UserProfileTearOff {
 
   _UserProfile call(
       {@JsonKey(name: 'id')
-          required String id,
+          String? id,
       @JsonKey(name: 'userName')
-          required Name username,
+          Name? username,
       @JsonKey(name: 'primaryPhone')
-          required PhoneNumber primaryPhoneNumber,
+          PhoneNumber? primaryPhoneNumber,
       @JsonKey(name: 'primaryEmailAddress')
-          required EmailAddress? primaryEmailAddress,
+          EmailAddress? primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
@@ -75,11 +75,11 @@ const $UserProfile = _$UserProfileTearOff();
 /// @nodoc
 mixin _$UserProfile {
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'userName')
-  Name get username => throw _privateConstructorUsedError;
+  Name? get username => throw _privateConstructorUsedError;
   @JsonKey(name: 'primaryPhone')
-  PhoneNumber get primaryPhoneNumber => throw _privateConstructorUsedError;
+  PhoneNumber? get primaryPhoneNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'primaryEmailAddress')
   EmailAddress? get primaryEmailAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'secondaryPhoneNumbers')
@@ -116,11 +116,11 @@ abstract class $UserProfileCopyWith<$Res> {
       _$UserProfileCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id')
-          String id,
+          String? id,
       @JsonKey(name: 'userName')
-          Name username,
+          Name? username,
       @JsonKey(name: 'primaryPhone')
-          PhoneNumber primaryPhoneNumber,
+          PhoneNumber? primaryPhoneNumber,
       @JsonKey(name: 'primaryEmailAddress')
           EmailAddress? primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
@@ -175,15 +175,15 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as Name,
+              as Name?,
       primaryPhoneNumber: primaryPhoneNumber == freezed
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
-              as PhoneNumber,
+              as PhoneNumber?,
       primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
@@ -270,11 +270,11 @@ abstract class _$UserProfileCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(name: 'id')
-          String id,
+          String? id,
       @JsonKey(name: 'userName')
-          Name username,
+          Name? username,
       @JsonKey(name: 'primaryPhone')
-          PhoneNumber primaryPhoneNumber,
+          PhoneNumber? primaryPhoneNumber,
       @JsonKey(name: 'primaryEmailAddress')
           EmailAddress? primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
@@ -334,15 +334,15 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
-              as Name,
+              as Name?,
       primaryPhoneNumber: primaryPhoneNumber == freezed
           ? _value.primaryPhoneNumber
           : primaryPhoneNumber // ignore: cast_nullable_to_non_nullable
-              as PhoneNumber,
+              as PhoneNumber?,
       primaryEmailAddress: primaryEmailAddress == freezed
           ? _value.primaryEmailAddress
           : primaryEmailAddress // ignore: cast_nullable_to_non_nullable
@@ -392,10 +392,10 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserProfile implements _UserProfile {
   _$_UserProfile(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'userName') required this.username,
-      @JsonKey(name: 'primaryPhone') required this.primaryPhoneNumber,
-      @JsonKey(name: 'primaryEmailAddress') required this.primaryEmailAddress,
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'userName') this.username,
+      @JsonKey(name: 'primaryPhone') this.primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress') this.primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers') this.secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses') this.secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted') this.termsAccepted,
@@ -411,13 +411,13 @@ class _$_UserProfile implements _UserProfile {
 
   @override
   @JsonKey(name: 'id')
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'userName')
-  final Name username;
+  final Name? username;
   @override
   @JsonKey(name: 'primaryPhone')
-  final PhoneNumber primaryPhoneNumber;
+  final PhoneNumber? primaryPhoneNumber;
   @override
   @JsonKey(name: 'primaryEmailAddress')
   final EmailAddress? primaryEmailAddress;
@@ -529,13 +529,13 @@ class _$_UserProfile implements _UserProfile {
 abstract class _UserProfile implements UserProfile {
   factory _UserProfile(
       {@JsonKey(name: 'id')
-          required String id,
+          String? id,
       @JsonKey(name: 'userName')
-          required Name username,
+          Name? username,
       @JsonKey(name: 'primaryPhone')
-          required PhoneNumber primaryPhoneNumber,
+          PhoneNumber? primaryPhoneNumber,
       @JsonKey(name: 'primaryEmailAddress')
-          required EmailAddress? primaryEmailAddress,
+          EmailAddress? primaryEmailAddress,
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
@@ -560,13 +560,13 @@ abstract class _UserProfile implements UserProfile {
 
   @override
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'userName')
-  Name get username => throw _privateConstructorUsedError;
+  Name? get username => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'primaryPhone')
-  PhoneNumber get primaryPhoneNumber => throw _privateConstructorUsedError;
+  PhoneNumber? get primaryPhoneNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'primaryEmailAddress')
   EmailAddress? get primaryEmailAddress => throw _privateConstructorUsedError;

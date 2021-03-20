@@ -21,40 +21,23 @@ class _$SupplierProfileTearOff {
   const _$SupplierProfileTearOff();
 
   _SupplierProfile call(
-      {@JsonKey(name: 'supplierID')
-          required String? supplierID,
-      @JsonKey(name: 'profileID')
-          required String? profileID,
-      @JsonKey(name: 'erpSupplierID')
-          required String? erpSupplierID,
-      @JsonKey(name: 'payables_account')
-          required PayablesAccount? payablesAccount,
-      @JsonKey(name: 'supplierKYC')
-          required Map<String, dynamic>? supplierKYC,
-      @JsonKey(name: 'active')
-          required bool? active,
-      @JsonKey(name: 'accountType')
-          required SupplierAccountType? accountType,
-      @JsonKey(name: 'underOrganization')
-          required bool? underOrganization,
-      @JsonKey(name: 'isOrganizationVerified')
-          required bool? isOrganizationVerified,
-      @JsonKey(name: 'sladeCode')
-          required String? sladeCode,
-      @JsonKey(name: 'parentOrganizationID')
-          required String? parentOrganizationID,
-      @JsonKey(name: 'organizationName')
-          required String? organizationName,
-      @JsonKey(name: 'hasBranches')
-          required bool? hasBranches,
-      @JsonKey(name: 'location')
-          required Location? location,
-      @JsonKey(name: 'partnerType')
-          required SupplierPartnerType? partnerType,
-      @JsonKey(name: 'partnerSetupComplete')
-          required bool? partnerSetupComplete,
-      @JsonKey(name: 'kycSubmitted')
-          required bool? kycSubmitted}) {
+      {@JsonKey(name: 'supplierID') String? supplierID,
+      @JsonKey(name: 'profileID') String? profileID,
+      @JsonKey(name: 'erpSupplierID') String? erpSupplierID,
+      @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active') bool? active,
+      @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization') bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode') String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID') String? parentOrganizationID,
+      @JsonKey(name: 'organizationName') String? organizationName,
+      @JsonKey(name: 'hasBranches') bool? hasBranches,
+      @JsonKey(name: 'location') Location? location,
+      @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted') bool? kycSubmitted}) {
     return _SupplierProfile(
       supplierID: supplierID,
       profileID: profileID,
@@ -420,40 +403,23 @@ class __$SupplierProfileCopyWithImpl<$Res>
 /// @nodoc
 class _$_SupplierProfile implements _SupplierProfile {
   _$_SupplierProfile(
-      {@JsonKey(name: 'supplierID')
-          required this.supplierID,
-      @JsonKey(name: 'profileID')
-          required this.profileID,
-      @JsonKey(name: 'erpSupplierID')
-          required this.erpSupplierID,
-      @JsonKey(name: 'payables_account')
-          required this.payablesAccount,
-      @JsonKey(name: 'supplierKYC')
-          required this.supplierKYC,
-      @JsonKey(name: 'active')
-          required this.active,
-      @JsonKey(name: 'accountType')
-          required this.accountType,
-      @JsonKey(name: 'underOrganization')
-          required this.underOrganization,
-      @JsonKey(name: 'isOrganizationVerified')
-          required this.isOrganizationVerified,
-      @JsonKey(name: 'sladeCode')
-          required this.sladeCode,
-      @JsonKey(name: 'parentOrganizationID')
-          required this.parentOrganizationID,
-      @JsonKey(name: 'organizationName')
-          required this.organizationName,
-      @JsonKey(name: 'hasBranches')
-          required this.hasBranches,
-      @JsonKey(name: 'location')
-          required this.location,
-      @JsonKey(name: 'partnerType')
-          required this.partnerType,
-      @JsonKey(name: 'partnerSetupComplete')
-          required this.partnerSetupComplete,
-      @JsonKey(name: 'kycSubmitted')
-          required this.kycSubmitted});
+      {@JsonKey(name: 'supplierID') this.supplierID,
+      @JsonKey(name: 'profileID') this.profileID,
+      @JsonKey(name: 'erpSupplierID') this.erpSupplierID,
+      @JsonKey(name: 'payables_account') this.payablesAccount,
+      @JsonKey(name: 'supplierKYC') this.supplierKYC,
+      @JsonKey(name: 'active') this.active,
+      @JsonKey(name: 'accountType') this.accountType,
+      @JsonKey(name: 'underOrganization') this.underOrganization,
+      @JsonKey(name: 'isOrganizationVerified') this.isOrganizationVerified,
+      @JsonKey(name: 'sladeCode') this.sladeCode,
+      @JsonKey(name: 'parentOrganizationID') this.parentOrganizationID,
+      @JsonKey(name: 'organizationName') this.organizationName,
+      @JsonKey(name: 'hasBranches') this.hasBranches,
+      @JsonKey(name: 'location') this.location,
+      @JsonKey(name: 'partnerType') this.partnerType,
+      @JsonKey(name: 'partnerSetupComplete') this.partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted') this.kycSubmitted});
 
   factory _$_SupplierProfile.fromJson(Map<String, dynamic> json) =>
       _$_$_SupplierProfileFromJson(json);
@@ -605,40 +571,23 @@ class _$_SupplierProfile implements _SupplierProfile {
 
 abstract class _SupplierProfile implements SupplierProfile {
   factory _SupplierProfile(
-      {@JsonKey(name: 'supplierID')
-          required String? supplierID,
-      @JsonKey(name: 'profileID')
-          required String? profileID,
-      @JsonKey(name: 'erpSupplierID')
-          required String? erpSupplierID,
-      @JsonKey(name: 'payables_account')
-          required PayablesAccount? payablesAccount,
-      @JsonKey(name: 'supplierKYC')
-          required Map<String, dynamic>? supplierKYC,
-      @JsonKey(name: 'active')
-          required bool? active,
-      @JsonKey(name: 'accountType')
-          required SupplierAccountType? accountType,
-      @JsonKey(name: 'underOrganization')
-          required bool? underOrganization,
-      @JsonKey(name: 'isOrganizationVerified')
-          required bool? isOrganizationVerified,
-      @JsonKey(name: 'sladeCode')
-          required String? sladeCode,
-      @JsonKey(name: 'parentOrganizationID')
-          required String? parentOrganizationID,
-      @JsonKey(name: 'organizationName')
-          required String? organizationName,
-      @JsonKey(name: 'hasBranches')
-          required bool? hasBranches,
-      @JsonKey(name: 'location')
-          required Location? location,
-      @JsonKey(name: 'partnerType')
-          required SupplierPartnerType? partnerType,
-      @JsonKey(name: 'partnerSetupComplete')
-          required bool? partnerSetupComplete,
-      @JsonKey(name: 'kycSubmitted')
-          required bool? kycSubmitted}) = _$_SupplierProfile;
+      {@JsonKey(name: 'supplierID') String? supplierID,
+      @JsonKey(name: 'profileID') String? profileID,
+      @JsonKey(name: 'erpSupplierID') String? erpSupplierID,
+      @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
+      @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
+      @JsonKey(name: 'active') bool? active,
+      @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+      @JsonKey(name: 'underOrganization') bool? underOrganization,
+      @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
+      @JsonKey(name: 'sladeCode') String? sladeCode,
+      @JsonKey(name: 'parentOrganizationID') String? parentOrganizationID,
+      @JsonKey(name: 'organizationName') String? organizationName,
+      @JsonKey(name: 'hasBranches') bool? hasBranches,
+      @JsonKey(name: 'location') Location? location,
+      @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+      @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
+      @JsonKey(name: 'kycSubmitted') bool? kycSubmitted}) = _$_SupplierProfile;
 
   factory _SupplierProfile.fromJson(Map<String, dynamic> json) =
       _$_SupplierProfile.fromJson;

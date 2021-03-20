@@ -10,26 +10,23 @@ part 'supplier_profile.g.dart';
 @freezed
 class SupplierProfile with _$SupplierProfile {
   factory SupplierProfile({
-    @JsonKey(name: 'supplierID') required String? supplierID,
-    @JsonKey(name: 'profileID') required String? profileID,
-    @JsonKey(name: 'erpSupplierID') required String? erpSupplierID,
-    @JsonKey(name: 'payables_account')
-        required PayablesAccount? payablesAccount,
-    @JsonKey(name: 'supplierKYC') required Map<String, dynamic>? supplierKYC,
-    @JsonKey(name: 'active') required bool? active,
-    @JsonKey(name: 'accountType') required SupplierAccountType? accountType,
-    @JsonKey(name: 'underOrganization') required bool? underOrganization,
-    @JsonKey(name: 'isOrganizationVerified')
-        required bool? isOrganizationVerified,
-    @JsonKey(name: 'sladeCode') required String? sladeCode,
-    @JsonKey(name: 'parentOrganizationID')
-        required String? parentOrganizationID,
-    @JsonKey(name: 'organizationName') required String? organizationName,
-    @JsonKey(name: 'hasBranches') required bool? hasBranches,
-    @JsonKey(name: 'location') required Location? location,
-    @JsonKey(name: 'partnerType') required SupplierPartnerType? partnerType,
-    @JsonKey(name: 'partnerSetupComplete') required bool? partnerSetupComplete,
-    @JsonKey(name: 'kycSubmitted') required bool? kycSubmitted,
+    @JsonKey(name: 'supplierID') String? supplierID,
+    @JsonKey(name: 'profileID') String? profileID,
+    @JsonKey(name: 'erpSupplierID') String? erpSupplierID,
+    @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
+    @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
+    @JsonKey(name: 'active') bool? active,
+    @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+    @JsonKey(name: 'underOrganization') bool? underOrganization,
+    @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
+    @JsonKey(name: 'sladeCode') String? sladeCode,
+    @JsonKey(name: 'parentOrganizationID') String? parentOrganizationID,
+    @JsonKey(name: 'organizationName') String? organizationName,
+    @JsonKey(name: 'hasBranches') bool? hasBranches,
+    @JsonKey(name: 'location') Location? location,
+    @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+    @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
+    @JsonKey(name: 'kycSubmitted') bool? kycSubmitted,
   }) = _SupplierProfile;
 
   factory SupplierProfile.fromJson(Map<String, dynamic> json) =>

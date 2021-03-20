@@ -22,15 +22,15 @@ class _$CustomerTearOff {
 
   _Customer call(
       {@JsonKey(name: 'customerID')
-          required String? id,
+          String? id,
       @JsonKey(name: 'profileID')
-          required String? profileID,
+          String? profileID,
       @JsonKey(name: 'id')
-          required String? customerID,
+          String? customerID,
       @JsonKey(name: 'receivables_account')
-          required ReceivablesAccount? receivablesAccount,
+          ReceivablesAccount? receivablesAccount,
       @JsonKey(name: 'active ')
-          required bool? active}) {
+          bool? active}) {
     return _Customer(
       id: id,
       profileID: profileID,
@@ -208,11 +208,11 @@ class __$CustomerCopyWithImpl<$Res> extends _$CustomerCopyWithImpl<$Res>
 /// @nodoc
 class _$_Customer implements _Customer {
   _$_Customer(
-      {@JsonKey(name: 'customerID') required this.id,
-      @JsonKey(name: 'profileID') required this.profileID,
-      @JsonKey(name: 'id') required this.customerID,
-      @JsonKey(name: 'receivables_account') required this.receivablesAccount,
-      @JsonKey(name: 'active ') required this.active});
+      {@JsonKey(name: 'customerID') this.id,
+      @JsonKey(name: 'profileID') this.profileID,
+      @JsonKey(name: 'id') this.customerID,
+      @JsonKey(name: 'receivables_account') this.receivablesAccount,
+      @JsonKey(name: 'active ') this.active});
 
   factory _$_Customer.fromJson(Map<String, dynamic> json) =>
       _$_$_CustomerFromJson(json);
@@ -280,15 +280,15 @@ class _$_Customer implements _Customer {
 abstract class _Customer implements Customer {
   factory _Customer(
       {@JsonKey(name: 'customerID')
-          required String? id,
+          String? id,
       @JsonKey(name: 'profileID')
-          required String? profileID,
+          String? profileID,
       @JsonKey(name: 'id')
-          required String? customerID,
+          String? customerID,
       @JsonKey(name: 'receivables_account')
-          required ReceivablesAccount? receivablesAccount,
+          ReceivablesAccount? receivablesAccount,
       @JsonKey(name: 'active ')
-          required bool? active}) = _$_Customer;
+          bool? active}) = _$_Customer;
 
   factory _Customer.fromJson(Map<String, dynamic> json) = _$_Customer.fromJson;
 

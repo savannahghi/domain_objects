@@ -21,9 +21,9 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {@JsonKey(name: 'branchSladeCode') required String? branchSladeCode,
-      @JsonKey(name: 'name') required String? name,
-      @JsonKey(name: 'id') required String? id}) {
+      {@JsonKey(name: 'branchSladeCode') String? branchSladeCode,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'id') String? id}) {
     return _Location(
       branchSladeCode: branchSladeCode,
       name: name,
@@ -143,9 +143,9 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Location implements _Location {
   _$_Location(
-      {@JsonKey(name: 'branchSladeCode') required this.branchSladeCode,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'id') required this.id});
+      {@JsonKey(name: 'branchSladeCode') this.branchSladeCode,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'id') this.id});
 
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$_$_LocationFromJson(json);
@@ -198,9 +198,9 @@ class _$_Location implements _Location {
 
 abstract class _Location implements Location {
   factory _Location(
-      {@JsonKey(name: 'branchSladeCode') required String? branchSladeCode,
-      @JsonKey(name: 'name') required String? name,
-      @JsonKey(name: 'id') required String? id}) = _$_Location;
+      {@JsonKey(name: 'branchSladeCode') String? branchSladeCode,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'id') String? id}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 

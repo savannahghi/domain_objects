@@ -21,12 +21,12 @@ class _$PayablesAccountTearOff {
   const _$PayablesAccountTearOff();
 
   _PayablesAccount call(
-      {@JsonKey(name: 'id') required String? id,
-      @JsonKey(name: 'name') required String? name,
-      @JsonKey(name: 'is_active') required bool? isActive,
-      @JsonKey(name: 'number') required String? number,
-      @JsonKey(name: 'tag') required String? tag,
-      @JsonKey(name: 'description') required String? description}) {
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'is_active') bool? isActive,
+      @JsonKey(name: 'number') String? number,
+      @JsonKey(name: 'tag') String? tag,
+      @JsonKey(name: 'description') String? description}) {
     return _PayablesAccount(
       id: id,
       name: name,
@@ -197,12 +197,12 @@ class __$PayablesAccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_PayablesAccount implements _PayablesAccount {
   _$_PayablesAccount(
-      {@JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'name') required this.name,
-      @JsonKey(name: 'is_active') required this.isActive,
-      @JsonKey(name: 'number') required this.number,
-      @JsonKey(name: 'tag') required this.tag,
-      @JsonKey(name: 'description') required this.description});
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'is_active') this.isActive,
+      @JsonKey(name: 'number') this.number,
+      @JsonKey(name: 'tag') this.tag,
+      @JsonKey(name: 'description') this.description});
 
   factory _$_PayablesAccount.fromJson(Map<String, dynamic> json) =>
       _$_$_PayablesAccountFromJson(json);
@@ -274,13 +274,12 @@ class _$_PayablesAccount implements _PayablesAccount {
 
 abstract class _PayablesAccount implements PayablesAccount {
   factory _PayablesAccount(
-          {@JsonKey(name: 'id') required String? id,
-          @JsonKey(name: 'name') required String? name,
-          @JsonKey(name: 'is_active') required bool? isActive,
-          @JsonKey(name: 'number') required String? number,
-          @JsonKey(name: 'tag') required String? tag,
-          @JsonKey(name: 'description') required String? description}) =
-      _$_PayablesAccount;
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'is_active') bool? isActive,
+      @JsonKey(name: 'number') String? number,
+      @JsonKey(name: 'tag') String? tag,
+      @JsonKey(name: 'description') String? description}) = _$_PayablesAccount;
 
   factory _PayablesAccount.fromJson(Map<String, dynamic> json) =
       _$_PayablesAccount.fromJson;

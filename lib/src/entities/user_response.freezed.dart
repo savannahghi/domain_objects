@@ -22,15 +22,15 @@ class _$UserResponseTearOff {
 
   _UserResponse call(
       {@JsonKey(name: 'profile')
-          required UserProfile? profile,
+          UserProfile? profile,
       @JsonKey(name: 'supplierProfile')
-          required SupplierProfile? supplierProfile,
+          SupplierProfile? supplierProfile,
       @JsonKey(name: 'customerProfile')
-          required Customer? customerProfile,
+          Customer? customerProfile,
       @JsonKey(name: 'communicationSettings')
-          required CommunicationSettings? communicationSettings,
+          CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          required AuthCredentialResponse? auth}) {
+          AuthCredentialResponse? auth}) {
     return _UserResponse(
       profile: profile,
       supplierProfile: supplierProfile,
@@ -268,16 +268,11 @@ class __$UserResponseCopyWithImpl<$Res> extends _$UserResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserResponse implements _UserResponse {
   _$_UserResponse(
-      {@JsonKey(name: 'profile')
-          required this.profile,
-      @JsonKey(name: 'supplierProfile')
-          required this.supplierProfile,
-      @JsonKey(name: 'customerProfile')
-          required this.customerProfile,
-      @JsonKey(name: 'communicationSettings')
-          required this.communicationSettings,
-      @JsonKey(name: 'auth')
-          required this.auth});
+      {@JsonKey(name: 'profile') this.profile,
+      @JsonKey(name: 'supplierProfile') this.supplierProfile,
+      @JsonKey(name: 'customerProfile') this.customerProfile,
+      @JsonKey(name: 'communicationSettings') this.communicationSettings,
+      @JsonKey(name: 'auth') this.auth});
 
   factory _$_UserResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_UserResponseFromJson(json);
@@ -346,15 +341,15 @@ class _$_UserResponse implements _UserResponse {
 abstract class _UserResponse implements UserResponse {
   factory _UserResponse(
       {@JsonKey(name: 'profile')
-          required UserProfile? profile,
+          UserProfile? profile,
       @JsonKey(name: 'supplierProfile')
-          required SupplierProfile? supplierProfile,
+          SupplierProfile? supplierProfile,
       @JsonKey(name: 'customerProfile')
-          required Customer? customerProfile,
+          Customer? customerProfile,
       @JsonKey(name: 'communicationSettings')
-          required CommunicationSettings? communicationSettings,
+          CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          required AuthCredentialResponse? auth}) = _$_UserResponse;
+          AuthCredentialResponse? auth}) = _$_UserResponse;
 
   factory _UserResponse.fromJson(Map<String, dynamic> json) =
       _$_UserResponse.fromJson;

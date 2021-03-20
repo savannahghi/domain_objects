@@ -8,9 +8,13 @@ part of 'user_profile.dart';
 
 _$_UserProfile _$_$_UserProfileFromJson(Map<String, dynamic> json) {
   return _$_UserProfile(
-    id: json['id'] as String,
-    username: Name.fromJson(json['userName'] as String),
-    primaryPhoneNumber: PhoneNumber.fromJson(json['primaryPhone'] as String),
+    id: json['id'] as String?,
+    username: json['userName'] == null
+        ? null
+        : Name.fromJson(json['userName'] as String),
+    primaryPhoneNumber: json['primaryPhone'] == null
+        ? null
+        : PhoneNumber.fromJson(json['primaryPhone'] as String),
     primaryEmailAddress: json['primaryEmailAddress'] == null
         ? null
         : EmailAddress.fromJson(json['primaryEmailAddress'] as String),
@@ -42,8 +46,8 @@ _$_UserProfile _$_$_UserProfileFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_UserProfileToJson(_$_UserProfile instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'userName': instance.username.toJson(),
-      'primaryPhone': instance.primaryPhoneNumber.toJson(),
+      'userName': instance.username?.toJson(),
+      'primaryPhone': instance.primaryPhoneNumber?.toJson(),
       'primaryEmailAddress': instance.primaryEmailAddress?.toJson(),
       'secondaryPhoneNumbers':
           instance.secondaryPhoneNumbers?.map((e) => e?.toJson()).toList(),

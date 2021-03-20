@@ -6,12 +6,12 @@ part 'payables_account.g.dart';
 @freezed
 class PayablesAccount with _$PayablesAccount {
   factory PayablesAccount({
-    @JsonKey(name: 'id') required String? id,
-    @JsonKey(name: 'name') required String? name,
-    @JsonKey(name: 'is_active') required bool? isActive,
-    @JsonKey(name: 'number') required String? number,
-    @JsonKey(name: 'tag') required String? tag,
-    @JsonKey(name: 'description') required String? description,
+    @JsonKey(name: 'id') String? id,
+    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'is_active') bool? isActive,
+    @JsonKey(name: 'number') String? number,
+    @JsonKey(name: 'tag') String? tag,
+    @JsonKey(name: 'description') String? description,
   }) = _PayablesAccount;
 
   factory PayablesAccount.fromJson(Map<String, dynamic> json) =>

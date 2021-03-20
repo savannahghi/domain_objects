@@ -26,7 +26,7 @@ class _$AddressTearOff {
       @JsonKey(name: 'locality') String? locality,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'placeID') String? placeID,
-      @JsonKey(name: 'formattedAddress') required String? formattedAddress}) {
+      @JsonKey(name: 'formattedAddress') String? formattedAddress}) {
     return _Address(
       latitude: latitude,
       longitude: longitude,
@@ -195,7 +195,7 @@ class _$_Address implements _Address {
       @JsonKey(name: 'locality') this.locality,
       @JsonKey(name: 'name') this.name,
       @JsonKey(name: 'placeID') this.placeID,
-      @JsonKey(name: 'formattedAddress') required this.formattedAddress});
+      @JsonKey(name: 'formattedAddress') this.formattedAddress});
 
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
       _$_$_AddressFromJson(json);
@@ -270,18 +270,13 @@ class _$_Address implements _Address {
 
 abstract class _Address implements Address {
   factory _Address(
-      {@JsonKey(name: 'latitude')
-          String? latitude,
-      @JsonKey(name: 'longitude')
-          String? longitude,
-      @JsonKey(name: 'locality')
-          String? locality,
-      @JsonKey(name: 'name')
-          String? name,
-      @JsonKey(name: 'placeID')
-          String? placeID,
-      @JsonKey(name: 'formattedAddress')
-          required String? formattedAddress}) = _$_Address;
+          {@JsonKey(name: 'latitude') String? latitude,
+          @JsonKey(name: 'longitude') String? longitude,
+          @JsonKey(name: 'locality') String? locality,
+          @JsonKey(name: 'name') String? name,
+          @JsonKey(name: 'placeID') String? placeID,
+          @JsonKey(name: 'formattedAddress') String? formattedAddress}) =
+      _$_Address;
 
   factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
 

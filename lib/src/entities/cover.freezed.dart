@@ -21,10 +21,10 @@ class _$CoverTearOff {
   const _$CoverTearOff();
 
   _Cover call(
-      {@JsonKey(name: 'payer_name') required String? payerName,
-      @JsonKey(name: 'payer_slade_code') required String? payerSladeCode,
-      @JsonKey(name: 'member_number') required String? memberNumber,
-      @JsonKey(name: 'member_name') required String? memberName}) {
+      {@JsonKey(name: 'payer_name') String? payerName,
+      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'member_number') String? memberNumber,
+      @JsonKey(name: 'member_name') String? memberName}) {
     return _Cover(
       payerName: payerName,
       payerSladeCode: payerSladeCode,
@@ -158,10 +158,10 @@ class __$CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
 /// @nodoc
 class _$_Cover implements _Cover {
   _$_Cover(
-      {@JsonKey(name: 'payer_name') required this.payerName,
-      @JsonKey(name: 'payer_slade_code') required this.payerSladeCode,
-      @JsonKey(name: 'member_number') required this.memberNumber,
-      @JsonKey(name: 'member_name') required this.memberName});
+      {@JsonKey(name: 'payer_name') this.payerName,
+      @JsonKey(name: 'payer_slade_code') this.payerSladeCode,
+      @JsonKey(name: 'member_number') this.memberNumber,
+      @JsonKey(name: 'member_name') this.memberName});
 
   factory _$_Cover.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverFromJson(json);
@@ -223,10 +223,10 @@ class _$_Cover implements _Cover {
 
 abstract class _Cover implements Cover {
   factory _Cover(
-      {@JsonKey(name: 'payer_name') required String? payerName,
-      @JsonKey(name: 'payer_slade_code') required String? payerSladeCode,
-      @JsonKey(name: 'member_number') required String? memberNumber,
-      @JsonKey(name: 'member_name') required String? memberName}) = _$_Cover;
+      {@JsonKey(name: 'payer_name') String? payerName,
+      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'member_number') String? memberNumber,
+      @JsonKey(name: 'member_name') String? memberName}) = _$_Cover;
 
   factory _Cover.fromJson(Map<String, dynamic> json) = _$_Cover.fromJson;
 
