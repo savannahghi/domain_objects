@@ -19,3 +19,14 @@ class ValueObjectFailure<T> with _$ValueObjectFailure<T> {
     required T failedValue,
   }) = EmailAddressMustNotBeNull<T>;
 }
+
+class UnExpectedValueObjectError<U> extends Error {
+  UnExpectedValueObjectError(this.valueObjectFailure);
+
+  final ValueObjectFailure<U> valueObjectFailure;
+
+  @override
+  String toString() {
+    return 'Unrecoverable valueObjectFailure $valueObjectFailure';
+  }
+}

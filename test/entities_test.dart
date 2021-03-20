@@ -94,10 +94,7 @@ void main() {
         (String right) => expect(right, '+254718376163'),
       );
 
-      expect(
-          profile.userBioData!.firstName!.value
-              .fold((ValueObjectFailure<String> l) => null, (String r) => r),
-          'Dex');
+      expect(profile.userBioData!.firstName!.getValue(), 'Dex');
     });
 
     test(
