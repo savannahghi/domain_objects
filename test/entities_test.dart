@@ -97,6 +97,52 @@ void main() {
       expect(profile.userBioData!.firstName!.getValue(), 'Dex');
     });
 
+    test('expects to convert location from json', () {
+      final Map<String, dynamic> locationAsJson = <String, dynamic>{
+        'id': 'ff83b587-d78a-498f-b0df-4d8cc9d4eb04',
+        'name': 'Nairobi',
+        'branchSladeCode': '258',
+      };
+
+      final Location location = Location.fromJson(locationAsJson);
+      expect(location, isNotNull);
+      expect(location.id, isNotNull);
+
+      expect(location.branchSladeCode!.toString(), '258');
+      expect(location.name!.toString(), 'Nairobi');
+      expect(location, isA<Location>());
+    });
+
+    test('expects to convert otpResponse from json', () {
+      final Map<String, dynamic> otpResponseAsJson = <String, dynamic>{
+        'otp': '123456',
+      };
+
+      final OtpResponse otpValue = OtpResponse.fromJson(otpResponseAsJson);
+      expect(otpValue, isA<OtpResponse>());
+      expect(otpValue, isNotNull);
+      expect(otpValue.otp!.length, 6);
+      expect(otpValue.otp!.toString(), '123456');
+    });
+
+    test('expects to convert payablesAccount from json', () {
+      final Map<String, dynamic> payablesAccountAsJson = <String, dynamic>{
+        'id': 'ff83b587-d78a-498f-b0df-4d8cc9d4eb04',
+        'name': 'Mama ngina',
+        'is_active': false,
+        'number': '2',
+        'tag': 'mama ngina account',
+        'description': ''
+      };
+
+      final PayablesAccount payablesAccount =
+          PayablesAccount.fromJson(payablesAccountAsJson);
+      expect(payablesAccount, isA<PayablesAccount>());
+      expect(payablesAccount, isNotNull);
+      expect(payablesAccount.description!.toString(), isEmpty);
+      expect(payablesAccount.isActive, isNotNull);
+    });
+
     test(
       'expects a login response map to be converted to a valid concrete types',
       () {

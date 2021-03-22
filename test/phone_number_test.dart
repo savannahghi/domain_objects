@@ -2,12 +2,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
 import 'package:sil_core_domain_objects/src/value_objects/phone_number.dart';
 
+import 'package:sil_core_domain_objects/src/value_objects/unknown.dart';
+
 void main() {
   group('Phonenumber', () {
     const String validKenyanPhone = '+254712345678';
     const String inValidKenyanPhone = '12345678';
     const String validUSAPhone = '+12025550163';
     const String inValidUSAPhone = '+25412345789';
+    const String nullPhone = UNKNOWN;
 
     test('expects valid kenyan phone number to be returned', () {
       final PhoneNumber phone = PhoneNumber.withValue(validKenyanPhone);
@@ -55,6 +58,18 @@ void main() {
 
       phoneNumber.value.fold(
         (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (String right) => expect(right, validKenyanPhone),
+      );
+    });
+
+    test('expects null phone number error to be returned', () {
+      final PhoneNumber phone = PhoneNumber.withValue(nullPhone);
+
+      phone.value.fold(
+        (ValueObjectFailure<String> left) => expect(
+            left,
+            const ValueObjectFailure<String>.invalidPhoneNumber(
+                failedValue: UNKNOWN)),
         (String right) => expect(right, validKenyanPhone),
       );
     });
