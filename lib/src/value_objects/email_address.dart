@@ -32,7 +32,7 @@ class EmailAddress extends ValueObject<String> {
   @override
   final Either<ValueObjectFailure<String>, String> value;
 
-  Map<String, dynamic> toJson() => _$EmailAddressToJson(this);
+  String toJson() => const _EmailAddressConverter().toJson(this.value);
 }
 
 /// [validateEmailAddress] checks for the validity of the provided input

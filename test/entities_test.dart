@@ -52,8 +52,8 @@ void main() {
       final Map<String, dynamic> json = profile.toJson();
       expect(json, isA<Map<String, dynamic>>());
       expect(json['id'], 'id');
-      expect(json['userName'], <String, dynamic>{'value': 'username'});
-      expect(json['primaryPhone'], <String, dynamic>{'value': '+254712345678'});
+      expect(json['userName'], 'username');
+      expect(json['primaryPhone'], '+254712345678');
     });
 
     test('expects to convert user profile from json', () {

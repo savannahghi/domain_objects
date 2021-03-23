@@ -52,7 +52,7 @@ class Name extends ValueObject<String> {
   @override
   final Either<ValueObjectFailure<String>, String> value;
 
-  Map<String, dynamic> toJson() => _$NameToJson(this);
+  String toJson() => const _NameConverter().toJson(this.value);
 }
 
 /// [_NameConverter] is a custom serialization class for [NameConverter]

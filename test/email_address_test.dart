@@ -38,9 +38,8 @@ void main() {
     });
 
     test('expects valid email returned when calling toJson', () {
-      final Map<String, dynamic> email =
-          EmailAddress.withValue(validEmail).toJson();
-      expect(email['value'], validEmail);
+      final String email = EmailAddress.withValue(validEmail).toJson();
+      expect(email, validEmail);
     });
   });
 }

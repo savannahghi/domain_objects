@@ -30,7 +30,7 @@ class PhoneNumber extends ValueObject<String> {
   @override
   final Either<ValueObjectFailure<String>, String> value;
 
-  Map<String, dynamic> toJson() => _$PhoneNumberToJson(this);
+  String toJson() => const _PhoneNumberConverter().toJson(this.value);
 }
 
 Either<ValueObjectFailure<String>, String> validatePhoneNumber(String input) {
