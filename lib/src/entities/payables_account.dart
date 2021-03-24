@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:sil_core_domain_objects/value_objects.dart';
 
 part 'payables_account.freezed.dart';
 part 'payables_account.g.dart';
@@ -13,6 +14,15 @@ class PayablesAccount with _$PayablesAccount {
     @JsonKey(name: 'tag') String? tag,
     @JsonKey(name: 'description') String? description,
   }) = _PayablesAccount;
+
+  factory PayablesAccount.initial() => PayablesAccount(
+        id: UNKNOWN,
+        name: UNKNOWN,
+        isActive: false,
+        number: UNKNOWN,
+        tag: UNKNOWN,
+        description: UNKNOWN,
+      );
 
   factory PayablesAccount.fromJson(Map<String, dynamic> json) =>
       _$PayablesAccountFromJson(json);

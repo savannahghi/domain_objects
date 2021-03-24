@@ -29,6 +29,24 @@ class SupplierProfile with _$SupplierProfile {
     @JsonKey(name: 'kycSubmitted') bool? kycSubmitted,
   }) = _SupplierProfile;
 
+  factory SupplierProfile.initial() => SupplierProfile(
+        supplierID: UNKNOWN,
+        profileID: UNKNOWN,
+        erpSupplierID: UNKNOWN,
+        payablesAccount: PayablesAccount.initial(),
+        supplierKYC: <String, dynamic>{},
+        underOrganization: false,
+        isOrganizationVerified: false,
+        sladeCode: UNKNOWN,
+        parentOrganizationID: UNKNOWN,
+        organizationName: UNKNOWN,
+        hasBranches: false,
+        location: Location.initial(),
+        partnerType: SupplierPartnerType.consumer,
+        partnerSetupComplete: false,
+        kycSubmitted: false,
+      );
+
   factory SupplierProfile.fromJson(Map<String, dynamic> json) =>
       _$SupplierProfileFromJson(json);
 }

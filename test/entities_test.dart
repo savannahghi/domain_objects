@@ -125,24 +125,6 @@ void main() {
       expect(otpValue.otp!.toString(), '123456');
     });
 
-    test('expects to convert payablesAccount from json', () {
-      final Map<String, dynamic> payablesAccountAsJson = <String, dynamic>{
-        'id': 'ff83b587-d78a-498f-b0df-4d8cc9d4eb04',
-        'name': 'Mama ngina',
-        'is_active': false,
-        'number': '2',
-        'tag': 'mama ngina account',
-        'description': ''
-      };
-
-      final PayablesAccount payablesAccount =
-          PayablesAccount.fromJson(payablesAccountAsJson);
-      expect(payablesAccount, isA<PayablesAccount>());
-      expect(payablesAccount, isNotNull);
-      expect(payablesAccount.description!.toString(), isEmpty);
-      expect(payablesAccount.isActive, isNotNull);
-    });
-
     test(
       'expects a login response map to be converted to a valid concrete types',
       () {
