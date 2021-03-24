@@ -13,6 +13,11 @@ class BioData with _$BioData {
     @JsonKey(name: 'gender') Gender? gender,
   }) = _BioData;
 
+  factory BioData.initial() => BioData(
+        firstName: Name.withValue(UNKNOWN),
+        lastName: Name.withValue(UNKNOWN),
+      );
+
   factory BioData.fromJson(Map<String, dynamic> json) =>
       _$BioDataFromJson(json);
 }
