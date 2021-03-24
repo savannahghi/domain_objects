@@ -22,7 +22,7 @@ _$_UserProfile _$_$_UserProfileFromJson(Map<String, dynamic> json) {
         ?.map((e) => e == null ? null : PhoneNumber.fromJson(e as String))
         .toList(),
     secondaryEmailAddresses: (json['secondaryEmailAddresses'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e == null ? null : EmailAddress.fromJson(e as String))
         .toList(),
     termsAccepted: json['terms_accepted'] as bool?,
     suspended: json['suspended'] as bool?,
@@ -51,7 +51,8 @@ Map<String, dynamic> _$_$_UserProfileToJson(_$_UserProfile instance) =>
       'primaryEmailAddress': instance.primaryEmailAddress?.toJson(),
       'secondaryPhoneNumbers':
           instance.secondaryPhoneNumbers?.map((e) => e?.toJson()).toList(),
-      'secondaryEmailAddresses': instance.secondaryEmailAddresses,
+      'secondaryEmailAddresses':
+          instance.secondaryEmailAddresses?.map((e) => e?.toJson()).toList(),
       'terms_accepted': instance.termsAccepted,
       'suspended': instance.suspended,
       'photoUploadID': instance.photoUploadID,

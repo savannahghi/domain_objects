@@ -32,7 +32,7 @@ class _$UserProfileTearOff {
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          List<String?>? secondaryEmailAddresses,
+          List<EmailAddress?>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
           bool? termsAccepted,
       @JsonKey(name: 'suspended')
@@ -86,7 +86,7 @@ mixin _$UserProfile {
   List<PhoneNumber?>? get secondaryPhoneNumbers =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'secondaryEmailAddresses')
-  List<String?>? get secondaryEmailAddresses =>
+  List<EmailAddress?>? get secondaryEmailAddresses =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'terms_accepted')
   bool? get termsAccepted => throw _privateConstructorUsedError;
@@ -126,7 +126,7 @@ abstract class $UserProfileCopyWith<$Res> {
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          List<String?>? secondaryEmailAddresses,
+          List<EmailAddress?>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
           bool? termsAccepted,
       @JsonKey(name: 'suspended')
@@ -195,7 +195,7 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
       secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
+              as List<EmailAddress?>?,
       termsAccepted: termsAccepted == freezed
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
@@ -280,7 +280,7 @@ abstract class _$UserProfileCopyWith<$Res>
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          List<String?>? secondaryEmailAddresses,
+          List<EmailAddress?>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
           bool? termsAccepted,
       @JsonKey(name: 'suspended')
@@ -354,7 +354,7 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
       secondaryEmailAddresses: secondaryEmailAddresses == freezed
           ? _value.secondaryEmailAddresses
           : secondaryEmailAddresses // ignore: cast_nullable_to_non_nullable
-              as List<String?>?,
+              as List<EmailAddress?>?,
       termsAccepted: termsAccepted == freezed
           ? _value.termsAccepted
           : termsAccepted // ignore: cast_nullable_to_non_nullable
@@ -426,7 +426,7 @@ class _$_UserProfile implements _UserProfile {
   final List<PhoneNumber?>? secondaryPhoneNumbers;
   @override
   @JsonKey(name: 'secondaryEmailAddresses')
-  final List<String?>? secondaryEmailAddresses;
+  final List<EmailAddress?>? secondaryEmailAddresses;
   @override
   @JsonKey(name: 'terms_accepted')
   final bool? termsAccepted;
@@ -539,7 +539,7 @@ abstract class _UserProfile implements UserProfile {
       @JsonKey(name: 'secondaryPhoneNumbers')
           List<PhoneNumber?>? secondaryPhoneNumbers,
       @JsonKey(name: 'secondaryEmailAddresses')
-          List<String?>? secondaryEmailAddresses,
+          List<EmailAddress?>? secondaryEmailAddresses,
       @JsonKey(name: 'terms_accepted')
           bool? termsAccepted,
       @JsonKey(name: 'suspended')
@@ -576,7 +576,7 @@ abstract class _UserProfile implements UserProfile {
       throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'secondaryEmailAddresses')
-  List<String?>? get secondaryEmailAddresses =>
+  List<EmailAddress?>? get secondaryEmailAddresses =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'terms_accepted')

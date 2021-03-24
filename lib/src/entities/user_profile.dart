@@ -19,7 +19,7 @@ class UserProfile with _$UserProfile {
     @JsonKey(name: 'secondaryPhoneNumbers')
         List<PhoneNumber?>? secondaryPhoneNumbers,
     @JsonKey(name: 'secondaryEmailAddresses')
-        List<String?>? secondaryEmailAddresses,
+        List<EmailAddress?>? secondaryEmailAddresses,
     @JsonKey(name: 'terms_accepted') bool? termsAccepted,
     @JsonKey(name: 'suspended') bool? suspended,
     @JsonKey(name: 'photoUploadID') String? photoUploadID,
@@ -28,6 +28,22 @@ class UserProfile with _$UserProfile {
     @JsonKey(name: 'homeAddress') Address? homeAddress,
     @JsonKey(name: 'workAddress') Address? workAddress,
   }) = _UserProfile;
+
+  factory UserProfile.initial() => UserProfile(
+        id: UNKNOWN,
+        username: Name.withValue(UNKNOWN),
+        primaryPhoneNumber: PhoneNumber.withValue('+254798000000'),
+        primaryEmailAddress: EmailAddress.withValue('test@example.com'),
+        secondaryPhoneNumbers: <PhoneNumber>[],
+        secondaryEmailAddresses: <EmailAddress>[],
+        termsAccepted: false,
+        suspended: false,
+        photoUploadID: '',
+        covers: <Cover>[],
+        userBioData: BioData.initial(),
+        homeAddress: Address(),
+        workAddress: Address(),
+      );
 
   factory UserProfile.fromJson(Map<String, dynamic> json) =>
       _$UserProfileFromJson(json);
