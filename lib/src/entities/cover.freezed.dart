@@ -22,7 +22,7 @@ class _$CoverTearOff {
 
   _Cover call(
       {@JsonKey(name: 'payer_name') String? payerName,
-      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
       @JsonKey(name: 'member_name') String? memberName}) {
     return _Cover(
@@ -46,7 +46,7 @@ mixin _$Cover {
   @JsonKey(name: 'payer_name')
   String? get payerName => throw _privateConstructorUsedError;
   @JsonKey(name: 'payer_slade_code')
-  String? get payerSladeCode => throw _privateConstructorUsedError;
+  int? get payerSladeCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'member_number')
   String? get memberNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'member_name')
@@ -63,7 +63,7 @@ abstract class $CoverCopyWith<$Res> {
       _$CoverCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'payer_name') String? payerName,
-      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
       @JsonKey(name: 'member_name') String? memberName});
 }
@@ -91,7 +91,7 @@ class _$CoverCopyWithImpl<$Res> implements $CoverCopyWith<$Res> {
       payerSladeCode: payerSladeCode == freezed
           ? _value.payerSladeCode
           : payerSladeCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       memberNumber: memberNumber == freezed
           ? _value.memberNumber
           : memberNumber // ignore: cast_nullable_to_non_nullable
@@ -111,7 +111,7 @@ abstract class _$CoverCopyWith<$Res> implements $CoverCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(name: 'payer_name') String? payerName,
-      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
       @JsonKey(name: 'member_name') String? memberName});
 }
@@ -140,7 +140,7 @@ class __$CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
       payerSladeCode: payerSladeCode == freezed
           ? _value.payerSladeCode
           : payerSladeCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       memberNumber: memberNumber == freezed
           ? _value.memberNumber
           : memberNumber // ignore: cast_nullable_to_non_nullable
@@ -171,7 +171,7 @@ class _$_Cover implements _Cover {
   final String? payerName;
   @override
   @JsonKey(name: 'payer_slade_code')
-  final String? payerSladeCode;
+  final int? payerSladeCode;
   @override
   @JsonKey(name: 'member_number')
   final String? memberNumber;
@@ -224,7 +224,7 @@ class _$_Cover implements _Cover {
 abstract class _Cover implements Cover {
   factory _Cover(
       {@JsonKey(name: 'payer_name') String? payerName,
-      @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+      @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
       @JsonKey(name: 'member_name') String? memberName}) = _$_Cover;
 
@@ -235,7 +235,7 @@ abstract class _Cover implements Cover {
   String? get payerName => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'payer_slade_code')
-  String? get payerSladeCode => throw _privateConstructorUsedError;
+  int? get payerSladeCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'member_number')
   String? get memberNumber => throw _privateConstructorUsedError;

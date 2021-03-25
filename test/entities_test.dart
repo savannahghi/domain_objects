@@ -77,6 +77,14 @@ void main() {
             'pushTokens': <String>[
               'cYk02pveSheo5QiEvmoyZ6:APA91bFdBqBJSbhbaTlG5Nylpz9LiMpzFbLLKvfOi6JuwfGt_vRHlLTC8UV9NczbqcV5YR4MTh4Awok8ssKRRpGOQDJK2yeVhaZjCBRHGmR8_AqBdUNBOJXFnGvdiPwWh1vjFt-FkcIe'
             ],
+            'covers': <Map<String, dynamic>>[
+              <String, dynamic>{
+                'payer_name': 'JICK',
+                'payer_slade_code': 123,
+                'member_number': '123255',
+                'member_name': 'Bewell Test'
+              }
+            ],
             'secondaryEmailAddresses': null,
             'secondaryPhoneNumbers': <String>['+254712654897', '+254723369852'],
             'suspended': false,
@@ -142,9 +150,9 @@ void main() {
 
     test('expects valid Cover returned when calling toJson', () {
       final Map<String, dynamic> json = <String, dynamic>{
-        'payer_name': 'payer_name',
-        'payer_slade_code': 'payer_slade_code',
-        'member_number': 'member_number',
+        'payer_name': 'JICK',
+        'payer_slade_code': 1234,
+        'member_number': '123456',
       };
       final Cover supplier = Cover.fromJson(json);
       expect(supplier, isNotNull);

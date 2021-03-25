@@ -9,7 +9,7 @@ part of 'cover.dart';
 _$_Cover _$_$_CoverFromJson(Map<String, dynamic> json) {
   return _$_Cover(
     payerName: json['payer_name'] as String?,
-    payerSladeCode: json['payer_slade_code'] as String?,
+    payerSladeCode: json['payer_slade_code'] as int?,
     memberNumber: json['member_number'] as String?,
     memberName: json['member_name'] as String?,
   );

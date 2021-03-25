@@ -7,7 +7,7 @@ part 'cover.g.dart';
 class Cover with _$Cover {
   factory Cover({
     @JsonKey(name: 'payer_name') String? payerName,
-    @JsonKey(name: 'payer_slade_code') String? payerSladeCode,
+    @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
     @JsonKey(name: 'member_number') String? memberNumber,
     @JsonKey(name: 'member_name') String? memberName,
   }) = _Cover;
