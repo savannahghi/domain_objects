@@ -17,9 +17,9 @@ class UserProfile with _$UserProfile {
     @JsonKey(name: 'primaryPhone') PhoneNumber? primaryPhoneNumber,
     @JsonKey(name: 'primaryEmailAddress') EmailAddress? primaryEmailAddress,
     @JsonKey(name: 'secondaryPhoneNumbers')
-        List<PhoneNumber?>? secondaryPhoneNumbers,
+        List<PhoneNumber>? secondaryPhoneNumbers,
     @JsonKey(name: 'secondaryEmailAddresses')
-        List<EmailAddress?>? secondaryEmailAddresses,
+        List<EmailAddress>? secondaryEmailAddresses,
     @JsonKey(name: 'terms_accepted') bool? termsAccepted,
     @JsonKey(name: 'suspended') bool? suspended,
     @JsonKey(name: 'photoUploadID') String? photoUploadID,
