@@ -132,9 +132,9 @@ void main() {
         'profileID': 'ff83b587-d78a-498f-b0df-4d8cc9d4eb04',
         'active': false,
       };
-      final SupplierProfile supplier = SupplierProfile.fromJson(json);
-      expect(supplier, isNotNull);
-      expect(supplier, isA<SupplierProfile>());
+      final SupplierProfile supplierProfile = SupplierProfile.fromJson(json);
+      expect(supplierProfile, isNotNull);
+      expect(supplierProfile, isA<SupplierProfile>());
     });
 
     test('expects valid Address returned when calling toJson', () {
@@ -143,20 +143,21 @@ void main() {
         'longitude': '24.232423',
         'name': 'place name',
       };
-      final Address supplier = Address.fromJson(json);
-      expect(supplier, isNotNull);
-      expect(supplier, isA<Address>());
+      final Address sampleAddress = Address.fromJson(json);
+      expect(sampleAddress, isNotNull);
+      expect(sampleAddress, isA<Address>());
     });
 
     test('expects valid Cover returned when calling toJson', () {
       final Map<String, dynamic> json = <String, dynamic>{
-        'payer_name': 'JICK',
+        'payer_name': 'Jubilee',
         'payer_slade_code': 1234,
         'member_number': '123456',
       };
-      final Cover supplier = Cover.fromJson(json);
-      expect(supplier, isNotNull);
-      expect(supplier, isA<Cover>());
+      final Cover sampleUserCover = Cover.fromJson(json);
+      expect(sampleUserCover, isNotNull);
+      expect(sampleUserCover, isA<Cover>());
+      expect(sampleUserCover.payerName, 'Jubilee');
     });
   });
 }

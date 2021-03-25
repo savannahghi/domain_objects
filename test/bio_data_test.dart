@@ -30,7 +30,7 @@ void main() {
       );
     });
 
-    test('expects a valid Biodata instance should convert to json', () {
+    test('expects a valid BioData instance should convert to json', () {
       final BioData bioData = BioData(
         firstName: Name.withValue(testFirstName),
         lastName: Name.withValue(testLastName),
@@ -42,7 +42,7 @@ void main() {
       expect(json['lastName'], testLastName);
     });
 
-    test('expects a valid Biodata instance should convert from json', () {
+    test('expects a valid BioData instance should convert from json', () {
       final Map<String, dynamic> bioDataJson = <String, dynamic>{
         'firstName': testFirstName,
         'lastName': testLastName
@@ -63,7 +63,7 @@ void main() {
     });
 
     test(
-        'expects a valid Biodata.initial should return a valid biodata with '
+        'expects a valid BioData.initial should return a valid bio data with '
         'initial values', () {
       final BioData bioData = BioData.initial();
 

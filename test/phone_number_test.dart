@@ -5,7 +5,7 @@ import 'package:sil_core_domain_objects/src/value_objects/phone_number.dart';
 import 'package:sil_core_domain_objects/src/value_objects/unknown.dart';
 
 void main() {
-  group('Phonenumber', () {
+  group('PhoneNumber', () {
     const String validKenyanPhone = '+254712345678';
     const String inValidKenyanPhone = '12345678';
     const String validUSAPhone = '+12025550163';

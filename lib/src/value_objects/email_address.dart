@@ -12,14 +12,14 @@ part 'email_address.g.dart';
 @_EmailAddressConverter()
 class EmailAddress extends ValueObject<String> {
   /// [EmailAddress] is the default constructor of this class. It should `NOT` be used to
-  /// create a new instance of [EmailAddress]. It's here solely for the purpose to satify the compiler
-  /// since [JsonSerialzable] demands for it. Always use [EmailAddress.withValue(value)] constructor
-  /// which will internally check for the validitiy of the provided input
+  /// create a new instance of [EmailAddress]. It's here solely for the purpose to satisfy the compiler
+  /// since [JsonSerializable] demands for it. Always use [EmailAddress.withValue(value)] constructor
+  /// which will internally check for the validity of the provided input
   const EmailAddress(this.value);
 
   const EmailAddress._(this.value);
 
-  /// [EmailAddress.withValue] the constructor that should be used in all usecases.
+  /// [EmailAddress.withValue] the constructor that should be used in all use cases.
   factory EmailAddress.withValue(String value) {
     return EmailAddress._(
       validateEmailAddress(value),

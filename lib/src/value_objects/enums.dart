@@ -16,7 +16,7 @@ extension GenderEx on Gender {
   }
 }
 
-/// [SupplierPartnerType] valud supplier partner types
+/// [SupplierPartnerType] valid supplier partner types
 enum SupplierPartnerType {
   rider,
   practitioner,
@@ -50,7 +50,7 @@ extension SupplierPartnerTypeEx on SupplierPartnerType {
   }
 }
 
-/// [LoginProvider] represents valif login methods
+/// [LoginProvider] represents valid login methods
 enum LoginProvider { phone, socialGoogle, socialFacebook, socialApple }
 
 /// [LoginProviderEx] extends [LoginProvider] enum to get the values as

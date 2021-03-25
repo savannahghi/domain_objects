@@ -3,7 +3,7 @@ import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
 import 'package:sil_core_domain_objects/src/value_objects/name.dart';
 
 void main() {
-  group('Phonenumber', () {
+  group('PhoneNumber', () {
     const String lowerCaseNameExample = 'brian';
     const String titleCaseNameExample = 'Brian';
     const String nameExample = 'brian';

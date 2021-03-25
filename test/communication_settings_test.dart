@@ -3,8 +3,8 @@ import 'package:sil_core_domain_objects/value_objects.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('CommuncationSettings tests', () {
-    test('expect valid CommuncationSettings instance', () {
+  group('CommunicationSettings tests', () {
+    test('expect valid CommunicationSettings instance', () {
       final CommunicationSettings communicationSettings = CommunicationSettings(
         profileID: UNKNOWN,
         allowWhatsApp: false,
@@ -20,7 +20,7 @@ void main() {
       expect(communicationSettings.allowEmail, false);
     });
 
-    test('expects a valid CommuncationSettings instance should convert to json',
+    test('expects a valid CommunicationSettings instance should convert to json',
         () {
       final CommunicationSettings communicationSettings = CommunicationSettings(
         profileID: UNKNOWN,

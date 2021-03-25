@@ -9,20 +9,20 @@ import 'package:sil_core_domain_objects/value_objects.dart';
 part 'name.g.dart';
 
 /// [Name] value object is a generic object that should be used to hold instances of `names`
-/// A usescase would be `firstName`, or `lastName` or `userName`
+/// A use case would be `firstName`, or `lastName` or `userName`
 
 @JsonSerializable()
 @_NameConverter()
 class Name extends ValueObject<String> {
   /// [Name] is the default constructor of this class. It should `NOT` be used to
-  /// create a new instance of [Name]. It's here solely for the purpose to satify the compiler
-  /// since [JsonSerialzable] demands for it. Always use [Name.withValue(value)] constructor
+  /// create a new instance of [Name]. It's here solely for the purpose to satisfy the compiler
+  /// since [JsonSerializable] demands for it. Always use [Name.withValue(value)] constructor
   const Name(this.value);
 
   const Name._(this.value);
 
-  /// [Name.maybe] is used when the name is optional. Example usecase;
-  /// middlename
+  /// [Name.maybe] is used when the name is optional. Example use case;
+  /// middleName
   factory Name.maybe({String? input}) {
     if (input == null) {
       return Name._(right(UNKNOWN));
@@ -41,7 +41,7 @@ class Name extends ValueObject<String> {
     return Name._(right(titleCased));
   }
 
-  /// [Name] constuctor is used in instance when the name must be provided. Example usecas;
+  /// [Name] constructor is used in instance when the name must be provided. Example useCase;
   factory Name.withValue(String value) {
     return Name._(right(value));
   }

@@ -10,14 +10,14 @@ part 'phone_number.g.dart';
 @_PhoneNumberConverter()
 class PhoneNumber extends ValueObject<String> {
   /// [PhoneNumber] is the default constructor of this class. It should `NOT` be used to
-  /// create a new instance of [PhoneNumber]. It's here solely for the purpose to satify the compiler
-  /// since [JsonSerialzable] demands for it. Always use [PhoneNumber.withValue(value)] constructor
-  /// which will internally check for the validitiy of the provided input
+  /// create a new instance of [PhoneNumber]. It's here solely for the purpose to satisfy the compiler
+  /// since [JsonSerializable] demands for it. Always use [PhoneNumber.withValue(value)] constructor
+  /// which will internally check for the validity of the provided input
   const PhoneNumber(this.value);
 
   const PhoneNumber._(this.value);
 
-  /// [PhoneNumber.withValue] the constructor that should be used in all usecases.
+  /// [PhoneNumber.withValue] the constructor that should be used in all useCases.
   factory PhoneNumber.withValue(String value) {
     return PhoneNumber._(
       validatePhoneNumber(value),
