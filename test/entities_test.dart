@@ -105,7 +105,25 @@ void main() {
             ],
             'verifiedUIDS': <String>['tGeoFDacVxOaXNoBZhqqhbXINZr1']
           },
-          'supplierProfile': null
+          'supplierProfile': <String, dynamic>{
+            'accountType': '',
+            'active': false,
+            'ediuserprofile': null,
+            'id': '',
+            'isOrganizationVerified': false,
+            'kycSubmitted': false,
+            'organizationName': '',
+            'parentOrganizationID': '',
+            'partnerSetupComplete': true,
+            'partnerType': 'PROVIDER',
+            'payables_account': null,
+            'profileID': '7c837f99-d96d-4f86-8b59-d0aae57a0434',
+            'sladeCode': '',
+            'supplierID': '787901cd-44de-4500-8a37-63e84187de0b',
+            'supplierKYC': null,
+            'supplierName': 'Abiud Orina',
+            'underOrganization': false
+          }
         };
 
         final UserResponse responseAsObject =
@@ -122,7 +140,7 @@ void main() {
         expect(responseAsObject.auth, isNotNull);
         expect(responseAsObject.customerProfile, isA<Customer>());
         expect(responseAsObject.customerProfile, isNotNull);
-        expect(responseAsObject.supplierProfile, isNull);
+        expect(responseAsObject.supplierProfile, isNotNull);
       },
     );
 

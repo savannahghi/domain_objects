@@ -18,6 +18,7 @@ extension GenderEx on Gender {
 
 /// [SupplierPartnerType] valid supplier partner types
 enum SupplierPartnerType {
+  unknown,
   rider,
   practitioner,
   provider,
@@ -46,12 +47,14 @@ extension SupplierPartnerTypeEx on SupplierPartnerType {
         return 'NUTRITION';
       case SupplierPartnerType.consumer:
         return 'CONSUMER';
+      default:
+        return 'UNKNOWN';
     }
   }
 }
 
 /// [LoginProvider] represents valid login methods
-enum LoginProvider { phone, socialGoogle, socialFacebook, socialApple }
+enum LoginProvider { unknown, phone, socialGoogle, socialFacebook, socialApple }
 
 /// [LoginProviderEx] extends [LoginProvider] enum to get the values as
 /// strings
@@ -66,12 +69,15 @@ extension LoginProviderEx on LoginProvider {
         return 'SOCIAL_FACEBOOK';
       case LoginProvider.socialApple:
         return 'SOCIAL_APPLE';
+      default:
+        return 'UNKNOWN';
     }
   }
 }
 
 /// [SupplierAccountType] valid supplier account types
 enum SupplierAccountType {
+  unknown,
   individual,
   organization,
 }
@@ -85,6 +91,8 @@ extension SupplierAccountTypeEx on SupplierAccountType {
         return 'INDIVIDUAL';
       case SupplierAccountType.organization:
         return 'ORGANISATION';
+      default:
+        return 'UNKNOWN';
     }
   }
 }

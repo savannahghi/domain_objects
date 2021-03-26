@@ -16,7 +16,8 @@ class SupplierProfile with _$SupplierProfile {
     @JsonKey(name: 'payables_account') PayablesAccount? payablesAccount,
     @JsonKey(name: 'supplierKYC') Map<String, dynamic>? supplierKYC,
     @JsonKey(name: 'active') bool? active,
-    @JsonKey(name: 'accountType') SupplierAccountType? accountType,
+    @JsonKey(name: 'accountType', unknownEnumValue: SupplierAccountType.unknown)
+        SupplierAccountType? accountType,
     @JsonKey(name: 'underOrganization') bool? underOrganization,
     @JsonKey(name: 'isOrganizationVerified') bool? isOrganizationVerified,
     @JsonKey(name: 'sladeCode') String? sladeCode,
@@ -24,7 +25,8 @@ class SupplierProfile with _$SupplierProfile {
     @JsonKey(name: 'organizationName') String? organizationName,
     @JsonKey(name: 'hasBranches') bool? hasBranches,
     @JsonKey(name: 'location') Location? location,
-    @JsonKey(name: 'partnerType') SupplierPartnerType? partnerType,
+    @JsonKey(name: 'partnerType', unknownEnumValue: SupplierPartnerType.unknown)
+        SupplierPartnerType? partnerType,
     @JsonKey(name: 'partnerSetupComplete') bool? partnerSetupComplete,
     @JsonKey(name: 'kycSubmitted') bool? kycSubmitted,
   }) = _SupplierProfile;

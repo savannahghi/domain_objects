@@ -17,8 +17,9 @@ _$_SupplierProfile _$_$_SupplierProfileFromJson(Map<String, dynamic> json) {
             json['payables_account'] as Map<String, dynamic>),
     supplierKYC: json['supplierKYC'] as Map<String, dynamic>?,
     active: json['active'] as bool?,
-    accountType:
-        _$enumDecodeNullable(_$SupplierAccountTypeEnumMap, json['accountType']),
+    accountType: _$enumDecodeNullable(
+        _$SupplierAccountTypeEnumMap, json['accountType'],
+        unknownValue: SupplierAccountType.unknown),
     underOrganization: json['underOrganization'] as bool?,
     isOrganizationVerified: json['isOrganizationVerified'] as bool?,
     sladeCode: json['sladeCode'] as String?,
@@ -28,8 +29,9 @@ _$_SupplierProfile _$_$_SupplierProfileFromJson(Map<String, dynamic> json) {
     location: json['location'] == null
         ? null
         : Location.fromJson(json['location'] as Map<String, dynamic>),
-    partnerType:
-        _$enumDecodeNullable(_$SupplierPartnerTypeEnumMap, json['partnerType']),
+    partnerType: _$enumDecodeNullable(
+        _$SupplierPartnerTypeEnumMap, json['partnerType'],
+        unknownValue: SupplierPartnerType.unknown),
     partnerSetupComplete: json['partnerSetupComplete'] as bool?,
     kycSubmitted: json['kycSubmitted'] as bool?,
   );
@@ -94,11 +96,13 @@ K? _$enumDecodeNullable<K, V>(
 }
 
 const _$SupplierAccountTypeEnumMap = {
+  SupplierAccountType.unknown: 'unknown',
   SupplierAccountType.individual: 'individual',
   SupplierAccountType.organization: 'organization',
 };
 
 const _$SupplierPartnerTypeEnumMap = {
+  SupplierPartnerType.unknown: 'unknown',
   SupplierPartnerType.rider: 'rider',
   SupplierPartnerType.practitioner: 'practitioner',
   SupplierPartnerType.provider: 'provider',
