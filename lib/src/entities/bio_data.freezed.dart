@@ -21,10 +21,14 @@ class _$BioDataTearOff {
   const _$BioDataTearOff();
 
   _BioData call(
-      {@JsonKey(name: 'firstName') Name? firstName,
-      @JsonKey(name: 'lastName') Name? lastName,
-      @JsonKey(name: 'dateOfBirth') String? dateOfBirth,
-      @JsonKey(name: 'gender') Gender? gender}) {
+      {@JsonKey(name: 'firstName')
+          Name? firstName,
+      @JsonKey(name: 'lastName')
+          Name? lastName,
+      @JsonKey(name: 'dateOfBirth')
+          String? dateOfBirth,
+      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
+          Gender? gender}) {
     return _BioData(
       firstName: firstName,
       lastName: lastName,
@@ -49,7 +53,7 @@ mixin _$BioData {
   Name? get lastName => throw _privateConstructorUsedError;
   @JsonKey(name: 'dateOfBirth')
   String? get dateOfBirth => throw _privateConstructorUsedError;
-  @JsonKey(name: 'gender')
+  @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
   Gender? get gender => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -62,10 +66,14 @@ abstract class $BioDataCopyWith<$Res> {
   factory $BioDataCopyWith(BioData value, $Res Function(BioData) then) =
       _$BioDataCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'firstName') Name? firstName,
-      @JsonKey(name: 'lastName') Name? lastName,
-      @JsonKey(name: 'dateOfBirth') String? dateOfBirth,
-      @JsonKey(name: 'gender') Gender? gender});
+      {@JsonKey(name: 'firstName')
+          Name? firstName,
+      @JsonKey(name: 'lastName')
+          Name? lastName,
+      @JsonKey(name: 'dateOfBirth')
+          String? dateOfBirth,
+      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
+          Gender? gender});
 }
 
 /// @nodoc
@@ -110,10 +118,14 @@ abstract class _$BioDataCopyWith<$Res> implements $BioDataCopyWith<$Res> {
       __$BioDataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'firstName') Name? firstName,
-      @JsonKey(name: 'lastName') Name? lastName,
-      @JsonKey(name: 'dateOfBirth') String? dateOfBirth,
-      @JsonKey(name: 'gender') Gender? gender});
+      {@JsonKey(name: 'firstName')
+          Name? firstName,
+      @JsonKey(name: 'lastName')
+          Name? lastName,
+      @JsonKey(name: 'dateOfBirth')
+          String? dateOfBirth,
+      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
+          Gender? gender});
 }
 
 /// @nodoc
@@ -161,7 +173,7 @@ class _$_BioData implements _BioData {
       {@JsonKey(name: 'firstName') this.firstName,
       @JsonKey(name: 'lastName') this.lastName,
       @JsonKey(name: 'dateOfBirth') this.dateOfBirth,
-      @JsonKey(name: 'gender') this.gender});
+      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown) this.gender});
 
   factory _$_BioData.fromJson(Map<String, dynamic> json) =>
       _$_$_BioDataFromJson(json);
@@ -176,7 +188,7 @@ class _$_BioData implements _BioData {
   @JsonKey(name: 'dateOfBirth')
   final String? dateOfBirth;
   @override
-  @JsonKey(name: 'gender')
+  @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
   final Gender? gender;
 
   @override
@@ -222,10 +234,14 @@ class _$_BioData implements _BioData {
 
 abstract class _BioData implements BioData {
   factory _BioData(
-      {@JsonKey(name: 'firstName') Name? firstName,
-      @JsonKey(name: 'lastName') Name? lastName,
-      @JsonKey(name: 'dateOfBirth') String? dateOfBirth,
-      @JsonKey(name: 'gender') Gender? gender}) = _$_BioData;
+      {@JsonKey(name: 'firstName')
+          Name? firstName,
+      @JsonKey(name: 'lastName')
+          Name? lastName,
+      @JsonKey(name: 'dateOfBirth')
+          String? dateOfBirth,
+      @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
+          Gender? gender}) = _$_BioData;
 
   factory _BioData.fromJson(Map<String, dynamic> json) = _$_BioData.fromJson;
 
@@ -239,7 +255,7 @@ abstract class _BioData implements BioData {
   @JsonKey(name: 'dateOfBirth')
   String? get dateOfBirth => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'gender')
+  @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown)
   Gender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

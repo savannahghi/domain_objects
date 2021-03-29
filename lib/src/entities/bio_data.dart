@@ -10,7 +10,7 @@ class BioData with _$BioData {
     @JsonKey(name: 'firstName') Name? firstName,
     @JsonKey(name: 'lastName') Name? lastName,
     @JsonKey(name: 'dateOfBirth') String? dateOfBirth,
-    @JsonKey(name: 'gender') Gender? gender,
+    @JsonKey(name: 'gender', unknownEnumValue: Gender.unknown) Gender? gender,
   }) = _BioData;
 
   factory BioData.initial() => BioData(

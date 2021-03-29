@@ -15,7 +15,8 @@ _$_BioData _$_$_BioDataFromJson(Map<String, dynamic> json) {
         ? null
         : Name.fromJson(json['lastName'] as String),
     dateOfBirth: json['dateOfBirth'] as String?,
-    gender: _$enumDecodeNullable(_$GenderEnumMap, json['gender']),
+    gender: _$enumDecodeNullable(_$GenderEnumMap, json['gender'],
+        unknownValue: Gender.unknown),
   );
 }
 

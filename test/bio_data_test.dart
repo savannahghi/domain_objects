@@ -45,7 +45,8 @@ void main() {
     test('expects a valid BioData instance should convert from json', () {
       final Map<String, dynamic> bioDataJson = <String, dynamic>{
         'firstName': testFirstName,
-        'lastName': testLastName
+        'lastName': testLastName,
+        'gender': '',
       };
 
       final BioData bioData = BioData.fromJson(bioDataJson);
@@ -60,6 +61,8 @@ void main() {
         (ValueObjectFailure<String> left) => expect(left, isNull),
         (String r) => expect(r, testLastName),
       );
+
+      expect(bioData.gender, Gender.unknown);
     });
 
     test(
