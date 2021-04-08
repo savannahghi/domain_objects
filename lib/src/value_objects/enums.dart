@@ -90,7 +90,7 @@ extension SupplierAccountTypeEx on SupplierAccountType {
       case SupplierAccountType.individual:
         return 'INDIVIDUAL';
       case SupplierAccountType.organization:
-        return 'ORGANISATION';
+        return 'ORGANIZATION';
       default:
         return 'UNKNOWN';
     }

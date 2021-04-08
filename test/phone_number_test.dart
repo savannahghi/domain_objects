@@ -20,6 +20,27 @@ void main() {
         (String right) => expect(right, validKenyanPhone),
       );
     });
+
+    test(
+        'expects valid kenyan phone number to be returned from getValue method',
+        () {
+      final PhoneNumber phone = PhoneNumber.withValue(validKenyanPhone);
+      expect(phone.getValue(), validKenyanPhone);
+      expect(phone.isValid(), true);
+    });
+
+    test('expects fromJson to return ValueObjectFailure for null', () {
+      final PhoneNumber phone = PhoneNumber.fromJson(inValidKenyanPhone);
+      expect(phone.isValid(), false);
+    });
+
+    test('expects throw error from getValue method', () {
+      final PhoneNumber phone = PhoneNumber.withValue(nullPhone);
+
+      expect(() => phone.getValue(),
+          throwsA(isA<UnExpectedValueObjectError<String>>()));
+    });
+
     test('expects invalid kenyan phone number error to be returned', () {
       final PhoneNumber phone = PhoneNumber.withValue(inValidKenyanPhone);
 

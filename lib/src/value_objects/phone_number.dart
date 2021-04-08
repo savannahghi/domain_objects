@@ -60,13 +60,8 @@ class _PhoneNumberConverter
   const _PhoneNumberConverter();
 
   @override
-  Either<ValueObjectFailure<String>, String> fromJson(String? value) {
-    if (value == null) {
-      return left(const ValueObjectFailure<String>.invalidPhoneNumber(
-          failedValue: UNKNOWN));
-    }
-    return right(value);
-  }
+  Either<ValueObjectFailure<String>, String> fromJson(String value) =>
+      validatePhoneNumber(value);
 
   @override
   String toJson(Either<ValueObjectFailure<String>, String> object) =>

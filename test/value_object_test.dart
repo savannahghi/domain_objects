@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sil_core_domain_objects/failures.dart';
 import 'package:sil_core_domain_objects/src/value_objects/email_address.dart';
 
 void main() {
@@ -12,5 +13,16 @@ void main() {
   });
   test('expects to return true when comparing 2 strings', () {
     expect(emailA.toString(), equals(emailB.toString()));
+  });
+
+  test('expects UnExpectedValueObjectError.toString to return string', () {
+    final UnExpectedValueObjectError<String> err =
+        UnExpectedValueObjectError<String>(
+            const ValueObjectFailure<String>.invalidEmailAddress(
+                failedValue: 'UNKNOWN'));
+    expect(
+        err.toString(),
+        equals(
+            'Unrecoverable valueObjectFailure ValueObjectFailure<String>.invalidEmailAddress(failedValue: UNKNOWN)'));
   });
 }

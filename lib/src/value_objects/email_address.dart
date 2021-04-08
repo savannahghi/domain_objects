@@ -57,13 +57,8 @@ class _EmailAddressConverter
   const _EmailAddressConverter();
 
   @override
-  Either<ValueObjectFailure<String>, String> fromJson(String? value) {
-    if (value == null) {
-      return left(const ValueObjectFailure<String>.invalidEmailAddress(
-          failedValue: UNKNOWN));
-    }
-    return right(value);
-  }
+  Either<ValueObjectFailure<String>, String> fromJson(String value) =>
+      validateEmailAddress(value);
 
   @override
   String toJson(Either<ValueObjectFailure<String>, String> object) =>
