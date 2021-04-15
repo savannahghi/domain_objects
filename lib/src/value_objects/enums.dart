@@ -1,5 +1,5 @@
 /// [Gender]
-enum Gender { male, female, unknown }
+enum Gender { male, female, non_binary, unknown }
 
 /// [GenderEx] extends [Gender] enum to get the values as
 /// strings
@@ -10,6 +10,8 @@ extension GenderEx on Gender {
         return 'MALE';
       case Gender.female:
         return 'FEMALE';
+      case Gender.non_binary:
+        return 'NON-BINARY';
       case Gender.unknown:
         return 'UNKNOWN';
     }
