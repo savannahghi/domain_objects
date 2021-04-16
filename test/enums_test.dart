@@ -8,7 +8,7 @@ void main() {
       expect(Gender.female.name, 'FEMALE');
       expect(Gender.male.name, 'MALE');
       expect(Gender.unknown.name, 'UNKNOWN');
-      expect(Gender.non_binary.name, 'NON-BINARY');
+      expect(Gender.other.name, 'OTHER');
     });
 
     test('expects valid SupplierPartnerType', () {

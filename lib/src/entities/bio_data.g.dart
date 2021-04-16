@@ -68,6 +68,6 @@ K? _$enumDecodeNullable<K, V>(
 const _$GenderEnumMap = {
   Gender.male: 'male',
   Gender.female: 'female',
-  Gender.non_binary: 'non_binary',
+  Gender.other: 'other',
   Gender.unknown: 'unknown',
 };
