@@ -60,9 +60,12 @@ void main() {
     });
 
     test('should correctly convert an email from a json object', () {
-      validEmail.value.fold(
+      final EmailAddress validEmailFromJson =
+          EmailAddress.fromJson(validEmailString);
+
+      validEmailFromJson.value.fold(
         (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
-        (String right) => expect(right, validEmailString),
+        (String right) => expect(right, 'author@example.com'),
       );
     });
 
