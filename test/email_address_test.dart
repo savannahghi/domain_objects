@@ -4,19 +4,50 @@ import 'package:sil_core_domain_objects/src/value_objects/email_address.dart';
 
 void main() {
   group('Email Address', () {
-    const String validEmail = 'author@example.com';
-    const String inValidEmail = 'author.co';
+    const String validEmailString = 'author@example.com';
+    final EmailAddress validEmail = EmailAddress.withValue(validEmailString);
 
-    test('expects valid email to be returned', () {
-      final EmailAddress email = EmailAddress.withValue(validEmail);
+    final EmailAddress validEmailVariant1 =
+        EmailAddress.withValue('author@bewell.co.ke');
 
-      email.value.fold(
+    final EmailAddress validEmailVariant2 =
+        EmailAddress.withValue('author@bewell.za');
+
+    final EmailAddress validEmailVariant3 =
+        EmailAddress.withValue('author.newuser@bewell.co.ke');
+
+    final EmailAddress validEmailVariant4 =
+        EmailAddress.withValue('unknown@bewell.co.ke');
+
+    test('should return a valid email', () {
+      validEmail.value.fold(
         (ValueObjectFailure<String> left) => expect(left, null),
-        (String right) => expect(right, validEmail),
+        (String right) => expect(right, validEmailString),
+      );
+
+      validEmailVariant1.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, null),
+        (String right) => expect(right, 'author@bewell.co.ke'),
+      );
+
+      validEmailVariant2.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, null),
+        (String right) => expect(right, 'author@bewell.za'),
+      );
+
+      validEmailVariant3.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, null),
+        (String right) => expect(right, 'author.newuser@bewell.co.ke'),
+      );
+
+      validEmailVariant4.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, null),
+        (String right) => expect(right, 'unknown@bewell.co.ke'),
       );
     });
 
-    test('expects invalid email error to be returned', () {
+    test('should return an error when an invalid email is used', () {
+      const String inValidEmail = 'author.co';
       final EmailAddress email = EmailAddress.withValue(inValidEmail);
 
       email.value.fold(
@@ -24,22 +55,19 @@ void main() {
             left,
             const ValueObjectFailure<String>.invalidEmailAddress(
                 failedValue: inValidEmail)),
-        (String right) => expect(right, validEmail),
+        (String right) => expect(right, validEmailString),
       );
     });
 
-    test('expects valid email from json to be returned', () {
-      final EmailAddress email = EmailAddress.fromJson(validEmail);
-
-      email.value.fold(
+    test('should correctly convert an email from a json object', () {
+      validEmail.value.fold(
         (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
-        (String right) => expect(right, validEmail),
+        (String right) => expect(right, validEmailString),
       );
     });
 
-    test('expects valid email returned when calling toJson', () {
-      final String email = EmailAddress.withValue(validEmail).toJson();
-      expect(email, validEmail);
+    test('should convert a an email object correctly to a json map', () {
+      expect(validEmail.toJson(), validEmailString);
     });
   });
 }
