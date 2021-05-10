@@ -8,8 +8,13 @@ void main() {
   group('PhoneNumber', () {
     const String validKenyanPhone = '+254712345678';
     const String inValidKenyanPhone = '12345678';
+
     const String validUSAPhone = '+12025550163';
     const String inValidUSAPhone = '+25412345789';
+
+    const String validUKPhone = '+447975777666';
+
+    const String validBelgiumPhone = '+3225450130';
     const String nullPhone = UNKNOWN;
 
     test('expects valid kenyan phone number to be returned', () {
@@ -71,6 +76,24 @@ void main() {
             const ValueObjectFailure<String>.invalidPhoneNumber(
                 failedValue: inValidUSAPhone)),
         (String right) => expect(right, inValidUSAPhone),
+      );
+    });
+
+    test('expects valid uk phone number to be returned', () {
+      final PhoneNumber phone = PhoneNumber.withValue(validUKPhone);
+
+      phone.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (String right) => expect(right, validUKPhone),
+      );
+    });
+
+    test('expects valid belgium phone number to be returned', () {
+      final PhoneNumber phone = PhoneNumber.withValue(validBelgiumPhone);
+
+      phone.value.fold(
+        (ValueObjectFailure<String> left) => expect(left, ValueObjectFailure),
+        (String right) => expect(right, validBelgiumPhone),
       );
     });
 
