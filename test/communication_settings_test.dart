@@ -20,7 +20,8 @@ void main() {
       expect(communicationSettings.allowEmail, false);
     });
 
-    test('expects a valid CommunicationSettings instance should convert to json',
+    test(
+        'expects a valid CommunicationSettings instance and be should converted to json',
         () {
       final CommunicationSettings communicationSettings = CommunicationSettings(
         profileID: UNKNOWN,

@@ -7,7 +7,7 @@ part 'user_profile.freezed.dart';
 part 'user_profile.g.dart';
 
 /// [UserProfile] represents a valid user as mapped out from the backend
-/// In the event the backend mapping changes, this model should also chage as well
+/// In the event the backend mapping changes, this model should also change as well
 
 @freezed
 class UserProfile with _$UserProfile {
