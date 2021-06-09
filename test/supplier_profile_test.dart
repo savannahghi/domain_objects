@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:sil_core_domain_objects/entities.dart';
-import 'package:sil_core_domain_objects/src/entities/supplier_profile.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
+import 'package:domain_objects/entities.dart';
+import 'package:domain_objects/src/entities/supplier_profile.dart';
+import 'package:domain_objects/value_objects.dart';
 import 'package:test/test.dart';
 
 void main() {

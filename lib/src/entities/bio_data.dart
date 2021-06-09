@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
+import 'package:domain_objects/value_objects.dart';
 
 part 'bio_data.freezed.dart';
 part 'bio_data.g.dart';

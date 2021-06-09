@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:sil_core_domain_objects/src/value_objects/enums.dart';
+import 'package:domain_objects/src/value_objects/enums.dart';
 
 void main() {
   group('Enums', () {

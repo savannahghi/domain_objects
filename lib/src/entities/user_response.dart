@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:sil_core_domain_objects/entities.dart';
+import 'package:domain_objects/entities.dart';
 
 part 'user_response.freezed.dart';
 part 'user_response.g.dart';

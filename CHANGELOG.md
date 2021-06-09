@@ -1,9 +1,10 @@
-### [0.0.18]
+## 0.0.18-nullsafety
 
-* fix: gender options
+- fix: gender options
+- chore: update dependencies (dartz, freezed, freezed_annotation, json_annotation, json_serializable, build_runner(dev))
 
-### Pre - [0.0.17] 
+## Pre - [0.0.17]
 
-* Code testing, refactor and upgrading design system for sil_core_domain_objects on both apps
-* Assorted bug fixes and enhancements
-* Migrated to nullsafety
+- Code testing, refactor and upgrading design system for domain_objects on both apps
+- Assorted bug fixes and enhancements
+- Migrated to nullsafety

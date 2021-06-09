@@ -1,15 +1,16 @@
-name: sil_core_domain_objects
-description: Home for all shared domain objects that are common for both consumer and professional app
-version: 0.0.1
-author: dmwangi@savannahinformatics.com
-homepage: https://gitlab.slade360emr.com/optimalhealth/dart_utils/sil_core_domain_objects
+name: domain_objects
+description: Home for all shared domain objects that are common for both bewell-consumer and bewell-professional app
+version: 0.0.18-nullsafety
+homepage: https://github.com/savannahghi/domain_objects
+repository: https://github.com/savannahghi/domain_objects
+issue_tracker: https://github.com/savannahghi/domain_objects/issues
+documentation: https://github.com/savannahghi/domain_objects/doc
 
 
 environment:  
   sdk: '>=2.12.0 <3.0.0'
   flutter: ">=2.0.0"
   
-
 dependencies:
   dartz: ^0.10.0-nullsafety.2
   flutter:
@@ -29,5 +30,3 @@ dev_dependencies:
 
 
 flutter:
-
-  

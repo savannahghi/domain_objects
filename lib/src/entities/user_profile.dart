@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:sil_core_domain_objects/entities.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
+import 'package:domain_objects/entities.dart';
+import 'package:domain_objects/value_objects.dart';
 
 part 'user_profile.freezed.dart';
 part 'user_profile.g.dart';

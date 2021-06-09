@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
-import 'package:sil_core_domain_objects/src/value_objects/name.dart';
+import 'package:domain_objects/src/failures/value_object_failure.dart';
+import 'package:domain_objects/src/value_objects/name.dart';
 
 void main() {
   group('PhoneNumber', () {
