@@ -1,4 +1,4 @@
-import 'package:sil_core_domain_objects/entities.dart';
+import 'package:domain_objects/entities.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,6 +1,6 @@
-import 'package:sil_core_domain_objects/entities.dart';
-import 'package:sil_core_domain_objects/failures.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
+import 'package:domain_objects/entities.dart';
+import 'package:domain_objects/failures.dart';
+import 'package:domain_objects/value_objects.dart';
 import 'package:test/test.dart';
 
 void main() {

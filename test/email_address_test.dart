@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sil_core_domain_objects/src/failures/value_object_failure.dart';
-import 'package:sil_core_domain_objects/src/value_objects/email_address.dart';
+import 'package:domain_objects/src/failures/value_object_failure.dart';
+import 'package:domain_objects/src/value_objects/email_address.dart';
 
 void main() {
   group('Email Address', () {

@@ -1,5 +1,5 @@
-import 'package:sil_core_domain_objects/src/entities/communication_settings.dart';
-import 'package:sil_core_domain_objects/value_objects.dart';
+import 'package:domain_objects/src/entities/communication_settings.dart';
+import 'package:domain_objects/value_objects.dart';
 import 'package:test/test.dart';
 
 void main() {
