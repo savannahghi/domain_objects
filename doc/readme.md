@@ -1,6 +1,3 @@
-[![Release](https://img.shields.io/badge/PreRelease-^0.0.18-red.svg?style=for-the-badge)](https://shields.io/)
-[![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
-
 # domain_objects
 
 `domain_objects` is an open source project &mdash; it's one among many other shared libraries that make up the wider ecosystem of software made and open sourced by `Savannah Informatics Limited`.

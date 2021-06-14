@@ -1,4 +1,4 @@
-name: debug_logger CI/CD Workflow
+name: domain_objects CI/CD Workflow
 
 on: [push]
 
