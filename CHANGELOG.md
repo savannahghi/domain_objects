@@ -1,3 +1,7 @@
+## 0.0.19-nullsafety
+
+- feat: add navigation
+
 ## 0.0.18-nullsafety
 
 - fix: gender options
