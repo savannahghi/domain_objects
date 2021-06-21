@@ -123,7 +123,44 @@ void main() {
             'supplierKYC': null,
             'supplierName': 'Abiud Orina',
             'underOrganization': false
-          }
+          },
+          'navigationActions': <String, dynamic>{
+            'primary': <dynamic>[
+              <String, dynamic>{
+                'id': '',
+                'title': '',
+                'onTapRoute': '',
+                'icon': <String, dynamic>{
+                  'id': '',
+                  'url': '',
+                  'linkType': '',
+                  'title': '',
+                  'description': '',
+                },
+                'favourite': false,
+                'nested': null
+              }
+            ],
+            'secondary': <dynamic>[
+              <String, dynamic>{
+                'id': '',
+                'title': '',
+                'onTapRoute': '',
+                'icon': <String, dynamic>{
+                  'id': '',
+                  'url': '',
+                  'linkType': '',
+                  'title': '',
+                  'description': '',
+                },
+                'favourite': false,
+                'nested': <dynamic>[
+                  <String, dynamic>{'title': '', 'onTapRoute': ''},
+                  <String, dynamic>{'title': '', 'onTapRoute': ''}
+                ]
+              }
+            ],
+          },
         };
 
         final UserResponse responseAsObject =
@@ -141,6 +178,12 @@ void main() {
         expect(responseAsObject.customerProfile, isA<Customer>());
         expect(responseAsObject.customerProfile, isNotNull);
         expect(responseAsObject.supplierProfile, isNotNull);
+        expect(responseAsObject.navigation, isNotNull);
+        expect(responseAsObject.navigation, isA<Navigation>());
+        expect(responseAsObject.navigation!.primaryActions,
+            isA<List<NavigationItem>>());
+        expect(responseAsObject.navigation!.secondaryActions,
+            isA<List<NavigationItem>>());
       },
     );
 

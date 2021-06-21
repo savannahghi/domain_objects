@@ -387,9 +387,8 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UserProfile implements _UserProfile {
   _$_UserProfile(
       {@JsonKey(name: 'id') this.id,

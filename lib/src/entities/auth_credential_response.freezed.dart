@@ -225,9 +225,8 @@ class __$AuthCredentialResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_AuthCredentialResponse implements _AuthCredentialResponse {
   _$_AuthCredentialResponse(
       {@JsonKey(name: 'customToken') this.customToken,

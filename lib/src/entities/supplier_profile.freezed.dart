@@ -449,9 +449,8 @@ class __$SupplierProfileCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SupplierProfile implements _SupplierProfile {
   _$_SupplierProfile(
       {@JsonKey(name: 'supplierID')

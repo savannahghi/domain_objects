@@ -177,9 +177,8 @@ class __$CommunicationSettingsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CommunicationSettings implements _CommunicationSettings {
   _$_CommunicationSettings(
       {@JsonKey(name: 'profileID') this.profileID,

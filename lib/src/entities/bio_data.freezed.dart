@@ -165,9 +165,8 @@ class __$BioDataCopyWithImpl<$Res> extends _$BioDataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_BioData implements _BioData {
   _$_BioData(
       {@JsonKey(name: 'firstName') this.firstName,
