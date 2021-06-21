@@ -138,9 +138,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Location implements _Location {
   _$_Location(
       {@JsonKey(name: 'branchSladeCode') this.branchSladeCode,

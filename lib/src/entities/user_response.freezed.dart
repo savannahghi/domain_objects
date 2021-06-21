@@ -30,13 +30,16 @@ class _$UserResponseTearOff {
       @JsonKey(name: 'communicationSettings')
           CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          AuthCredentialResponse? auth}) {
+          AuthCredentialResponse? auth,
+      @JsonKey(name: 'navigationActions')
+          Navigation? navigation}) {
     return _UserResponse(
       profile: profile,
       supplierProfile: supplierProfile,
       customerProfile: customerProfile,
       communicationSettings: communicationSettings,
       auth: auth,
+      navigation: navigation,
     );
   }
 
@@ -61,6 +64,8 @@ mixin _$UserResponse {
       throw _privateConstructorUsedError;
   @JsonKey(name: 'auth')
   AuthCredentialResponse? get auth => throw _privateConstructorUsedError;
+  @JsonKey(name: 'navigationActions')
+  Navigation? get navigation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -83,13 +88,16 @@ abstract class $UserResponseCopyWith<$Res> {
       @JsonKey(name: 'communicationSettings')
           CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          AuthCredentialResponse? auth});
+          AuthCredentialResponse? auth,
+      @JsonKey(name: 'navigationActions')
+          Navigation? navigation});
 
   $UserProfileCopyWith<$Res>? get profile;
   $SupplierProfileCopyWith<$Res>? get supplierProfile;
   $CustomerCopyWith<$Res>? get customerProfile;
   $CommunicationSettingsCopyWith<$Res>? get communicationSettings;
   $AuthCredentialResponseCopyWith<$Res>? get auth;
+  $NavigationCopyWith<$Res>? get navigation;
 }
 
 /// @nodoc
@@ -107,6 +115,7 @@ class _$UserResponseCopyWithImpl<$Res> implements $UserResponseCopyWith<$Res> {
     Object? customerProfile = freezed,
     Object? communicationSettings = freezed,
     Object? auth = freezed,
+    Object? navigation = freezed,
   }) {
     return _then(_value.copyWith(
       profile: profile == freezed
@@ -129,6 +138,10 @@ class _$UserResponseCopyWithImpl<$Res> implements $UserResponseCopyWith<$Res> {
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as AuthCredentialResponse?,
+      navigation: navigation == freezed
+          ? _value.navigation
+          : navigation // ignore: cast_nullable_to_non_nullable
+              as Navigation?,
     ));
   }
 
@@ -187,6 +200,17 @@ class _$UserResponseCopyWithImpl<$Res> implements $UserResponseCopyWith<$Res> {
       return _then(_value.copyWith(auth: value));
     });
   }
+
+  @override
+  $NavigationCopyWith<$Res>? get navigation {
+    if (_value.navigation == null) {
+      return null;
+    }
+
+    return $NavigationCopyWith<$Res>(_value.navigation!, (value) {
+      return _then(_value.copyWith(navigation: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -206,7 +230,9 @@ abstract class _$UserResponseCopyWith<$Res>
       @JsonKey(name: 'communicationSettings')
           CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          AuthCredentialResponse? auth});
+          AuthCredentialResponse? auth,
+      @JsonKey(name: 'navigationActions')
+          Navigation? navigation});
 
   @override
   $UserProfileCopyWith<$Res>? get profile;
@@ -218,6 +244,8 @@ abstract class _$UserResponseCopyWith<$Res>
   $CommunicationSettingsCopyWith<$Res>? get communicationSettings;
   @override
   $AuthCredentialResponseCopyWith<$Res>? get auth;
+  @override
+  $NavigationCopyWith<$Res>? get navigation;
 }
 
 /// @nodoc
@@ -237,6 +265,7 @@ class __$UserResponseCopyWithImpl<$Res> extends _$UserResponseCopyWithImpl<$Res>
     Object? customerProfile = freezed,
     Object? communicationSettings = freezed,
     Object? auth = freezed,
+    Object? navigation = freezed,
   }) {
     return _then(_UserResponse(
       profile: profile == freezed
@@ -259,20 +288,24 @@ class __$UserResponseCopyWithImpl<$Res> extends _$UserResponseCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as AuthCredentialResponse?,
+      navigation: navigation == freezed
+          ? _value.navigation
+          : navigation // ignore: cast_nullable_to_non_nullable
+              as Navigation?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UserResponse implements _UserResponse {
   _$_UserResponse(
       {@JsonKey(name: 'profile') this.profile,
       @JsonKey(name: 'supplierProfile') this.supplierProfile,
       @JsonKey(name: 'customerProfile') this.customerProfile,
       @JsonKey(name: 'communicationSettings') this.communicationSettings,
-      @JsonKey(name: 'auth') this.auth});
+      @JsonKey(name: 'auth') this.auth,
+      @JsonKey(name: 'navigationActions') this.navigation});
 
   factory _$_UserResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_UserResponseFromJson(json);
@@ -292,10 +325,13 @@ class _$_UserResponse implements _UserResponse {
   @override
   @JsonKey(name: 'auth')
   final AuthCredentialResponse? auth;
+  @override
+  @JsonKey(name: 'navigationActions')
+  final Navigation? navigation;
 
   @override
   String toString() {
-    return 'UserResponse(profile: $profile, supplierProfile: $supplierProfile, customerProfile: $customerProfile, communicationSettings: $communicationSettings, auth: $auth)';
+    return 'UserResponse(profile: $profile, supplierProfile: $supplierProfile, customerProfile: $customerProfile, communicationSettings: $communicationSettings, auth: $auth, navigation: $navigation)';
   }
 
   @override
@@ -315,7 +351,10 @@ class _$_UserResponse implements _UserResponse {
                 const DeepCollectionEquality().equals(
                     other.communicationSettings, communicationSettings)) &&
             (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                const DeepCollectionEquality().equals(other.auth, auth)) &&
+            (identical(other.navigation, navigation) ||
+                const DeepCollectionEquality()
+                    .equals(other.navigation, navigation)));
   }
 
   @override
@@ -325,7 +364,8 @@ class _$_UserResponse implements _UserResponse {
       const DeepCollectionEquality().hash(supplierProfile) ^
       const DeepCollectionEquality().hash(customerProfile) ^
       const DeepCollectionEquality().hash(communicationSettings) ^
-      const DeepCollectionEquality().hash(auth);
+      const DeepCollectionEquality().hash(auth) ^
+      const DeepCollectionEquality().hash(navigation);
 
   @JsonKey(ignore: true)
   @override
@@ -349,7 +389,9 @@ abstract class _UserResponse implements UserResponse {
       @JsonKey(name: 'communicationSettings')
           CommunicationSettings? communicationSettings,
       @JsonKey(name: 'auth')
-          AuthCredentialResponse? auth}) = _$_UserResponse;
+          AuthCredentialResponse? auth,
+      @JsonKey(name: 'navigationActions')
+          Navigation? navigation}) = _$_UserResponse;
 
   factory _UserResponse.fromJson(Map<String, dynamic> json) =
       _$_UserResponse.fromJson;
@@ -370,6 +412,9 @@ abstract class _UserResponse implements UserResponse {
   @override
   @JsonKey(name: 'auth')
   AuthCredentialResponse? get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'navigationActions')
+  Navigation? get navigation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserResponseCopyWith<_UserResponse> get copyWith =>

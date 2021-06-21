@@ -153,9 +153,8 @@ class __$CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Cover implements _Cover {
   _$_Cover(
       {@JsonKey(name: 'payer_name') this.payerName,

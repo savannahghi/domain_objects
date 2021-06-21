@@ -203,9 +203,8 @@ class __$CustomerCopyWithImpl<$Res> extends _$CustomerCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Customer implements _Customer {
   _$_Customer(
       {@JsonKey(name: 'customerID') this.id,

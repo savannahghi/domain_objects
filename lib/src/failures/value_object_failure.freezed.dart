@@ -146,6 +146,7 @@ class _$InvalidEmailAddressCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$InvalidEmailAddress<T> implements InvalidEmailAddress<T> {
   const _$InvalidEmailAddress({required this.failedValue});
 
@@ -274,6 +275,7 @@ class _$InvalidPhoneNumberCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$InvalidPhoneNumber<T> implements InvalidPhoneNumber<T> {
   const _$InvalidPhoneNumber({required this.failedValue});
 
@@ -403,6 +405,7 @@ class _$EmailAddressMustNotBeNullCopyWithImpl<T, $Res>
 }
 
 /// @nodoc
+
 class _$EmailAddressMustNotBeNull<T> implements EmailAddressMustNotBeNull<T> {
   const _$EmailAddressMustNotBeNull({required this.failedValue});
 

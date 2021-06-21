@@ -107,9 +107,8 @@ class __$OtpResponseCopyWithImpl<$Res> extends _$OtpResponseCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OtpResponse implements _OtpResponse {
   _$_OtpResponse({@JsonKey(name: 'otp') this.otp});
 

@@ -185,9 +185,8 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Address implements _Address {
   _$_Address(
       {@JsonKey(name: 'latitude') this.latitude,

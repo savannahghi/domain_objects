@@ -192,9 +192,8 @@ class __$ReceivablesAccountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ReceivablesAccount implements _ReceivablesAccount {
   _$_ReceivablesAccount(
       {@JsonKey(name: 'id') this.id,

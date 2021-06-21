@@ -25,6 +25,10 @@ _$_UserResponse _$_$_UserResponseFromJson(Map<String, dynamic> json) {
     auth: json['auth'] == null
         ? null
         : AuthCredentialResponse.fromJson(json['auth'] as Map<String, dynamic>),
+    navigation: json['navigationActions'] == null
+        ? null
+        : Navigation.fromJson(
+            json['navigationActions'] as Map<String, dynamic>),
   );
 }
 
@@ -35,4 +39,5 @@ Map<String, dynamic> _$_$_UserResponseToJson(_$_UserResponse instance) =>
       'customerProfile': instance.customerProfile?.toJson(),
       'communicationSettings': instance.communicationSettings?.toJson(),
       'auth': instance.auth?.toJson(),
+      'navigationActions': instance.navigation?.toJson(),
     };

@@ -192,9 +192,8 @@ class __$PayablesAccountCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PayablesAccount implements _PayablesAccount {
   _$_PayablesAccount(
       {@JsonKey(name: 'id') this.id,
