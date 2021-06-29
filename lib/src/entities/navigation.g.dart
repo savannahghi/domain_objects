@@ -15,6 +15,7 @@ _$_Navigation _$_$_NavigationFromJson(Map<String, dynamic> json) {
         ?.map((e) => NavigationItem.fromJson(e as Map<String, dynamic>))
         .toList(),
     drawerSelectedIndex: json['drawerSelectedIndex'] as int? ?? -1,
+    bottomBarSelectedIndex: json['bottomBarSelectedIndex'] as int? ?? 0,
   );
 }
 
@@ -23,4 +24,5 @@ Map<String, dynamic> _$_$_NavigationToJson(_$_Navigation instance) =>
       'primary': instance.primaryActions?.map((e) => e.toJson()).toList(),
       'secondary': instance.secondaryActions?.map((e) => e.toJson()).toList(),
       'drawerSelectedIndex': instance.drawerSelectedIndex,
+      'bottomBarSelectedIndex': instance.bottomBarSelectedIndex,
     };
