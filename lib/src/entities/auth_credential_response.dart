@@ -14,6 +14,7 @@ class AuthCredentialResponse with _$AuthCredentialResponse {
     @JsonKey(name: 'is_admin') bool? isAdmin,
     @JsonKey(name: 'is_anonymous') bool? isAnonymous,
     @JsonKey(name: 'can_experiment') bool? canExperiment,
+    @JsonKey(name: 'change_pin') bool? isChangePin,
   }) = _AuthCredentialResponse;
 
   factory AuthCredentialResponse.fromJson(Map<String, dynamic> json) =>

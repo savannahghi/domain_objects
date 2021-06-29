@@ -14,9 +14,9 @@ const String helpCenterRoute = '/helpCenter';
 
 // urls
 const String homeIconUrl =
-    'https://assets.healthcloud.co.ke/actions/svg/home_navaction.svg';
+    'https://assets.healthcloud.co.ke/actions/home_navaction.png';
 const String helpIconUrl =
-    'https://assets.healthcloud.co.ke/actions/svg/help_navaction.svg';
+    'https://assets.healthcloud.co.ke/actions/help_navaction.png';
 
 //ids
 const String homeIconId = '1u7E6vQxZ7Le4ZyodCuXTSDaPLs';
