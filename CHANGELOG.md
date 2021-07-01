@@ -1,3 +1,8 @@
+## 0.0.20-nullsafety
+
+- chore: add bottomBarSelectedIndex to navigation
+- chore: add default primary actions to navigation
+
 ## 0.0.19-nullsafety
 
 - feat: add navigation
