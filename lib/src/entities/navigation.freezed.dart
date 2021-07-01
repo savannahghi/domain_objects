@@ -23,11 +23,13 @@ class _$NavigationTearOff {
   _Navigation call(
       {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
       @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
-      @JsonKey(defaultValue: -1) required int drawerSelectedIndex}) {
+      @JsonKey(defaultValue: -1) required int drawerSelectedIndex,
+      @JsonKey(defaultValue: 0) required int bottomBarSelectedIndex}) {
     return _Navigation(
       primaryActions: primaryActions,
       secondaryActions: secondaryActions,
       drawerSelectedIndex: drawerSelectedIndex,
+      bottomBarSelectedIndex: bottomBarSelectedIndex,
     );
   }
 
@@ -49,6 +51,8 @@ mixin _$Navigation {
       throw _privateConstructorUsedError;
   @JsonKey(defaultValue: -1)
   int get drawerSelectedIndex => throw _privateConstructorUsedError;
+  @JsonKey(defaultValue: 0)
+  int get bottomBarSelectedIndex => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -64,7 +68,8 @@ abstract class $NavigationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
       @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
-      @JsonKey(defaultValue: -1) int drawerSelectedIndex});
+      @JsonKey(defaultValue: -1) int drawerSelectedIndex,
+      @JsonKey(defaultValue: 0) int bottomBarSelectedIndex});
 }
 
 /// @nodoc
@@ -80,6 +85,7 @@ class _$NavigationCopyWithImpl<$Res> implements $NavigationCopyWith<$Res> {
     Object? primaryActions = freezed,
     Object? secondaryActions = freezed,
     Object? drawerSelectedIndex = freezed,
+    Object? bottomBarSelectedIndex = freezed,
   }) {
     return _then(_value.copyWith(
       primaryActions: primaryActions == freezed
@@ -94,6 +100,10 @@ class _$NavigationCopyWithImpl<$Res> implements $NavigationCopyWith<$Res> {
           ? _value.drawerSelectedIndex
           : drawerSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      bottomBarSelectedIndex: bottomBarSelectedIndex == freezed
+          ? _value.bottomBarSelectedIndex
+          : bottomBarSelectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -107,7 +117,8 @@ abstract class _$NavigationCopyWith<$Res> implements $NavigationCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
       @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
-      @JsonKey(defaultValue: -1) int drawerSelectedIndex});
+      @JsonKey(defaultValue: -1) int drawerSelectedIndex,
+      @JsonKey(defaultValue: 0) int bottomBarSelectedIndex});
 }
 
 /// @nodoc
@@ -125,6 +136,7 @@ class __$NavigationCopyWithImpl<$Res> extends _$NavigationCopyWithImpl<$Res>
     Object? primaryActions = freezed,
     Object? secondaryActions = freezed,
     Object? drawerSelectedIndex = freezed,
+    Object? bottomBarSelectedIndex = freezed,
   }) {
     return _then(_Navigation(
       primaryActions: primaryActions == freezed
@@ -139,6 +151,10 @@ class __$NavigationCopyWithImpl<$Res> extends _$NavigationCopyWithImpl<$Res>
           ? _value.drawerSelectedIndex
           : drawerSelectedIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      bottomBarSelectedIndex: bottomBarSelectedIndex == freezed
+          ? _value.bottomBarSelectedIndex
+          : bottomBarSelectedIndex // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -149,7 +165,8 @@ class _$_Navigation implements _Navigation {
   _$_Navigation(
       {@JsonKey(name: 'primary') this.primaryActions,
       @JsonKey(name: 'secondary') this.secondaryActions,
-      @JsonKey(defaultValue: -1) required this.drawerSelectedIndex});
+      @JsonKey(defaultValue: -1) required this.drawerSelectedIndex,
+      @JsonKey(defaultValue: 0) required this.bottomBarSelectedIndex});
 
   factory _$_Navigation.fromJson(Map<String, dynamic> json) =>
       _$_$_NavigationFromJson(json);
@@ -163,10 +180,13 @@ class _$_Navigation implements _Navigation {
   @override
   @JsonKey(defaultValue: -1)
   final int drawerSelectedIndex;
+  @override
+  @JsonKey(defaultValue: 0)
+  final int bottomBarSelectedIndex;
 
   @override
   String toString() {
-    return 'Navigation(primaryActions: $primaryActions, secondaryActions: $secondaryActions, drawerSelectedIndex: $drawerSelectedIndex)';
+    return 'Navigation(primaryActions: $primaryActions, secondaryActions: $secondaryActions, drawerSelectedIndex: $drawerSelectedIndex, bottomBarSelectedIndex: $bottomBarSelectedIndex)';
   }
 
   @override
@@ -181,7 +201,10 @@ class _$_Navigation implements _Navigation {
                     .equals(other.secondaryActions, secondaryActions)) &&
             (identical(other.drawerSelectedIndex, drawerSelectedIndex) ||
                 const DeepCollectionEquality()
-                    .equals(other.drawerSelectedIndex, drawerSelectedIndex)));
+                    .equals(other.drawerSelectedIndex, drawerSelectedIndex)) &&
+            (identical(other.bottomBarSelectedIndex, bottomBarSelectedIndex) ||
+                const DeepCollectionEquality().equals(
+                    other.bottomBarSelectedIndex, bottomBarSelectedIndex)));
   }
 
   @override
@@ -189,7 +212,8 @@ class _$_Navigation implements _Navigation {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(primaryActions) ^
       const DeepCollectionEquality().hash(secondaryActions) ^
-      const DeepCollectionEquality().hash(drawerSelectedIndex);
+      const DeepCollectionEquality().hash(drawerSelectedIndex) ^
+      const DeepCollectionEquality().hash(bottomBarSelectedIndex);
 
   @JsonKey(ignore: true)
   @override
@@ -206,7 +230,8 @@ abstract class _Navigation implements Navigation {
   factory _Navigation(
           {@JsonKey(name: 'primary') List<NavigationItem>? primaryActions,
           @JsonKey(name: 'secondary') List<NavigationItem>? secondaryActions,
-          @JsonKey(defaultValue: -1) required int drawerSelectedIndex}) =
+          @JsonKey(defaultValue: -1) required int drawerSelectedIndex,
+          @JsonKey(defaultValue: 0) required int bottomBarSelectedIndex}) =
       _$_Navigation;
 
   factory _Navigation.fromJson(Map<String, dynamic> json) =
@@ -223,6 +248,9 @@ abstract class _Navigation implements Navigation {
   @override
   @JsonKey(defaultValue: -1)
   int get drawerSelectedIndex => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(defaultValue: 0)
+  int get bottomBarSelectedIndex => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$NavigationCopyWith<_Navigation> get copyWith =>

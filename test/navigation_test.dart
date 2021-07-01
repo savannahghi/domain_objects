@@ -30,7 +30,8 @@ void main() {
       final Navigation navigation = Navigation.initial();
 
       expect(navigation.drawerSelectedIndex, -1);
-      expect(navigation.primaryActions, List<Navigation>.empty());
+      expect(navigation.bottomBarSelectedIndex, 0);
+      expect(navigation.primaryActions, isNotEmpty);
       expect(navigation.secondaryActions, List<Navigation>.empty());
     });
 
@@ -39,7 +40,8 @@ void main() {
       final Map<String, dynamic> navigationAsJson = navigation.toJson();
 
       expect(navigationAsJson['drawerSelectedIndex'], -1);
-      expect(navigationAsJson['primary'], List<Navigation>.empty());
+      expect(navigationAsJson['bottomBarSelectedIndex'], 0);
+      expect(navigationAsJson['primary'], isNotEmpty);
       expect(navigationAsJson['secondary'], List<Navigation>.empty());
     });
   });
