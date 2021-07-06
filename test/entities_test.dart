@@ -34,7 +34,7 @@ void main() {
     test(
       'expects a login response map to be converted to a valid concrete types',
       () {
-        final Map<String, Map<String, dynamic?>?> loginResponse =
+        final Map<String, Map<String, dynamic>?> loginResponse =
             <String, Map<String, Object?>?>{
           'auth': <String, dynamic>{
             'can_experiment': true,

@@ -1,3 +1,7 @@
+## 0.0.21-nullsafety
+
+- infra: upgrade to flutter 2.2
+
 ## 0.0.20-nullsafety
 
 - chore: add bottomBarSelectedIndex to navigation
