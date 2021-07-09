@@ -29,7 +29,8 @@ class _$AuthCredentialResponseTearOff {
       @JsonKey(name: 'uid') String? uid,
       @JsonKey(name: 'is_admin') bool? isAdmin,
       @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-      @JsonKey(name: 'can_experiment') bool? canExperiment}) {
+      @JsonKey(name: 'can_experiment') bool? canExperiment,
+      @JsonKey(name: 'change_pin') bool? isChangePin}) {
     return _AuthCredentialResponse(
       customToken: customToken,
       idToken: idToken,
@@ -39,6 +40,7 @@ class _$AuthCredentialResponseTearOff {
       isAdmin: isAdmin,
       isAnonymous: isAnonymous,
       canExperiment: canExperiment,
+      isChangePin: isChangePin,
     );
   }
 
@@ -68,6 +70,8 @@ mixin _$AuthCredentialResponse {
   bool? get isAnonymous => throw _privateConstructorUsedError;
   @JsonKey(name: 'can_experiment')
   bool? get canExperiment => throw _privateConstructorUsedError;
+  @JsonKey(name: 'change_pin')
+  bool? get isChangePin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -88,7 +92,8 @@ abstract class $AuthCredentialResponseCopyWith<$Res> {
       @JsonKey(name: 'uid') String? uid,
       @JsonKey(name: 'is_admin') bool? isAdmin,
       @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-      @JsonKey(name: 'can_experiment') bool? canExperiment});
+      @JsonKey(name: 'can_experiment') bool? canExperiment,
+      @JsonKey(name: 'change_pin') bool? isChangePin});
 }
 
 /// @nodoc
@@ -110,6 +115,7 @@ class _$AuthCredentialResponseCopyWithImpl<$Res>
     Object? isAdmin = freezed,
     Object? isAnonymous = freezed,
     Object? canExperiment = freezed,
+    Object? isChangePin = freezed,
   }) {
     return _then(_value.copyWith(
       customToken: customToken == freezed
@@ -144,6 +150,10 @@ class _$AuthCredentialResponseCopyWithImpl<$Res>
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
+      isChangePin: isChangePin == freezed
+          ? _value.isChangePin
+          : isChangePin // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -163,7 +173,8 @@ abstract class _$AuthCredentialResponseCopyWith<$Res>
       @JsonKey(name: 'uid') String? uid,
       @JsonKey(name: 'is_admin') bool? isAdmin,
       @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-      @JsonKey(name: 'can_experiment') bool? canExperiment});
+      @JsonKey(name: 'can_experiment') bool? canExperiment,
+      @JsonKey(name: 'change_pin') bool? isChangePin});
 }
 
 /// @nodoc
@@ -187,6 +198,7 @@ class __$AuthCredentialResponseCopyWithImpl<$Res>
     Object? isAdmin = freezed,
     Object? isAnonymous = freezed,
     Object? canExperiment = freezed,
+    Object? isChangePin = freezed,
   }) {
     return _then(_AuthCredentialResponse(
       customToken: customToken == freezed
@@ -221,6 +233,10 @@ class __$AuthCredentialResponseCopyWithImpl<$Res>
           ? _value.canExperiment
           : canExperiment // ignore: cast_nullable_to_non_nullable
               as bool?,
+      isChangePin: isChangePin == freezed
+          ? _value.isChangePin
+          : isChangePin // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -236,7 +252,8 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
       @JsonKey(name: 'uid') this.uid,
       @JsonKey(name: 'is_admin') this.isAdmin,
       @JsonKey(name: 'is_anonymous') this.isAnonymous,
-      @JsonKey(name: 'can_experiment') this.canExperiment});
+      @JsonKey(name: 'can_experiment') this.canExperiment,
+      @JsonKey(name: 'change_pin') this.isChangePin});
 
   factory _$_AuthCredentialResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AuthCredentialResponseFromJson(json);
@@ -265,10 +282,13 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
   @override
   @JsonKey(name: 'can_experiment')
   final bool? canExperiment;
+  @override
+  @JsonKey(name: 'change_pin')
+  final bool? isChangePin;
 
   @override
   String toString() {
-    return 'AuthCredentialResponse(customToken: $customToken, idToken: $idToken, expiresIn: $expiresIn, refreshToken: $refreshToken, uid: $uid, isAdmin: $isAdmin, isAnonymous: $isAnonymous, canExperiment: $canExperiment)';
+    return 'AuthCredentialResponse(customToken: $customToken, idToken: $idToken, expiresIn: $expiresIn, refreshToken: $refreshToken, uid: $uid, isAdmin: $isAdmin, isAnonymous: $isAnonymous, canExperiment: $canExperiment, isChangePin: $isChangePin)';
   }
 
   @override
@@ -297,7 +317,10 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
                     .equals(other.isAnonymous, isAnonymous)) &&
             (identical(other.canExperiment, canExperiment) ||
                 const DeepCollectionEquality()
-                    .equals(other.canExperiment, canExperiment)));
+                    .equals(other.canExperiment, canExperiment)) &&
+            (identical(other.isChangePin, isChangePin) ||
+                const DeepCollectionEquality()
+                    .equals(other.isChangePin, isChangePin)));
   }
 
   @override
@@ -310,7 +333,8 @@ class _$_AuthCredentialResponse implements _AuthCredentialResponse {
       const DeepCollectionEquality().hash(uid) ^
       const DeepCollectionEquality().hash(isAdmin) ^
       const DeepCollectionEquality().hash(isAnonymous) ^
-      const DeepCollectionEquality().hash(canExperiment);
+      const DeepCollectionEquality().hash(canExperiment) ^
+      const DeepCollectionEquality().hash(isChangePin);
 
   @JsonKey(ignore: true)
   @override
@@ -333,7 +357,8 @@ abstract class _AuthCredentialResponse implements AuthCredentialResponse {
           @JsonKey(name: 'uid') String? uid,
           @JsonKey(name: 'is_admin') bool? isAdmin,
           @JsonKey(name: 'is_anonymous') bool? isAnonymous,
-          @JsonKey(name: 'can_experiment') bool? canExperiment}) =
+          @JsonKey(name: 'can_experiment') bool? canExperiment,
+          @JsonKey(name: 'change_pin') bool? isChangePin}) =
       _$_AuthCredentialResponse;
 
   factory _AuthCredentialResponse.fromJson(Map<String, dynamic> json) =
@@ -363,6 +388,9 @@ abstract class _AuthCredentialResponse implements AuthCredentialResponse {
   @override
   @JsonKey(name: 'can_experiment')
   bool? get canExperiment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'change_pin')
+  bool? get isChangePin => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AuthCredentialResponseCopyWith<_AuthCredentialResponse> get copyWith =>

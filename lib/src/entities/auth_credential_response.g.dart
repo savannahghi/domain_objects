@@ -17,6 +17,7 @@ _$_AuthCredentialResponse _$_$_AuthCredentialResponseFromJson(
     isAdmin: json['is_admin'] as bool?,
     isAnonymous: json['is_anonymous'] as bool?,
     canExperiment: json['can_experiment'] as bool?,
+    isChangePin: json['change_pin'] as bool?,
   );
 }
 
@@ -31,4 +32,5 @@ Map<String, dynamic> _$_$_AuthCredentialResponseToJson(
       'is_admin': instance.isAdmin,
       'is_anonymous': instance.isAnonymous,
       'can_experiment': instance.canExperiment,
+      'change_pin': instance.isChangePin,
     };
