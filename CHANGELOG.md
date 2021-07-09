@@ -1,3 +1,7 @@
+## 0.0.22-nullsafety
+
+- chore: added changepin to AuthCredentialResponse
+
 ## 0.0.21-nullsafety
 
 - infra: upgrade to flutter 2.2
