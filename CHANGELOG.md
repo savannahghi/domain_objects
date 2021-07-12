@@ -1,3 +1,6 @@
+## 0.0.23-nullsafety
+
+- feat: add SILException class
 ## 0.0.22-nullsafety
 
 - chore: added changepin to AuthCredentialResponse
