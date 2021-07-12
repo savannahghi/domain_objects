@@ -1,3 +1,11 @@
+## 0.0.25-nullsafety
+
+- test: SILException class
+
+## 0.0.24-nullsafety
+
+- fix: add SILException class
+
 ## 0.0.23-nullsafety
 
 - feat: add SILException class
