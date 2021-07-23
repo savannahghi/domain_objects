@@ -10,8 +10,7 @@
 - [x] feat: Completed task
 - [ ] chore: Incomplete task
   - [ ] test: Sub-task 1
-
-
+  
 #### Structure*
 
 - [ ] The MR has a `proper` title that conforms to our [MR title standards](https://gitlab.slade360emr.com/optimalhealth/bewell-professional#message-header)
