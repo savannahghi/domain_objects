@@ -1,10 +1,10 @@
 name: domain_objects
 description: Home for all shared domain objects that are common for both bewell-consumer and bewell-professional app
-version: 0.0.25-nullsafety
+version: 0.0.26-nullsafety
 homepage: https://github.com/savannahghi/domain_objects
 repository: https://github.com/savannahghi/domain_objects
 issue_tracker: https://github.com/savannahghi/domain_objects/issues
-documentation: https://github.com/savannahghi/domain_objects/doc
+documentation: https://github.com/savannahghi/domain_objects/tree/main/doc
 
 environment:  
   sdk: '>=2.12.0 <3.0.0'

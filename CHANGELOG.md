@@ -1,3 +1,7 @@
+## 0.0.26-nullsafety
+
+doc: fix documentation
+
 ## 0.0.25-nullsafety
 
 - test: SILException class
