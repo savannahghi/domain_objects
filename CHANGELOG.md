@@ -1,3 +1,7 @@
+## 0.0.27-nullsafety
+
+- feat: add error to exception class
+
 ## 0.0.26-nullsafety
 
 doc: fix documentation
