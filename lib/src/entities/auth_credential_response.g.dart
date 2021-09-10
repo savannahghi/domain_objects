@@ -18,6 +18,8 @@ _$_AuthCredentialResponse _$_$_AuthCredentialResponseFromJson(
     isAnonymous: json['is_anonymous'] as bool?,
     canExperiment: json['can_experiment'] as bool?,
     isChangePin: json['change_pin'] as bool?,
+    scopes:
+        (json['scopes'] as List<dynamic>?)?.map((e) => e as String).toList(),
   );
 }
 
@@ -33,4 +35,5 @@ Map<String, dynamic> _$_$_AuthCredentialResponseToJson(
       'is_anonymous': instance.isAnonymous,
       'can_experiment': instance.canExperiment,
       'change_pin': instance.isChangePin,
+      'scopes': instance.scopes,
     };

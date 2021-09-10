@@ -1,3 +1,7 @@
+## 0.0.28-nullsafety
+
+- chore: auth scope
+
 ## 0.0.27-nullsafety
 
 - feat: add error to exception class
