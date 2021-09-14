@@ -103,6 +103,6 @@ K? _$enumDecodeNullable<K, V>(
 }
 
 const _$AssistantEnumMap = {
-  Assistant.bowi: 'bowi',
-  Assistant.bev: 'bev',
+  Assistant.bowi: 'BOWI',
+  Assistant.bev: 'BEV',
 };

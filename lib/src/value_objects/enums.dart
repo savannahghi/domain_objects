@@ -1,3 +1,5 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 /// [Gender]
 enum Gender { male, female, unknown }
 
@@ -99,7 +101,9 @@ extension SupplierAccountTypeEx on SupplierAccountType {
 
 /// [Assistant] is the user assistant
 enum Assistant {
+  @JsonValue('BOWI')
   bowi,
+  @JsonValue('BEV')
   bev,
 }
 
