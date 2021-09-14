@@ -46,7 +46,9 @@ class _$UserProfileTearOff {
       @JsonKey(name: 'homeAddress')
           Address? homeAddress,
       @JsonKey(name: 'workAddress')
-          Address? workAddress}) {
+          Address? workAddress,
+      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+          Assistant? assistant}) {
     return _UserProfile(
       id: id,
       username: username,
@@ -61,6 +63,7 @@ class _$UserProfileTearOff {
       userBioData: userBioData,
       homeAddress: homeAddress,
       workAddress: workAddress,
+      assistant: assistant,
     );
   }
 
@@ -103,6 +106,11 @@ mixin _$UserProfile {
   @JsonKey(name: 'workAddress')
   Address? get workAddress => throw _privateConstructorUsedError;
 
+  /// [assistant] refers to the name of the Be.Well user assistant,
+  /// i.e Bev or Bowi.
+  @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+  Assistant? get assistant => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserProfileCopyWith<UserProfile> get copyWith =>
@@ -140,7 +148,9 @@ abstract class $UserProfileCopyWith<$Res> {
       @JsonKey(name: 'homeAddress')
           Address? homeAddress,
       @JsonKey(name: 'workAddress')
-          Address? workAddress});
+          Address? workAddress,
+      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+          Assistant? assistant});
 
   $BioDataCopyWith<$Res>? get userBioData;
   $AddressCopyWith<$Res>? get homeAddress;
@@ -170,6 +180,7 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
     Object? userBioData = freezed,
     Object? homeAddress = freezed,
     Object? workAddress = freezed,
+    Object? assistant = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -224,6 +235,10 @@ class _$UserProfileCopyWithImpl<$Res> implements $UserProfileCopyWith<$Res> {
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
+      assistant: assistant == freezed
+          ? _value.assistant
+          : assistant // ignore: cast_nullable_to_non_nullable
+              as Assistant?,
     ));
   }
 
@@ -294,7 +309,9 @@ abstract class _$UserProfileCopyWith<$Res>
       @JsonKey(name: 'homeAddress')
           Address? homeAddress,
       @JsonKey(name: 'workAddress')
-          Address? workAddress});
+          Address? workAddress,
+      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+          Assistant? assistant});
 
   @override
   $BioDataCopyWith<$Res>? get userBioData;
@@ -329,6 +346,7 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
     Object? userBioData = freezed,
     Object? homeAddress = freezed,
     Object? workAddress = freezed,
+    Object? assistant = freezed,
   }) {
     return _then(_UserProfile(
       id: id == freezed
@@ -383,6 +401,10 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
           ? _value.workAddress
           : workAddress // ignore: cast_nullable_to_non_nullable
               as Address?,
+      assistant: assistant == freezed
+          ? _value.assistant
+          : assistant // ignore: cast_nullable_to_non_nullable
+              as Assistant?,
     ));
   }
 }
@@ -391,19 +413,34 @@ class __$UserProfileCopyWithImpl<$Res> extends _$UserProfileCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_UserProfile implements _UserProfile {
   _$_UserProfile(
-      {@JsonKey(name: 'id') this.id,
-      @JsonKey(name: 'userName') this.username,
-      @JsonKey(name: 'primaryPhone') this.primaryPhoneNumber,
-      @JsonKey(name: 'primaryEmailAddress') this.primaryEmailAddress,
-      @JsonKey(name: 'secondaryPhoneNumbers') this.secondaryPhoneNumbers,
-      @JsonKey(name: 'secondaryEmailAddresses') this.secondaryEmailAddresses,
-      @JsonKey(name: 'terms_accepted') this.termsAccepted,
-      @JsonKey(name: 'suspended') this.suspended,
-      @JsonKey(name: 'photoUploadID') this.photoUploadID,
-      @JsonKey(name: 'covers') this.covers,
-      @JsonKey(name: 'userBioData') this.userBioData,
-      @JsonKey(name: 'homeAddress') this.homeAddress,
-      @JsonKey(name: 'workAddress') this.workAddress});
+      {@JsonKey(name: 'id')
+          this.id,
+      @JsonKey(name: 'userName')
+          this.username,
+      @JsonKey(name: 'primaryPhone')
+          this.primaryPhoneNumber,
+      @JsonKey(name: 'primaryEmailAddress')
+          this.primaryEmailAddress,
+      @JsonKey(name: 'secondaryPhoneNumbers')
+          this.secondaryPhoneNumbers,
+      @JsonKey(name: 'secondaryEmailAddresses')
+          this.secondaryEmailAddresses,
+      @JsonKey(name: 'terms_accepted')
+          this.termsAccepted,
+      @JsonKey(name: 'suspended')
+          this.suspended,
+      @JsonKey(name: 'photoUploadID')
+          this.photoUploadID,
+      @JsonKey(name: 'covers')
+          this.covers,
+      @JsonKey(name: 'userBioData')
+          this.userBioData,
+      @JsonKey(name: 'homeAddress')
+          this.homeAddress,
+      @JsonKey(name: 'workAddress')
+          this.workAddress,
+      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+          this.assistant});
 
   factory _$_UserProfile.fromJson(Map<String, dynamic> json) =>
       _$_$_UserProfileFromJson(json);
@@ -447,10 +484,16 @@ class _$_UserProfile implements _UserProfile {
   @override
   @JsonKey(name: 'workAddress')
   final Address? workAddress;
+  @override
+
+  /// [assistant] refers to the name of the Be.Well user assistant,
+  /// i.e Bev or Bowi.
+  @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+  final Assistant? assistant;
 
   @override
   String toString() {
-    return 'UserProfile(id: $id, username: $username, primaryPhoneNumber: $primaryPhoneNumber, primaryEmailAddress: $primaryEmailAddress, secondaryPhoneNumbers: $secondaryPhoneNumbers, secondaryEmailAddresses: $secondaryEmailAddresses, termsAccepted: $termsAccepted, suspended: $suspended, photoUploadID: $photoUploadID, covers: $covers, userBioData: $userBioData, homeAddress: $homeAddress, workAddress: $workAddress)';
+    return 'UserProfile(id: $id, username: $username, primaryPhoneNumber: $primaryPhoneNumber, primaryEmailAddress: $primaryEmailAddress, secondaryPhoneNumbers: $secondaryPhoneNumbers, secondaryEmailAddresses: $secondaryEmailAddresses, termsAccepted: $termsAccepted, suspended: $suspended, photoUploadID: $photoUploadID, covers: $covers, userBioData: $userBioData, homeAddress: $homeAddress, workAddress: $workAddress, assistant: $assistant)';
   }
 
   @override
@@ -494,7 +537,10 @@ class _$_UserProfile implements _UserProfile {
                     .equals(other.homeAddress, homeAddress)) &&
             (identical(other.workAddress, workAddress) ||
                 const DeepCollectionEquality()
-                    .equals(other.workAddress, workAddress)));
+                    .equals(other.workAddress, workAddress)) &&
+            (identical(other.assistant, assistant) ||
+                const DeepCollectionEquality()
+                    .equals(other.assistant, assistant)));
   }
 
   @override
@@ -512,7 +558,8 @@ class _$_UserProfile implements _UserProfile {
       const DeepCollectionEquality().hash(covers) ^
       const DeepCollectionEquality().hash(userBioData) ^
       const DeepCollectionEquality().hash(homeAddress) ^
-      const DeepCollectionEquality().hash(workAddress);
+      const DeepCollectionEquality().hash(workAddress) ^
+      const DeepCollectionEquality().hash(assistant);
 
   @JsonKey(ignore: true)
   @override
@@ -552,7 +599,9 @@ abstract class _UserProfile implements UserProfile {
       @JsonKey(name: 'homeAddress')
           Address? homeAddress,
       @JsonKey(name: 'workAddress')
-          Address? workAddress}) = _$_UserProfile;
+          Address? workAddress,
+      @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+          Assistant? assistant}) = _$_UserProfile;
 
   factory _UserProfile.fromJson(Map<String, dynamic> json) =
       _$_UserProfile.fromJson;
@@ -598,6 +647,12 @@ abstract class _UserProfile implements UserProfile {
   @override
   @JsonKey(name: 'workAddress')
   Address? get workAddress => throw _privateConstructorUsedError;
+  @override
+
+  /// [assistant] refers to the name of the Be.Well user assistant,
+  /// i.e Bev or Bowi.
+  @JsonKey(name: 'assistant', unknownEnumValue: Assistant.bev)
+  Assistant? get assistant => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserProfileCopyWith<_UserProfile> get copyWith =>

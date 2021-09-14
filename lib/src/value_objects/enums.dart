@@ -96,3 +96,21 @@ extension SupplierAccountTypeEx on SupplierAccountType {
     }
   }
 }
+
+/// [Assistant] is the user assistant
+enum Assistant {
+  bowi,
+  bev,
+}
+
+/// [AssistantExt] offers an extension to get string names of the [Assistant]
+extension AssistantExt on Assistant {
+  String get name {
+    switch (this) {
+      case Assistant.bowi:
+        return 'BOWI';
+      default:
+        return 'BEV';
+    }
+  }
+}

@@ -34,5 +34,10 @@ void main() {
       expect(SupplierAccountType.organization.name, 'ORGANIZATION');
       expect(SupplierAccountType.unknown.name, 'UNKNOWN');
     });
+
+    test('expects valid Assistant types', () {
+      expect(Assistant.bev.name, 'BEV');
+      expect(Assistant.bowi.name, 'BOWI');
+    });
   });
 }

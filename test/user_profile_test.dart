@@ -1,6 +1,7 @@
 import 'package:domain_objects/entities.dart';
 import 'package:domain_objects/failures.dart';
 import 'package:domain_objects/value_objects.dart';
+import 'package:flutter/foundation.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -12,6 +13,7 @@ void main() {
         id: 'id',
         username: Name.withValue('username'),
         primaryPhoneNumber: PhoneNumber.withValue(validPhone),
+        assistant: Assistant.bowi,
       );
 
       expect(profile, isA<UserProfile>());
@@ -27,6 +29,8 @@ void main() {
               (ValueObjectFailure<String> left) => null,
               (String right) => right),
           validPhone);
+
+      expect(profile.assistant, Assistant.bowi);
     });
 
     test('expects a valid UserProfile should convert to json', () {
@@ -34,6 +38,7 @@ void main() {
         id: 'id',
         username: Name.withValue('username'),
         primaryPhoneNumber: PhoneNumber.withValue(validPhone),
+        assistant: Assistant.bowi,
       );
 
       expect(profile, isA<UserProfile>());
@@ -49,15 +54,19 @@ void main() {
               (String right) => right),
           validPhone);
 
+      expect(profile.assistant, Assistant.bowi);
+
       final Map<String, dynamic> json = profile.toJson();
       expect(json, isA<Map<String, dynamic>>());
       expect(json['id'], 'id');
       expect(json['userName'], 'username');
       expect(json['primaryPhone'], '+254712345678');
+      expect(json['assistant'], describeEnum(Assistant.bowi));
     });
 
     test('expects to convert user profile from json', () {
       final Map<String, dynamic> profileAsJson = <String, dynamic>{
+        'assistant': Assistant.bowi.name.toLowerCase(),
         'id': 'ff83b587-d78a-498f-b0df-4d8cc9d4eb04',
         'primaryEmailAddress': null,
         'primaryPhone': '+254718376163',
@@ -95,6 +104,9 @@ void main() {
       );
 
       expect(profile.userBioData!.firstName!.getValue(), 'Dex');
+
+      expect(profile.assistant, isA<Assistant>());
+      expect(profile.assistant, Assistant.bowi);
     });
 
     test('expects initial to return a valid instance', () {
@@ -115,6 +127,7 @@ void main() {
       expect(userProfile.userBioData, BioData.initial());
       expect(userProfile.homeAddress, Address());
       expect(userProfile.workAddress, Address());
+      expect(userProfile.assistant, Assistant.bev);
     });
   });
 }
