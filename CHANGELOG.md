@@ -1,3 +1,15 @@
+## 0.0.30-nullsafety
+
+- chore: fix assistant decoding
+
+## 0.0.29-nullsafety
+
+- chore: package release
+
+## 0.0.28-nullsafety
+
+- add user assitant on profile
+
 ## 0.0.27-nullsafety
 
 - feat: add error to exception class
@@ -17,6 +29,7 @@ doc: fix documentation
 ## 0.0.23-nullsafety
 
 - feat: add SILException class
+
 ## 0.0.22-nullsafety
 
 - chore: added changepin to AuthCredentialResponse
