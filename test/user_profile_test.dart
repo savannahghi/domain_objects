@@ -1,5 +1,6 @@
 import 'package:domain_objects/entities.dart';
 import 'package:domain_objects/failures.dart';
+import 'package:domain_objects/src/value_objects/app_string_const.dart';
 import 'package:domain_objects/value_objects.dart';
 import 'package:flutter/foundation.dart';
 import 'package:test/test.dart';
@@ -91,7 +92,8 @@ void main() {
             'uid': 'tGeoFDacVxOaXNoBZhqqhbXINZr1'
           }
         ],
-        'verifiedUIDS': <String>['tGeoFDacVxOaXNoBZhqqhbXINZr1']
+        'verifiedUIDS': <String>['tGeoFDacVxOaXNoBZhqqhbXINZr1'],
+        'referralLink': 'https://bwl.mobi/dl',
       };
 
       final UserProfile profile = UserProfile.fromJson(profileAsJson);
@@ -138,7 +140,8 @@ void main() {
             'uid': 'tGeoFDacVxOaXNoBZhqqhbXINZr1'
           }
         ],
-        'verifiedUIDS': <String>['tGeoFDacVxOaXNoBZhqqhbXINZr1']
+        'verifiedUIDS': <String>['tGeoFDacVxOaXNoBZhqqhbXINZr1'],
+        'referralLink': 'https://bwl.mobi/dl',
       };
 
       final UserProfile profile = UserProfile.fromJson(profileAsJson);
@@ -154,6 +157,7 @@ void main() {
 
       expect(profile.assistant, isA<Assistant>());
       expect(profile.assistant?.name, Assistant.bev.name);
+      expect(profile.referralLink, referralLink);
     });
 
     test('expects initial to return a valid instance', () {
@@ -175,6 +179,7 @@ void main() {
       expect(userProfile.homeAddress, Address());
       expect(userProfile.workAddress, Address());
       expect(userProfile.assistant, Assistant.bev);
+      expect(userProfile.referralLink, '');
     });
   });
 }
