@@ -40,6 +40,7 @@ _$_UserProfile _$_$_UserProfileFromJson(Map<String, dynamic> json) {
     workAddress: json['workAddress'] == null
         ? null
         : Address.fromJson(json['workAddress'] as Map<String, dynamic>),
+    referralLink: json['referralLink'] as String?,
     assistant: _$enumDecodeNullable(_$AssistantEnumMap, json['assistant'],
         unknownValue: Assistant.bev),
   );
@@ -62,6 +63,7 @@ Map<String, dynamic> _$_$_UserProfileToJson(_$_UserProfile instance) =>
       'userBioData': instance.userBioData?.toJson(),
       'homeAddress': instance.homeAddress?.toJson(),
       'workAddress': instance.workAddress?.toJson(),
+      'referralLink': instance.referralLink,
       'assistant': _$AssistantEnumMap[instance.assistant],
     };
 

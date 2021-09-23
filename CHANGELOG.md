@@ -1,3 +1,7 @@
+## 0.0.31-nullsafety
+
+- feat: referral Link
+
 ## 0.0.30-nullsafety
 
 - chore: fix assistant decoding

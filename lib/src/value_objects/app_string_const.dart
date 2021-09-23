@@ -21,3 +21,6 @@ const String helpIconUrl =
 //ids
 const String homeIconId = '1u7E6vQxZ7Le4ZyodCuXTSDaPLs';
 const String helpIconId = '1u7E6vQxZ7Le4ZyodCuXTSDaPLs';
+
+//referralLink
+const String referralLink = 'https://bwl.mobi/dl';

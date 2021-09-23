@@ -27,6 +27,7 @@ class UserProfile with _$UserProfile {
     @JsonKey(name: 'userBioData') BioData? userBioData,
     @JsonKey(name: 'homeAddress') Address? homeAddress,
     @JsonKey(name: 'workAddress') Address? workAddress,
+    @JsonKey(name: 'referralLink') String? referralLink,
 
     /// [assistant] refers to the name of the Be.Well user assistant,
     /// i.e Bev or Bowi.
@@ -49,6 +50,7 @@ class UserProfile with _$UserProfile {
         homeAddress: Address(),
         workAddress: Address(),
         assistant: Assistant.bev,
+        referralLink: '',
       );
 
   factory UserProfile.fromJson(Map<String, dynamic> json) =>

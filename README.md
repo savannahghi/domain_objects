@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/PreRelease-^0.0.30-red.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/PreRelease-^0.0.31-red.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
 # domain_objects
@@ -23,7 +23,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```dart
 dependencies:
-  domain_objects: ^0.0.30-nullsafety
+  domain_objects: ^0.0.31-nullsafety
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
@@ -40,7 +40,6 @@ import 'package:domain_objects/entities.dart';
 
 Check the [example](https://github.com/savannahghi/domain_objects/blob/main/example/main.dart) provided for how to use this package.
 
-
 ## Dart & Flutter Version
 
 - Dart 2: >= 2.12
@@ -52,7 +51,7 @@ First off, thanks for taking the time to contribute!
 
 Be sure to check out detailed instructions on how to contribute to this project [here](https://github.com/savannahghi/domain_objects/blob/main/CONTRIBUTING.md) and go through out [Code of Conduct](https://github.com/savannahghi/domain_objects/blob/main/CODE_OF_CONDUCT.md).
 
-GPG Signing: 
+GPG Signing:
 As a contributor, you need to sign your commits. For more details check [here](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/signing-commits)
 
 ## License
