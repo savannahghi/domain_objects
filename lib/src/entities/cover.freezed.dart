@@ -24,12 +24,16 @@ class _$CoverTearOff {
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
-      @JsonKey(name: 'member_name') String? memberName}) {
+      @JsonKey(name: 'member_name') String? memberName,
+      @JsonKey(name: 'valid_to') String? validTo,
+      @JsonKey(name: 'valid_from') String? validFrom}) {
     return _Cover(
       payerName: payerName,
       payerSladeCode: payerSladeCode,
       memberNumber: memberNumber,
       memberName: memberName,
+      validTo: validTo,
+      validFrom: validFrom,
     );
   }
 
@@ -51,6 +55,10 @@ mixin _$Cover {
   String? get memberNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'member_name')
   String? get memberName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'valid_to')
+  String? get validTo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'valid_from')
+  String? get validFrom => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -65,7 +73,9 @@ abstract class $CoverCopyWith<$Res> {
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
-      @JsonKey(name: 'member_name') String? memberName});
+      @JsonKey(name: 'member_name') String? memberName,
+      @JsonKey(name: 'valid_to') String? validTo,
+      @JsonKey(name: 'valid_from') String? validFrom});
 }
 
 /// @nodoc
@@ -82,6 +92,8 @@ class _$CoverCopyWithImpl<$Res> implements $CoverCopyWith<$Res> {
     Object? payerSladeCode = freezed,
     Object? memberNumber = freezed,
     Object? memberName = freezed,
+    Object? validTo = freezed,
+    Object? validFrom = freezed,
   }) {
     return _then(_value.copyWith(
       payerName: payerName == freezed
@@ -100,6 +112,14 @@ class _$CoverCopyWithImpl<$Res> implements $CoverCopyWith<$Res> {
           ? _value.memberName
           : memberName // ignore: cast_nullable_to_non_nullable
               as String?,
+      validTo: validTo == freezed
+          ? _value.validTo
+          : validTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      validFrom: validFrom == freezed
+          ? _value.validFrom
+          : validFrom // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -113,7 +133,9 @@ abstract class _$CoverCopyWith<$Res> implements $CoverCopyWith<$Res> {
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
-      @JsonKey(name: 'member_name') String? memberName});
+      @JsonKey(name: 'member_name') String? memberName,
+      @JsonKey(name: 'valid_to') String? validTo,
+      @JsonKey(name: 'valid_from') String? validFrom});
 }
 
 /// @nodoc
@@ -131,6 +153,8 @@ class __$CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
     Object? payerSladeCode = freezed,
     Object? memberNumber = freezed,
     Object? memberName = freezed,
+    Object? validTo = freezed,
+    Object? validFrom = freezed,
   }) {
     return _then(_Cover(
       payerName: payerName == freezed
@@ -149,6 +173,14 @@ class __$CoverCopyWithImpl<$Res> extends _$CoverCopyWithImpl<$Res>
           ? _value.memberName
           : memberName // ignore: cast_nullable_to_non_nullable
               as String?,
+      validTo: validTo == freezed
+          ? _value.validTo
+          : validTo // ignore: cast_nullable_to_non_nullable
+              as String?,
+      validFrom: validFrom == freezed
+          ? _value.validFrom
+          : validFrom // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -160,7 +192,9 @@ class _$_Cover implements _Cover {
       {@JsonKey(name: 'payer_name') this.payerName,
       @JsonKey(name: 'payer_slade_code') this.payerSladeCode,
       @JsonKey(name: 'member_number') this.memberNumber,
-      @JsonKey(name: 'member_name') this.memberName});
+      @JsonKey(name: 'member_name') this.memberName,
+      @JsonKey(name: 'valid_to') this.validTo,
+      @JsonKey(name: 'valid_from') this.validFrom});
 
   factory _$_Cover.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverFromJson(json);
@@ -177,10 +211,16 @@ class _$_Cover implements _Cover {
   @override
   @JsonKey(name: 'member_name')
   final String? memberName;
+  @override
+  @JsonKey(name: 'valid_to')
+  final String? validTo;
+  @override
+  @JsonKey(name: 'valid_from')
+  final String? validFrom;
 
   @override
   String toString() {
-    return 'Cover(payerName: $payerName, payerSladeCode: $payerSladeCode, memberNumber: $memberNumber, memberName: $memberName)';
+    return 'Cover(payerName: $payerName, payerSladeCode: $payerSladeCode, memberNumber: $memberNumber, memberName: $memberName, validTo: $validTo, validFrom: $validFrom)';
   }
 
   @override
@@ -198,7 +238,13 @@ class _$_Cover implements _Cover {
                     .equals(other.memberNumber, memberNumber)) &&
             (identical(other.memberName, memberName) ||
                 const DeepCollectionEquality()
-                    .equals(other.memberName, memberName)));
+                    .equals(other.memberName, memberName)) &&
+            (identical(other.validTo, validTo) ||
+                const DeepCollectionEquality()
+                    .equals(other.validTo, validTo)) &&
+            (identical(other.validFrom, validFrom) ||
+                const DeepCollectionEquality()
+                    .equals(other.validFrom, validFrom)));
   }
 
   @override
@@ -207,7 +253,9 @@ class _$_Cover implements _Cover {
       const DeepCollectionEquality().hash(payerName) ^
       const DeepCollectionEquality().hash(payerSladeCode) ^
       const DeepCollectionEquality().hash(memberNumber) ^
-      const DeepCollectionEquality().hash(memberName);
+      const DeepCollectionEquality().hash(memberName) ^
+      const DeepCollectionEquality().hash(validTo) ^
+      const DeepCollectionEquality().hash(validFrom);
 
   @JsonKey(ignore: true)
   @override
@@ -225,7 +273,9 @@ abstract class _Cover implements Cover {
       {@JsonKey(name: 'payer_name') String? payerName,
       @JsonKey(name: 'payer_slade_code') int? payerSladeCode,
       @JsonKey(name: 'member_number') String? memberNumber,
-      @JsonKey(name: 'member_name') String? memberName}) = _$_Cover;
+      @JsonKey(name: 'member_name') String? memberName,
+      @JsonKey(name: 'valid_to') String? validTo,
+      @JsonKey(name: 'valid_from') String? validFrom}) = _$_Cover;
 
   factory _Cover.fromJson(Map<String, dynamic> json) = _$_Cover.fromJson;
 
@@ -241,6 +291,12 @@ abstract class _Cover implements Cover {
   @override
   @JsonKey(name: 'member_name')
   String? get memberName => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'valid_to')
+  String? get validTo => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'valid_from')
+  String? get validFrom => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverCopyWith<_Cover> get copyWith => throw _privateConstructorUsedError;
