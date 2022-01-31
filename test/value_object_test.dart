@@ -1,6 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:domain_objects/failures.dart';
 import 'package:domain_objects/src/value_objects/email_address.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final EmailAddress emailA = EmailAddress.withValue('john@gmail.com');

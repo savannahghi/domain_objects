@@ -1,10 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:intl/intl.dart';
-import 'package:json_annotation/json_annotation.dart';
 import 'package:domain_objects/failures.dart';
-
 import 'package:domain_objects/src/value_objects/value_object.dart';
 import 'package:domain_objects/value_objects.dart';
+import 'package:intl/intl.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'name.g.dart';
 

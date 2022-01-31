@@ -1,8 +1,9 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:domain_objects/src/entities/navigation_icon.dart';
 import 'package:domain_objects/src/entities/navigation_nested_item.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-
 import 'package:domain_objects/value_objects.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'navigation_item.freezed.dart';
 part 'navigation_item.g.dart';

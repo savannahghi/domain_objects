@@ -1,7 +1,8 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+// ignore_for_file: invalid_annotation_target
 
 import 'package:domain_objects/entities.dart';
 import 'package:domain_objects/value_objects.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_profile.freezed.dart';
 part 'user_profile.g.dart';
