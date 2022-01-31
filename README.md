@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/PreRelease-^0.0.31-red.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/PreRelease-^0.0.33-red.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
 # domain_objects
@@ -23,7 +23,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```dart
 dependencies:
-  domain_objects: ^0.0.32-nullsafety
+  domain_objects: ^0.0.33-nullsafety
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
@@ -42,7 +42,7 @@ Check the [example](https://github.com/savannahghi/domain_objects/blob/main/exam
 
 ## Dart & Flutter Version
 
-- Dart 2: >= 2.12
+- Dart 2: >= 2.14
 - Flutter: >=2.0.0
 
 ## Developing & Contributing

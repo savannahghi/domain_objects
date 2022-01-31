@@ -1,8 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+// ignore_for_file: invalid_annotation_target
+
 import 'package:domain_objects/entities.dart';
 import 'package:domain_objects/src/entities/payables_account.dart';
-
 import 'package:domain_objects/value_objects.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'supplier_profile.freezed.dart';
 part 'supplier_profile.g.dart';

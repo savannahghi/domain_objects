@@ -1,6 +1,11 @@
+## 0.0.33-nullsafety
+
+- chore: update packages
+
 ## 0.0.32-nullsafety
 
 - chore: update covers model
+
 ## 0.0.31-nullsafety
 
 - feat: referral Link

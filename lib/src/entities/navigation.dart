@@ -1,7 +1,8 @@
+// ignore_for_file: invalid_annotation_target
+
 import 'package:domain_objects/src/entities/navigation_item.dart';
 import 'package:domain_objects/src/value_objects/app_string_const.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
 import '../../entities.dart';
 
 part 'navigation.freezed.dart';
