@@ -1,6 +1,6 @@
 name: domain_objects
 description: Home for all shared domain objects that are common for both bewell-consumer and bewell-professional app
-version: 0.0.33-nullsafety
+version: 0.2.0-nullsafety
 homepage: https://github.com/savannahghi/domain_objects
 repository: https://github.com/savannahghi/domain_objects
 issue_tracker: https://github.com/savannahghi/domain_objects/issues
@@ -14,8 +14,8 @@ dependencies:
   dartz: ^0.10.0-nullsafety.2
   flutter:
     sdk: flutter
-  freezed: ^0.14.2
-  freezed_annotation: ^1.1.0
+  freezed: ^2.1.0+1
+  freezed_annotation: ^2.1.0
   intl: ^0.17.0
   json_annotation: ^4.4.0
   json_serializable: ^6.1.4

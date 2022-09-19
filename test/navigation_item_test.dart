@@ -1,5 +1,4 @@
 import 'package:domain_objects/entities.dart';
-import 'package:domain_objects/src/entities/navigation_item.dart';
 import 'package:domain_objects/value_objects.dart';
 import 'package:flutter_test/flutter_test.dart';
 
