@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
 import 'package:domain_objects/src/failures/value_object_failure.dart';
-import 'package:domain_objects/src/value_objects/value_object.dart';
 import 'package:domain_objects/value_objects.dart';
 import 'package:json_annotation/json_annotation.dart';
 
