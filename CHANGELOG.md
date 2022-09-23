@@ -1,3 +1,7 @@
+## 0.2.1-nullsafety
+
+- feat: setup automated deployment to pub.dev
+
 ## 0.2.0-nullsafety
 
 - chore: upgrade to flutter 3.0.5
